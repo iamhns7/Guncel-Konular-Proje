@@ -1,0 +1,12 @@
+{
+  "id": "mancanik",
+  "name": "MANCANIK",
+  "shortDescription": "mancanik için kısa bir açıklama.",
+  "imageAsset": "media/mancanik.webp",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12. Yüzyıl"
+}

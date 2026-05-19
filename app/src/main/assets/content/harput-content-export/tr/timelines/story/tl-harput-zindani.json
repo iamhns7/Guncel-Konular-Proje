@@ -1,0 +1,13 @@
+{
+  "id": "tl-harput-zindani",
+  "placeId": "harput-zindani",
+  "events": [
+    {
+      "id": "ev-harput-zindani-1",
+      "year": "1150",
+      "title": "İlk Temellerin Atılması",
+      "content": "Bölgenin savunmasını güçlendirmek amacıyla ilk temeller atıldı.",
+      "imageAsset": "media/harput-zindani.jpg"
+    }
+  ]
+}

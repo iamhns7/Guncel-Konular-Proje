@@ -1,0 +1,13 @@
+{
+  "id": "tl-harput-kalesi-ici-ve-artuklu-cami-harabeleri",
+  "placeId": "harput-kalesi-ici-ve-artuklu-cami-harabeleri",
+  "events": [
+    {
+      "id": "ev-harput-kalesi-ici-ve-artuklu-cami-harabeleri-1",
+      "year": "1150",
+      "title": "İlk Temellerin Atılması",
+      "content": "Bölgenin savunmasını güçlendirmek amacıyla ilk temeller atıldı.",
+      "imageAsset": "media/Harput-kalesi-ici-ve-Artuklu-cami-harabeleri.jpg"
+    }
+  ]
+}

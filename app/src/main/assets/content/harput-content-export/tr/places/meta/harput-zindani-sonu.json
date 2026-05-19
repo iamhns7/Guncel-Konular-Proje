@@ -1,0 +1,12 @@
+{
+  "id": "harput-zindani-sonu",
+  "name": "HARPUT ZINDANI SONU",
+  "shortDescription": "harput zindani sonu için kısa bir açıklama.",
+  "imageAsset": "media/harput-zindani-sonu.webp",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12. Yüzyıl"
+}

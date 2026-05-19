@@ -1,0 +1,13 @@
+{
+  "id": "tl-aslanli-burc-ve-kale-kitabesi",
+  "placeId": "aslanli-burc-ve-kale-kitabesi",
+  "events": [
+    {
+      "id": "ev-aslanli-burc-ve-kale-kitabesi-1",
+      "year": "1150",
+      "title": "İlk Temellerin Atılması",
+      "content": "Bölgenin savunmasını güçlendirmek amacıyla ilk temeller atıldı.",
+      "imageAsset": "media/Aslanli-burc-ve-kale-kitabesi.jpg"
+    }
+  ]
+}

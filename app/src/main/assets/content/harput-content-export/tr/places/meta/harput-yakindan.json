@@ -1,0 +1,12 @@
+{
+  "id": "harput-yakindan",
+  "name": "HARPUT YAKINDAN",
+  "shortDescription": "harput yakindan için kısa bir açıklama.",
+  "imageAsset": "media/harput-yakindan.webp",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12. Yüzyıl"
+}

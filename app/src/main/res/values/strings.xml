@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Harput AR Rehber</string>
+
+    <!-- Bottom navigation -->
+    <string name="tab_home">Ana Menü</string>
+    <string name="tab_places">Noktalar</string>
+    <string name="tab_ar">AR Tara</string>
+    <string name="tab_favorites">Favoriler</string>
+    <string name="tab_visited">Gezdiğim</string>
+    <string name="tab_about">Hakkında</string>
+
+    <!-- Places -->
+    <string name="places_title">Tarihi Noktalar</string>
+    <string name="places_subtitle">Harput\'taki önemli noktaları seç\nve keşfetmeye başla.</string>
+    <string name="places_filter_soon">Filtreleme yakında eklenecek.</string>
+    <string name="places_error_load">Mekânlar yüklenemedi. Lütfen tekrar deneyin.</string>
+    <string name="places_error_empty">Gösterilecek mekân bulunamadı.</string>
+    <string name="places_empty_title">Mekân bulunamadı</string>
+    <string name="places_empty_description">Henüz listelenecek tarihi nokta yok.</string>
+    <string name="action_retry">Tekrar dene</string>
+    <string name="cd_menu">Menü</string>
+    <string name="cd_filter">Filtrele</string>
+
+    <!-- Place detail -->
+    <string name="place_detail_error_load">Detay bilgisi yüklenemedi. Lütfen tekrar deneyin.</string>
+    <string name="place_detail_error_missing">Bu mekânın detay bilgisi bulunamadı.</string>
+    <string name="place_detail_period">Dönem</string>
+    <string name="place_detail_estimated_build">Tahmini Yapım</string>
+    <string name="place_detail_category">Kategori</string>
+    <string name="place_detail_highlights">Öne Çıkan Özellikler</string>
+    <string name="place_detail_navigate">Yol Tarifi Al</string>
+    <string name="place_detail_ar">AR ile İncele</string>
+    <string name="place_detail_model">3D Modeli Gör</string>
+    <string name="cd_back">Geri</string>
+    <string name="cd_favorite">Favori</string>
+    <string name="cd_visited">Gezildi</string>
+
+    <!-- Language -->
+    <string name="language_section_title">Dil / Language</string>
+    <string name="language_section_description">Uygulama arayüzü ve mekân içerikleri seçilen dilde gösterilir.</string>
+    <string name="language_turkish">Türkçe</string>
+    <string name="language_english">English</string>
+    <string name="language_changed">Dil güncellendi.</string>
+
+    <!-- About -->
+    <string name="about_title">Hakkında</string>
+</resources>

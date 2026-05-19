@@ -1,0 +1,12 @@
+{
+  "id": "harput-kalesi-dogu-terasi",
+  "name": "HARPUT KALESI DOGU TERASI",
+  "shortDescription": "Harput kalesi dogu terasi için kısa bir açıklama.",
+  "imageAsset": "media/Harput-kalesi-dogu-terasi.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12. Yüzyıl"
+}

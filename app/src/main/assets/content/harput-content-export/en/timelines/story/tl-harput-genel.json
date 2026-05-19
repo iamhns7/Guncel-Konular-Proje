@@ -1,0 +1,13 @@
+{
+  "id": "tl-harput-genel",
+  "placeId": "harput-genel",
+  "events": [
+    {
+      "id": "ev-harput-genel-1",
+      "year": "1150",
+      "title": "Laying the First Foundations",
+      "content": "The first foundations were laid to strengthen the region's defense.",
+      "imageAsset": "media/harput-genel.jpg"
+    }
+  ]
+}

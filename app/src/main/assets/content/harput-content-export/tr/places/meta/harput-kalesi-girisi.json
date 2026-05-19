@@ -1,0 +1,12 @@
+{
+  "id": "harput-kalesi-girisi",
+  "name": "HARPUT KALESI GIRISI",
+  "shortDescription": "Harput kalesi girisi için kısa bir açıklama.",
+  "imageAsset": "media/Harput-kalesi-girisi.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12. Yüzyıl"
+}

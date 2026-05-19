@@ -1,0 +1,12 @@
+{
+  "id": "harput-kalesi-ici-ve-artuklu-cami-harabeleri",
+  "name": "HARPUT KALESI ICI VE ARTUKLU CAMI HARABELERI (EN)",
+  "shortDescription": "A short description for Harput kalesi ici ve Artuklu cami harabeleri.",
+  "imageAsset": "media/Harput-kalesi-ici-ve-Artuklu-cami-harabeleri.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12th Century"
+}

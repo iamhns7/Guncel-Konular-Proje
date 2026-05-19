@@ -1,0 +1,12 @@
+{
+  "id": "artuklu-sarnici-ve-zindani",
+  "name": "ARTUKLU SARNICI VE ZINDANI (EN)",
+  "shortDescription": "A short description for Artuklu sarnici ve zindani.",
+  "imageAsset": "media/Artuklu-sarnici-ve-zindani.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12th Century"
+}

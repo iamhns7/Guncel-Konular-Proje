@@ -1,0 +1,13 @@
+{
+  "id": "tl-harput-kalesi-tarihi-hamami",
+  "placeId": "harput-kalesi-tarihi-hamami",
+  "events": [
+    {
+      "id": "ev-harput-kalesi-tarihi-hamami-1",
+      "year": "1150",
+      "title": "İlk Temellerin Atılması",
+      "content": "Bölgenin savunmasını güçlendirmek amacıyla ilk temeller atıldı.",
+      "imageAsset": "media/Harput-kalesi-tarihi-hamami.jpg"
+    }
+  ]
+}

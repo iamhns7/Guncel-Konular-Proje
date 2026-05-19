@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Harput AR Guide</string>
+
+    <string name="tab_home">Home</string>
+    <string name="tab_places">Places</string>
+    <string name="tab_ar">AR Scan</string>
+    <string name="tab_favorites">Favorites</string>
+    <string name="tab_visited">Visited</string>
+    <string name="tab_about">About</string>
+
+    <string name="places_title">Historic Places</string>
+    <string name="places_subtitle">Choose key sites in Harput\nand start exploring.</string>
+    <string name="places_filter_soon">Filtering will be added soon.</string>
+    <string name="places_error_load">Could not load places. Please try again.</string>
+    <string name="places_error_empty">No places to display.</string>
+    <string name="places_empty_title">No places found</string>
+    <string name="places_empty_description">There are no historic sites to list yet.</string>
+    <string name="action_retry">Try again</string>
+    <string name="cd_menu">Menu</string>
+    <string name="cd_filter">Filter</string>
+
+    <string name="place_detail_error_load">Could not load details. Please try again.</string>
+    <string name="place_detail_error_missing">Details for this place were not found.</string>
+    <string name="place_detail_period">Period</string>
+    <string name="place_detail_estimated_build">Estimated construction</string>
+    <string name="place_detail_category">Category</string>
+    <string name="place_detail_highlights">Highlights</string>
+    <string name="place_detail_navigate">Get directions</string>
+    <string name="place_detail_ar">View in AR</string>
+    <string name="place_detail_model">View 3D model</string>
+    <string name="cd_back">Back</string>
+    <string name="cd_favorite">Favorite</string>
+    <string name="cd_visited">Visited</string>
+
+    <string name="language_section_title">Language / Dil</string>
+    <string name="language_section_description">App UI and place content are shown in the selected language.</string>
+    <string name="language_turkish">Türkçe</string>
+    <string name="language_english">English</string>
+    <string name="language_changed">Language updated.</string>
+
+    <string name="about_title">About</string>
+</resources>

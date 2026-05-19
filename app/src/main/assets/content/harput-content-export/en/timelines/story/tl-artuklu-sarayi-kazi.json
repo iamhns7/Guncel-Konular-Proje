@@ -1,0 +1,13 @@
+{
+  "id": "tl-artuklu-sarayi-kazi",
+  "placeId": "artuklu-sarayi-kazi",
+  "events": [
+    {
+      "id": "ev-artuklu-sarayi-kazi-1",
+      "year": "1150",
+      "title": "Laying the First Foundations",
+      "content": "The first foundations were laid to strengthen the region's defense.",
+      "imageAsset": "media/Artuklu-sarayi-kazi.jpg"
+    }
+  ]
+}

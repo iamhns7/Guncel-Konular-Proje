@@ -1,0 +1,13 @@
+{
+  "id": "tl-harput-genel",
+  "placeId": "harput-genel",
+  "events": [
+    {
+      "id": "ev-harput-genel-1",
+      "year": "1150",
+      "title": "İlk Temellerin Atılması",
+      "content": "Bölgenin savunmasını güçlendirmek amacıyla ilk temeller atıldı.",
+      "imageAsset": "media/harput-genel.jpg"
+    }
+  ]
+}

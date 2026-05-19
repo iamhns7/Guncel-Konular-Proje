@@ -1,0 +1,12 @@
+{
+  "id": "harput-kalesi-dogu-terasi",
+  "name": "HARPUT KALESI DOGU TERASI (EN)",
+  "shortDescription": "A short description for Harput kalesi dogu terasi.",
+  "imageAsset": "media/Harput-kalesi-dogu-terasi.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12th Century"
+}

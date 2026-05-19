@@ -1,0 +1,13 @@
+{
+  "id": "tl-harput-kalesi-tarihi-hamami",
+  "placeId": "harput-kalesi-tarihi-hamami",
+  "events": [
+    {
+      "id": "ev-harput-kalesi-tarihi-hamami-1",
+      "year": "1150",
+      "title": "Laying the First Foundations",
+      "content": "The first foundations were laid to strengthen the region's defense.",
+      "imageAsset": "media/Harput-kalesi-tarihi-hamami.jpg"
+    }
+  ]
+}

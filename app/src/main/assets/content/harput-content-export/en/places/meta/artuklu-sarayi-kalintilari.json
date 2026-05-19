@@ -1,0 +1,12 @@
+{
+  "id": "artuklu-sarayi-kalintilari",
+  "name": "ARTUKLU SARAYI KALINTILARI (EN)",
+  "shortDescription": "A short description for Artuklu sarayi kalintilari.",
+  "imageAsset": "media/Artuklu-sarayi-kalintilari.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12th Century"
+}

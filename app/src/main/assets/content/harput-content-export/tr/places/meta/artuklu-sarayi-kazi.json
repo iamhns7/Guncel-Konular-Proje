@@ -1,0 +1,12 @@
+{
+  "id": "artuklu-sarayi-kazi",
+  "name": "ARTUKLU SARAYI KAZI",
+  "shortDescription": "Artuklu sarayi kazi için kısa bir açıklama.",
+  "imageAsset": "media/Artuklu-sarayi-kazi.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12. Yüzyıl"
+}

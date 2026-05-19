@@ -1,0 +1,13 @@
+{
+  "id": "tl-artuklu-sarayi-kalintilari",
+  "placeId": "artuklu-sarayi-kalintilari",
+  "events": [
+    {
+      "id": "ev-artuklu-sarayi-kalintilari-1",
+      "year": "1150",
+      "title": "İlk Temellerin Atılması",
+      "content": "Bölgenin savunmasını güçlendirmek amacıyla ilk temeller atıldı.",
+      "imageAsset": "media/Artuklu-sarayi-kalintilari.jpg"
+    }
+  ]
+}

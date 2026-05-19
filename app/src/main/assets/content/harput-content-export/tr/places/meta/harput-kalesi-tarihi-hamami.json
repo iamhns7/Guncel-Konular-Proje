@@ -1,0 +1,12 @@
+{
+  "id": "harput-kalesi-tarihi-hamami",
+  "name": "HARPUT KALESI TARIHI HAMAMI",
+  "shortDescription": "Harput kalesi tarihi hamami için kısa bir açıklama.",
+  "imageAsset": "media/Harput-kalesi-tarihi-hamami.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12. Yüzyıl"
+}

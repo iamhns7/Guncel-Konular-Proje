@@ -1,0 +1,13 @@
+{
+  "id": "tl-artuklu-sarnici-ve-zindani",
+  "placeId": "artuklu-sarnici-ve-zindani",
+  "events": [
+    {
+      "id": "ev-artuklu-sarnici-ve-zindani-1",
+      "year": "1150",
+      "title": "Laying the First Foundations",
+      "content": "The first foundations were laid to strengthen the region's defense.",
+      "imageAsset": "media/Artuklu-sarnici-ve-zindani.jpg"
+    }
+  ]
+}

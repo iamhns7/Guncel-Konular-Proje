@@ -1,0 +1,13 @@
+{
+  "id": "tl-harput-yakindan",
+  "placeId": "harput-yakindan",
+  "events": [
+    {
+      "id": "ev-harput-yakindan-1",
+      "year": "1150",
+      "title": "Laying the First Foundations",
+      "content": "The first foundations were laid to strengthen the region's defense.",
+      "imageAsset": "media/harput-yakindan.jpg"
+    }
+  ]
+}

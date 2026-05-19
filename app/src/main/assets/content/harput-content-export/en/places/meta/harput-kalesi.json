@@ -1,0 +1,12 @@
+{
+  "id": "harput-kalesi",
+  "name": "HARPUT KALESI (EN)",
+  "shortDescription": "A short description for Harput kalesi.",
+  "imageAsset": "media/Harput-kalesi.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12th Century"
+}
