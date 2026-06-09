@@ -38,15 +38,17 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -64,7 +66,11 @@ import com.tayyipgunay.harputarguide.core.design.component.defaultHarputPlacehol
 import com.tayyipgunay.harputarguide.core.design.component.HarputBottomBarStyle
 import com.tayyipgunay.harputarguide.core.design.component.HarputBottomTab
 import com.tayyipgunay.harputarguide.core.design.component.PlaceDetailInfoGrid
+import com.tayyipgunay.harputarguide.core.common.openGoogleMapsNavigation
+import com.tayyipgunay.harputarguide.core.design.theme.HarputColors
+import com.tayyipgunay.harputarguide.data.map.HarputMapPoints
 import com.tayyipgunay.harputarguide.domain.model.PlaceDetail
+import kotlinx.coroutines.launch
 
 private val HeroHeight = 240.dp
 private val PanelOverlap = 24.dp
@@ -74,34 +80,57 @@ fun PlaceDetailScreen(
     placeId: String,
     uiState: PlaceDetailUiState,
     onRetry: () -> Unit,
+    onToggleVisited: () -> Unit,
+    onToggleFavorite: () -> Unit,
+    onMessageConsumed: () -> Unit,
     onBackClick: () -> Unit,
-    onNavigateClick: (String) -> Unit,
     onArClick: (String) -> Unit,
-    onModelViewerClick: (String) -> Unit,
     onHomeClick: () -> Unit,
     onPlacesClick: () -> Unit,
     onVisitedClick: () -> Unit,
     onFavoritesClick: () -> Unit,
     onAboutClick: () -> Unit
 ) {
-    var isFavorite by remember(placeId) { mutableStateOf(false) }
-
-    val cream = Color(0xFFF5EBDD)
-    val panelColor = Color(0xFFF8F1E6)
-    val darkBrown = Color(0xFF4B2E1F)
-    val softBrown = Color(0xFF72533C)
-    val bottomBarBg = Color(0xFFF0E4D4)
+    val cream = HarputColors.Cream
+    val panelColor = HarputColors.CardCream
+    val darkBrown = HarputColors.DarkBrown
+    val softBrown = HarputColors.SoftBrown
+    val bottomBarBg = HarputColors.BottomBarBg
     val dividerColor = Color(0xFFB89977).copy(alpha = 0.35f)
-    val checkGreen = Color(0xFF5A8F4A)
+    val checkGreen = HarputColors.VisitedGreen
     val errorMessage = when (uiState.error) {
         PlaceDetailError.LOAD_FAILED -> stringResource(R.string.place_detail_error_load)
         PlaceDetailError.NOT_FOUND -> stringResource(R.string.place_detail_error_missing)
         null -> null
     }
 
+    val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+    val snackbarHostState = remember { SnackbarHostState() }
+    val locationNotFoundMsg = stringResource(R.string.navigation_location_not_found)
+    val visitedAddedMsg = stringResource(R.string.place_detail_visited_added)
+    val visitedRemovedMsg = stringResource(R.string.place_detail_visited_removed)
+    val favoriteAddedMsg = stringResource(R.string.place_detail_favorite_added)
+    val favoriteRemovedMsg = stringResource(R.string.place_detail_favorite_removed)
+    val actionFailedMsg = stringResource(R.string.place_detail_action_failed)
+
+    LaunchedEffect(uiState.message) {
+        val message = uiState.message ?: return@LaunchedEffect
+        val text = when (message) {
+            PlaceDetailMessage.VISITED_ADDED -> visitedAddedMsg
+            PlaceDetailMessage.VISITED_REMOVED -> visitedRemovedMsg
+            PlaceDetailMessage.FAVORITE_ADDED -> favoriteAddedMsg
+            PlaceDetailMessage.FAVORITE_REMOVED -> favoriteRemovedMsg
+            PlaceDetailMessage.ACTION_FAILED -> actionFailedMsg
+        }
+        snackbarHostState.showSnackbar(text)
+        onMessageConsumed()
+    }
+
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         containerColor = cream,
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         bottomBar = {
             HarputBottomBar(
                 selectedTab = HarputBottomTab.Places,
@@ -155,22 +184,38 @@ fun PlaceDetailScreen(
                 ) {
                     DetailHeroSection(
                         detail = detail,
-                        isFavorite = isFavorite,
+                        isFavorite = uiState.isFavorite,
                         panelColor = panelColor,
                         onBackClick = onBackClick,
-                        onFavoriteClick = { isFavorite = !isFavorite }
+                        onFavoriteClick = onToggleFavorite
                     )
 
                     DetailContentPanel(
                         detail = detail,
+                        isVisited = uiState.isVisited,
+                        isArAvailable = uiState.isArAvailable,
                         panelColor = panelColor,
                         darkBrown = darkBrown,
                         softBrown = softBrown,
                         dividerColor = dividerColor,
                         checkGreen = checkGreen,
-                        onNavigateClick = { onNavigateClick(placeId) },
+                        onNavigateClick = {
+                            val mapPoint = HarputMapPoints.findByPlaceId(placeId)
+                            if (mapPoint != null) {
+                                openGoogleMapsNavigation(
+                                    context = context,
+                                    latitude = mapPoint.latitude,
+                                    longitude = mapPoint.longitude,
+                                    mode = "w"
+                                )
+                            } else {
+                                scope.launch {
+                                    snackbarHostState.showSnackbar(locationNotFoundMsg)
+                                }
+                            }
+                        },
                         onArClick = { onArClick(placeId) },
-                        onModelViewerClick = { onModelViewerClick(placeId) },
+                        onToggleVisited = onToggleVisited,
                         modifier = Modifier.offset(y = -PanelOverlap)
                     )
 
@@ -313,6 +358,8 @@ private fun CircleIconButton(
 @Composable
 private fun DetailContentPanel(
     detail: PlaceDetail,
+    isVisited: Boolean,
+    isArAvailable: Boolean,
     panelColor: Color,
     darkBrown: Color,
     softBrown: Color,
@@ -320,7 +367,7 @@ private fun DetailContentPanel(
     checkGreen: Color,
     onNavigateClick: () -> Unit,
     onArClick: () -> Unit,
-    onModelViewerClick: () -> Unit,
+    onToggleVisited: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -408,6 +455,55 @@ private fun DetailContentPanel(
             }
 
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                if (isVisited) {
+                    Button(
+                        onClick = onToggleVisited,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(50.dp),
+                        shape = RoundedCornerShape(14.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = checkGreen,
+                            contentColor = Color.White
+                        )
+                    ) {
+                        ActionButtonContent(
+                            icon = {
+                                Icon(
+                                    imageVector = Icons.Filled.Check,
+                                    contentDescription = null,
+                                    tint = Color.White,
+                                    modifier = Modifier.size(20.dp)
+                                )
+                            },
+                            label = stringResource(R.string.place_detail_visited),
+                            labelColor = Color.White
+                        )
+                    }
+                } else {
+                    OutlinedButton(
+                        onClick = onToggleVisited,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(50.dp),
+                        shape = RoundedCornerShape(14.dp),
+                        colors = ButtonDefaults.outlinedButtonColors(contentColor = checkGreen)
+                    ) {
+                        ActionButtonContent(
+                            icon = {
+                                Icon(
+                                    imageVector = Icons.Filled.Check,
+                                    contentDescription = null,
+                                    tint = checkGreen,
+                                    modifier = Modifier.size(20.dp)
+                                )
+                            },
+                            label = stringResource(R.string.place_detail_mark_visited),
+                            labelColor = checkGreen
+                        )
+                    }
+                }
+
                 OutlinedButton(
                     onClick = onNavigateClick,
                     modifier = Modifier
@@ -428,36 +524,34 @@ private fun DetailContentPanel(
                     )
                 }
 
-                Button(
-                    onClick = onArClick,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(50.dp),
-                    shape = RoundedCornerShape(14.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = darkBrown)
-                ) {
-                    ActionButtonContent(
-                        icon = {
-                            Icon(
-                                imageVector = Icons.Filled.ViewInAr,
-                                contentDescription = null,
-                                tint = Color(0xFFF5EBDD),
-                                modifier = Modifier.size(20.dp)
-                            )
-                        },
-                        label = stringResource(R.string.place_detail_ar),
-                        labelColor = Color(0xFFF5EBDD)
-                    )
-                }
-
-                TextButton(
-                    onClick = onModelViewerClick,
-                    modifier = Modifier.align(Alignment.CenterHorizontally)
-                ) {
+                if (isArAvailable) {
+                    Button(
+                        onClick = onArClick,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(50.dp),
+                        shape = RoundedCornerShape(14.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = darkBrown)
+                    ) {
+                        ActionButtonContent(
+                            icon = {
+                                Icon(
+                                    imageVector = Icons.Filled.ViewInAr,
+                                    contentDescription = null,
+                                    tint = Color(0xFFF5EBDD),
+                                    modifier = Modifier.size(20.dp)
+                                )
+                            },
+                            label = stringResource(R.string.place_detail_ar),
+                            labelColor = Color(0xFFF5EBDD)
+                        )
+                    }
+                } else {
                     Text(
-                        text = stringResource(R.string.place_detail_model),
+                        text = stringResource(R.string.place_detail_ar_unavailable),
                         color = softBrown,
-                        fontSize = 13.sp
+                        fontSize = 13.sp,
+                        modifier = Modifier.align(Alignment.CenterHorizontally)
                     )
                 }
             }

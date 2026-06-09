@@ -23,12 +23,14 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.tayyipgunay.harputarguide.R
+import com.tayyipgunay.harputarguide.core.design.theme.HarputColors
 import kotlinx.coroutines.delay
 
 private const val SPLASH_DURATION_MS = 1500L
@@ -37,10 +39,10 @@ private const val SPLASH_DURATION_MS = 1500L
 fun SplashScreen(
     onSplashFinished: () -> Unit
 ) {
-    val cream = Color(0xFFF5EBDD)
-    val darkBrown = Color(0xFF4B2E1F)
-    val softBrown = Color(0xFF72533C)
-    val iconBg = Color(0xFFE8DFD0)
+    val cream = HarputColors.Cream
+    val darkBrown = HarputColors.DarkBrown
+    val softBrown = HarputColors.SoftBrown
+    val iconBg = HarputColors.IconBg
 
     LaunchedEffect(Unit) {
         delay(SPLASH_DURATION_MS)
@@ -67,14 +69,14 @@ fun SplashScreen(
             ) {
                 Icon(
                     imageVector = Icons.Filled.AccountBalance,
-                    contentDescription = "Harput logosu",
+                    contentDescription = stringResource(R.string.cd_app_logo),
                     tint = darkBrown,
                     modifier = Modifier.size(48.dp)
                 )
             }
 
             Text(
-                text = "HARPUT",
+                text = stringResource(R.string.app_brand),
                 color = darkBrown,
                 fontFamily = FontFamily.Serif,
                 fontWeight = FontWeight.Bold,
@@ -84,7 +86,7 @@ fun SplashScreen(
             )
 
             Text(
-                text = "AKILLI AR TUR REHBERİ",
+                text = stringResource(R.string.app_tagline),
                 color = softBrown,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 13.sp,
@@ -95,7 +97,7 @@ fun SplashScreen(
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = "Tarihi keşif başlıyor...",
+                text = stringResource(R.string.splash_loading),
                 color = softBrown.copy(alpha = 0.85f),
                 fontSize = 14.sp,
                 textAlign = TextAlign.Center

@@ -49,7 +49,7 @@ enum class HarputBottomBarStyle {
 
 @Composable
 fun HarputBottomBar(
-    selectedTab: HarputBottomTab,
+    selectedTab: HarputBottomTab?,
     style: HarputBottomBarStyle,
     onHomeClick: () -> Unit,
     onPlacesClick: () -> Unit,

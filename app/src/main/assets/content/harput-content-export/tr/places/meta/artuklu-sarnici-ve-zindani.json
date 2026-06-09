@@ -1,8 +1,8 @@
 {
   "id": "artuklu-sarnici-ve-zindani",
-  "name": "ARTUKLU SARNICI VE ZINDANI",
-  "shortDescription": "Artuklu sarnici ve zindani için kısa bir açıklama.",
-  "imageAsset": "media/Artuklu-sarnici-ve-zindani.jpg",
+  "name": "Urartu Sarnıcı ve Zindan Geçidi",
+  "shortDescription": "Kayaya oyulmuş sarnıç ve zindan geçidi alanını; basamakları, tünel geçidini ve iniş hattını tanıtan AR deneyimi.",
+  "imageAsset": "ar/images/artuklu-sarnici-ve-zindani-reference.jpg",
   "category": "historical",
   "coordinate": {
     "latitude": 38.705,

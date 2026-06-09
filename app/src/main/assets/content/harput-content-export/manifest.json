@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "defaultLocale": "en",
-  "supportedLocales": ["en", "tr"],
+  "defaultLocale": "tr",
+  "supportedLocales": ["tr", "en"],
   "mediaBasePath": "media"
 }

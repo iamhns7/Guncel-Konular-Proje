@@ -1,0 +1,49 @@
+{
+  "placeId": "artuklu-sarnici-ve-zindani",
+  "title": "Urartu Sarnıcı ve Zindan Geçidi",
+  "referenceImage": "artuklu-sarnici-ve-zindani-reference.jpg",
+  "physicalWidthMeters": 2.0,
+  "shortDescription": "Kayaya oyulmuş sarnıç ve zindan geçidi alanını; basamakları, tünel geçidini ve iniş hattını tanıtan AR deneyimi.",
+  "info": {
+    "constructionPeriod": "Harput Kalesi içindeki sarnıç ve zindan geçitleri genellikle Urartu dönemiyle ilişkilendirilir; sonraki dönemlerde farklı kullanım ve anlatılarla da anılmıştır.",
+    "materialAndArchitecture": "Alan, doğal kayanın oyulmasıyla oluşturulan geçit ve basamak sistemleri üzerinden okunabilir.",
+    "historySliderIdea": "Geçmişi Gör modunda geçidin eski kullanımında meşale aydınlatmaları, suya ulaşım ve kuşatma dönemindeki işlev temsilî olarak gösterilebilir."
+  },
+  "hotspots": [
+    {
+      "id": "kaya_oyma_yuzey",
+      "name": "Kaya Oyma Yüzey",
+      "x": 0.312,
+      "y": 0.285,
+      "shortDescription": "Doğal kayanın oyularak oluşturulduğu yüzeyi gösterir. Bu bölüm, sarnıç ve geçit alanının ana kaya ile doğrudan ilişkisini anlatır."
+    },
+    {
+      "id": "basamaklar",
+      "name": "Basamaklar",
+      "x": 0.651,
+      "y": 0.422,
+      "shortDescription": "Aşağıya doğru inen basamak hattını gösterir. Bu basamaklar, kalenin suya veya alt geçitlere ulaşım kurgusunu anlamak için önemlidir."
+    },
+    {
+      "id": "tunel_gecidi",
+      "name": "Tünel Geçidi",
+      "x": 0.518,
+      "y": 0.422,
+      "shortDescription": "Geçidin derinlere doğru devam eden bölümünü temsil eder. Bu nokta, sarnıç-zindan anlatısındaki gizemli geçiş hissini güçlendirir."
+    },
+    {
+      "id": "aydinlatma_alani",
+      "name": "Aydınlatma Alanı",
+      "x": 0.417,
+      "y": 0.53,
+      "shortDescription": "Geçit içindeki ışık alanını temsil eder. Geçmişi Gör modunda bu alana meşale veya tarihî aydınlatma etkisi eklenebilir."
+    },
+    {
+      "id": "zemin_inis_hatti",
+      "name": "Zemin / İniş Hattı",
+      "x": 0.534,
+      "y": 0.775,
+      "shortDescription": "Geçit boyunca aşağıya doğru ilerleyen zemin hattını gösterir. Kullanıcının yapının derinlik algısını ve iniş yönünü anlamasına yardımcı olur."
+    }
+  ]
+}

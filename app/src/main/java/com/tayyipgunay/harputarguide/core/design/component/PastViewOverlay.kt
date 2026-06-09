@@ -1,6 +1,5 @@
 package com.tayyipgunay.harputarguide.core.design.component
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -19,38 +18,23 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.graphics.ColorMatrix
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlin.math.roundToInt
 
-private val SepiaColorFilter = ColorFilter.colorMatrix(
-    ColorMatrix(
-        floatArrayOf(
-            0.393f, 0.769f, 0.189f, 0f, 0f,
-            0.349f, 0.686f, 0.168f, 0f, 0f,
-            0.272f, 0.534f, 0.131f, 0f, 0f,
-            0f, 0f, 0f, 1f, 0f
-        )
-    )
-)
-
 /**
- * Kamera / günümüz görüntüsünün ÜZERİNE bindirilen geçmiş katmanı.
- * Alt katmandaki canlı görüntü [ARScreen] içinde gösterilir; bu composable yalnızca overlay çizer.
+ * Kamera / günümüz görüntüsünün üzerine bindirilen geçmiş rekonstrüksiyon katmanı.
  */
 @Composable
 fun PastViewOverlay(
     sliderValue: Float,
-    presentImageRes: Int,
+    pastImageAssetPath: String,
     modifier: Modifier = Modifier
 ) {
     val clampedSlider = sliderValue.coerceIn(0f, 1f)
@@ -60,10 +44,7 @@ fun PastViewOverlay(
         val density = LocalDensity.current
         val dividerX = (clampedSlider * constraints.maxWidth).roundToInt()
 
-        // Tam ekran yarı saydam geçmiş tonu (slider → opaklık)
-        Image(
-            painter = painterResource(id = presentImageRes),
-            contentDescription = "Geçmiş rekonstrüksiyon katmanı",
+        Box(
             modifier = Modifier
                 .fillMaxSize()
                 .graphicsLayer { alpha = overlayAlpha * 0.85f }
@@ -72,33 +53,35 @@ fun PastViewOverlay(
                     drawRect(
                         brush = Brush.verticalGradient(
                             colors = listOf(
-                                Color(0xFF3D2814).copy(alpha = 0.4f * overlayAlpha),
-                                Color(0xFF6B4A2A).copy(alpha = 0.3f * overlayAlpha),
-                                Color(0xFF2A1A0E).copy(alpha = 0.45f * overlayAlpha)
+                                Color(0xFF3D2814).copy(alpha = 0.25f * overlayAlpha),
+                                Color(0xFF6B4A2A).copy(alpha = 0.18f * overlayAlpha),
+                                Color(0xFF2A1A0E).copy(alpha = 0.28f * overlayAlpha)
                             )
                         )
                     )
-                },
-            contentScale = ContentScale.Crop,
-            colorFilter = SepiaColorFilter
-        )
+                }
+        ) {
+            AssetAsyncImage(
+                assetPath = pastImageAssetPath,
+                contentDescription = "Geçmiş rekonstrüksiyon katmanı",
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop
+            )
+        }
 
-        // Sol tarafta karşılaştırma için daha belirgin geçmiş şeridi
         if (dividerX > 0) {
             Box(
                 modifier = Modifier
                     .fillMaxHeight()
                     .width(with(density) { dividerX.toDp() })
                     .clip(RectangleShape)
+                    .graphicsLayer { alpha = (overlayAlpha * 0.95f).coerceAtLeast(0.05f) }
             ) {
-                Image(
-                    painter = painterResource(id = presentImageRes),
+                AssetAsyncImage(
+                    assetPath = pastImageAssetPath,
                     contentDescription = "Geçmiş karşılaştırma",
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .graphicsLayer { alpha = (overlayAlpha * 0.95f).coerceAtLeast(0.05f) },
-                    contentScale = ContentScale.Crop,
-                    colorFilter = SepiaColorFilter
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = ContentScale.Crop
                 )
             }
         }
@@ -109,7 +92,7 @@ fun PastViewOverlay(
                 .background(
                     Brush.horizontalGradient(
                         colorStops = arrayOf(
-                            0f to Color(0xFF4A3520).copy(alpha = overlayAlpha * 0.18f),
+                            0f to Color(0xFF4A3520).copy(alpha = overlayAlpha * 0.12f),
                             0.5f to Color.Transparent,
                             1f to Color.Transparent
                         )

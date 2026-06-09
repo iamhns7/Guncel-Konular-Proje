@@ -1,6 +1,7 @@
 package com.tayyipgunay.harputarguide.feature.onboarding
 
 import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -28,42 +29,44 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.tayyipgunay.harputarguide.R
 import com.tayyipgunay.harputarguide.core.design.component.OnboardingStepRow
+import com.tayyipgunay.harputarguide.core.design.theme.HarputColors
 
 private data class OnboardingStep(
     val number: Int,
-    val title: String,
-    val description: String,
+    @StringRes val titleRes: Int,
+    @StringRes val descRes: Int,
     @DrawableRes val imageResId: Int
 )
 
 private val onboardingSteps = listOf(
     OnboardingStep(
         number = 1,
-        title = "Nokta Seç",
-        description = "Harput'taki önemli noktaları seç.",
+        titleRes = R.string.onboarding_step1_title,
+        descRes = R.string.onboarding_step1_desc,
         imageResId = R.drawable.onboarding_png_1
     ),
     OnboardingStep(
         number = 2,
-        title = "Yönlendirmeyi Takip Et",
-        description = "Uygulama seni seçtiğin noktaya götürür.",
+        titleRes = R.string.onboarding_step2_title,
+        descRes = R.string.onboarding_step2_desc,
         imageResId = R.drawable.onboarding_png_2
     ),
     OnboardingStep(
         number = 3,
-        title = "AR ile Keşfet",
-        description = "Kamerayı aç, yapı üzerinde bilgi katmanlarını gör.",
+        titleRes = R.string.onboarding_step3_title,
+        descRes = R.string.onboarding_step3_desc,
         imageResId = R.drawable.onboarding_png_3
     ),
     OnboardingStep(
         number = 4,
-        title = "Dinle, Oku, Sor",
-        description = "Sesli anlatımı dinle, kitabeyi oku ve rehbere sor.",
+        titleRes = R.string.onboarding_step4_title,
+        descRes = R.string.onboarding_step4_desc,
         imageResId = R.drawable.onboarding_png_4
     )
 )
@@ -73,10 +76,10 @@ fun OnboardingScreen(
     onBackClick: () -> Unit,
     onStartClick: () -> Unit
 ) {
-    val cream = Color(0xFFF5EBDD)
-    val beige = Color(0xFFE4D3BD)
-    val darkBrown = Color(0xFF4B2E1F)
-    val softBrown = Color(0xFF72533C)
+    val cream = HarputColors.Cream
+    val beige = HarputColors.Beige
+    val darkBrown = HarputColors.DarkBrown
+    val softBrown = HarputColors.SoftBrown
     val iconBorder = Color(0xFFB99977).copy(alpha = 0.35f)
     val dividerColor = Color(0xFFB89977).copy(alpha = 0.28f)
 
@@ -117,8 +120,8 @@ fun OnboardingScreen(
                 onboardingSteps.forEachIndexed { index, step ->
                     OnboardingStepRow(
                         number = step.number,
-                        title = step.title,
-                        description = step.description,
+                        title = stringResource(step.titleRes),
+                        description = stringResource(step.descRes),
                         imageResId = step.imageResId,
                         titleColor = darkBrown,
                         descriptionColor = softBrown,
@@ -174,7 +177,7 @@ private fun OnboardingHeader(
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
         Text(
-            text = "Nasıl Çalışır?",
+            text = stringResource(R.string.onboarding_title),
             color = titleColor,
             fontFamily = FontFamily.Serif,
             fontWeight = FontWeight.Bold,
@@ -182,7 +185,7 @@ private fun OnboardingHeader(
             textAlign = TextAlign.Center
         )
         Text(
-            text = "Harput'u keşfetmek çok kolay!",
+            text = stringResource(R.string.onboarding_subtitle),
             color = subtitleColor,
             fontSize = 16.sp,
             textAlign = TextAlign.Center
@@ -212,7 +215,7 @@ private fun StartButton(
         ) {
             Spacer(modifier = Modifier.size(8.dp))
             Text(
-                text = "Başlayalım",
+                text = stringResource(R.string.onboarding_start),
                 color = contentColor,
                 fontSize = 20.sp,
                 fontWeight = FontWeight.SemiBold

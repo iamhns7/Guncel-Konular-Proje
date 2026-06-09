@@ -1,0 +1,221 @@
+{
+  "placeId": "harput-kalesi",
+  "title": "Harput Kalesi",
+  "purpose": "Bu dosya sadece hotspot tıklanınca açılacak detay içerikleri için kullanılır. AR referans fotoğrafı veya hotspot overlay kurulumu içermez.",
+  "hotspots": [
+    {
+      "id": "ana_burc",
+      "name": "Ana Burç",
+      "contentType": "model_3d",
+      "shortDescription": "Ana burç, kalenin savunma ve gözetleme amacıyla kullanılan çıkıntılı kule bölümünü temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Ana burç; taş bloklar, moloz taşlar ve bağlayıcı harç kullanılarak oluşturulmuş kalın bir savunma kütlesi olarak düşünülebilir. Dış yüzeyde daha iri taşlar, iç kısımda ise daha küçük taş ve dolgu malzemesi kullanılmış olabilir.",
+        "construction": "Burç gövdesi, taşların katmanlar hâlinde üst üste dizilmesi ve aralarının harçla doldurulmasıyla oluşturulur. Düz sur hattından dışa doğru taşan bu form, kaleye daha geniş bir görüş ve savunma açısı kazandırır.",
+        "purpose": "Burçlar çevreyi gözetlemek, yaklaşan tehlikeleri erken fark etmek ve sur hattını savunma açısından güçlendirmek için kullanılır. Dışa taşan form sayesinde savunmacılar farklı yönleri daha iyi kontrol edebilir.",
+        "significance": "Ana burç, Harput Kalesi’nin yalnızca düz duvarlardan oluşmadığını; gözetleme ve savunma için özel olarak planlanmış mimari elemanlara sahip olduğunu gösterir."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Taş blok / moloz taş / harç"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Taş örgü + dolgu kütlesi"
+        },
+        {
+          "label": "İşlev",
+          "value": "Gözetleme ve savunma"
+        },
+        {
+          "label": "Mimari Rol",
+          "value": "Dışa taşan savunma kütlesi"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/harput-kalesi-ana_burc.png"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "tas_duvar_dokusu",
+      "name": "Taş Duvar Dokusu",
+      "contentType": "material_analysis",
+      "shortDescription": "Taş duvar dokusu, kalenin dış savunma yüzeyindeki taş örgü sistemini gösterir.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Bu bölüm taş bloklar, yerel taş parçaları, moloz taş ve bağlayıcı harç kullanılarak oluşturulmuş bir duvar dokusunu temsil eder. Fotoğraftan taş türünü kesin olarak belirlemek doğru olmayacağı için genel olarak “taş duvar dokusu” ifadesi kullanılmalıdır.",
+        "construction": "Taşlar farklı boyutlarda seçilip duvar yüzeyine yerleştirilir. Büyük taşlar dış yüzeyde dayanıklılık sağlar. Taşların arasındaki boşluklar harç veya küçük taş parçalarıyla doldurulur. İç bölümde dolgu malzemesiyle duvarın kütlesi güçlendirilmiş olabilir.",
+        "purpose": "Taş duvar, kalenin savunma sınırını oluşturur. Kalın taş örgü, dış etkilere karşı dayanıklılık sağlar ve yapının uzun süre ayakta kalmasına yardımcı olur.",
+        "significance": "Duvar dokusu, kalenin yapım tekniğini doğrudan gösteren en okunabilir yüzeylerden biridir. Taşların boyutu, dizilişi ve harç boşlukları yapının inşa mantığını anlamaya yardımcı olur."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Taş blok / yerel taş"
+        },
+        {
+          "label": "Bağlayıcı",
+          "value": "Harç / derz dolgusu"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Taş örgü + iç dolgu"
+        },
+        {
+          "label": "İşlev",
+          "value": "Savunma duvarı"
+        },
+        {
+          "label": "Doku",
+          "value": "Taş örgü yüzeyi"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": true
+      },
+      "media": {
+        "detailImage": "detail_images/harput-kalesi-tas_duvar_dokusu.png"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "ust_sur_hatti",
+      "name": "Üst Sur Hattı",
+      "contentType": "history_slider",
+      "shortDescription": "Üst sur hattı, kalenin üst bölümünde devam eden savunma çizgisini temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Üst sur hattı taş bloklar, moloz taşlar ve harçla oluşturulmuş savunma duvarının üst bölümüdür. Günümüze ulaşan kısımlar yıpranmış veya eksilmiş olabilir.",
+        "construction": "Sur hattı, kalenin çevresini izleyen duvar çizgisi boyunca yükseltilir. Üst bölümler savunma ve gözetleme için kullanılmış olabilir. Zaman içinde doğal aşınma, yıkım veya onarımlar nedeniyle özgün görünüm değişmiş olabilir.",
+        "purpose": "Üst sur hattı, kalenin korunma çizgisini oluşturur. Savunmacıların üst seviyeden çevreyi izlemesine ve sur hattı boyunca hareket etmesine yardımcı olur.",
+        "significance": "Bu bölüm, kalenin geçmişte daha bütünlüklü bir savunma yapısına sahip olduğunu anlatmak için uygundur. Günümüzde eksik görünen parçalar, yapının tarihsel süreçte yıprandığını gösterir."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Taş / harç"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Çevreyi izleyen taş sur hattı"
+        },
+        {
+          "label": "İşlev",
+          "value": "Savunma çizgisi"
+        },
+        {
+          "label": "Durum",
+          "value": "Kısmen yıpranmış veya eksilmiş olabilir"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": true,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/harput-kalesi-ust_sur_hatti.jpg"
+      },
+      "audioText": null,
+      "historyIdea": "Slider ile bugünkü yıpranmış sur çizgisi ile temsilî tamamlanmış savunma duvarı karşılaştırılabilir."
+    },
+    {
+      "id": "kayalik_temel",
+      "name": "Kayalık Temel",
+      "contentType": "info_card",
+      "shortDescription": "Kayalık temel, kalenin doğal kayalık zeminle kurduğu ilişkiyi gösterir.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Bu bölüm insan yapımı bir duvardan çok doğal kaya yüzeyini temsil eder. Kale, doğal kayalık zemine oturtulmuş veya bu zeminle bütünleşecek biçimde inşa edilmiş olabilir.",
+        "construction": "Kayalık alan taşıyıcı zemin olarak kullanılmıştır. Duvarlar ve burçlar bu sağlam yüzeye oturtulur. Bazı noktalarda kaya yüzeyi düzeltilmiş, oyulmuş veya üzerine taş örgü duvarlar yerleştirilmiş olabilir.",
+        "purpose": "Kayalık temel kaleye doğal bir savunma avantajı sağlar. Yüksek ve sarp zemin, kaleye ulaşmayı zorlaştırır ve yapının savunma gücünü artırır.",
+        "significance": "Bu hotspot, Harput Kalesi’nin yalnızca insan yapımı duvarlarla değil, bulunduğu doğal coğrafyayla da güçlü bir savunma yapısı hâline geldiğini gösterir."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Doğal kaya"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Kayalık zemin üzerine yerleşim"
+        },
+        {
+          "label": "İşlev",
+          "value": "Taşıyıcı zemin ve doğal savunma"
+        },
+        {
+          "label": "Mimari Rol",
+          "value": "Kale ve arazi bütünleşmesi"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/harput-kalesi-kayalik_temel.jpg"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "sag_burc",
+      "name": "Sağ Burç",
+      "contentType": "info_card",
+      "shortDescription": "Sağ burç, kalenin sağ tarafındaki savunma çıkıntısını temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Sağ burç; taş bloklar, moloz taşlar ve harçla oluşturulmuş çıkıntılı bir savunma kütlesi olarak düşünülebilir. Dış yüzeyde taş örgü, iç bölümde dolgu mantığı bulunabilir.",
+        "construction": "Burç, sur hattının dışa doğru çıkıntı yapan bir bölümü olarak inşa edilir. Taşlar katmanlar hâlinde dizilir, araları harçla sabitlenir ve savunma amacıyla kalın bir kütle oluşturulur.",
+        "purpose": "Sağ burç kalenin sağ cephesini kontrol eder. Farklı yönlerden gelebilecek tehditlere karşı gözetleme ve savunma imkânı sağlar.",
+        "significance": "Bu bölüm, kalenin çok cepheli bir savunma mantığına sahip olduğunu gösterir. Burçlar, kalenin savunma hattını daha etkili hâle getiren mimari elemanlardır."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Taş / harç / dolgu"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Çıkıntılı taş savunma kütlesi"
+        },
+        {
+          "label": "İşlev",
+          "value": "Cephe kontrolü ve savunma"
+        },
+        {
+          "label": "Mimari Rol",
+          "value": "Sağ savunma hattı"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/harput-kalesi-sag_burc.png"
+      },
+      "audioText": null,
+      "historyIdea": null
+    }
+  ]
+}

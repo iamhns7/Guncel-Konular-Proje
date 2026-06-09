@@ -32,12 +32,14 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.tayyipgunay.harputarguide.R
+import com.tayyipgunay.harputarguide.core.design.theme.HarputColors
 
 @Composable
 fun WelcomeScreen(
@@ -45,10 +47,10 @@ fun WelcomeScreen(
     onFavoritesClick: () -> Unit,
     onAboutClick: () -> Unit
 ) {
-    val cream = Color(0xFFF5EBDD)
-    val beige = Color(0xFFE4D3BD)
-    val darkBrown = Color(0xFF4B2E1F)
-    val softBrown = Color(0xFF72533C)
+    val cream = HarputColors.Cream
+    val beige = HarputColors.Beige
+    val darkBrown = HarputColors.DarkBrown
+    val softBrown = HarputColors.SoftBrown
 
     Box(
         modifier = Modifier
@@ -123,14 +125,14 @@ private fun BrandHeader(
             )
         }
         Text(
-            text = "HARPUT",
+            text = stringResource(R.string.app_brand),
             color = titleColor,
             fontFamily = FontFamily.Serif,
             fontWeight = FontWeight.Bold,
             fontSize = 34.sp
         )
         Text(
-            text = "AKILLI AR TUR REHBERİ",
+            text = stringResource(R.string.app_tagline),
             color = subtitleColor,
             fontSize = 11.sp,
             fontWeight = FontWeight.Medium,
@@ -181,7 +183,7 @@ private fun WelcomeTexts(
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         Text(
-            text = "Harput Kalesi'ni\nkeşfetmeye hazır mısın?",
+            text = stringResource(R.string.welcome_title),
             color = titleColor,
             fontFamily = FontFamily.Serif,
             fontWeight = FontWeight.SemiBold,
@@ -190,7 +192,7 @@ private fun WelcomeTexts(
             textAlign = TextAlign.Center
         )
         Text(
-            text = "Tarihi noktaları keşfet, geçmişi\ngünümüzle karşılaştır ve Harput'u\nAR ile keşfetmenin keyfini çıkar.",
+            text = stringResource(R.string.welcome_description),
             color = descriptionColor,
             fontSize = 18.sp,
             lineHeight = 24.sp,
@@ -203,7 +205,7 @@ private fun WelcomeTexts(
 private fun CastleImage() {
     Image(
         painter = painterResource(id = R.drawable.harput_welcome_png),
-        contentDescription = "Harput Kalesi",
+        contentDescription = stringResource(R.string.cd_castle_image),
         modifier = Modifier
             .fillMaxWidth()
             .height(220.dp)
@@ -237,14 +239,14 @@ private fun StartTourButton(
         ) {
             Spacer(modifier = Modifier.size(8.dp))
             Text(
-                text = "Turu Başlat",
-                color = Color(0xFFF5EBDD),
+                text = stringResource(R.string.welcome_start_tour),
+                color = HarputColors.Cream,
                 fontSize = 20.sp,
                 fontWeight = FontWeight.SemiBold
             )
             Text(
                 text = "→",
-                color = Color(0xFFF5EBDD),
+                color = HarputColors.Cream,
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold
             )
@@ -267,7 +269,7 @@ private fun BottomActions(
             onClick = onFavoritesClick
         ) {
             Text(
-                text = "♡  Favorilerim",
+                text = stringResource(R.string.welcome_favorites),
                 color = titleColor,
                 fontSize = 14.sp
             )
@@ -283,7 +285,7 @@ private fun BottomActions(
             onClick = onAboutClick
         ) {
             Text(
-                text = "⌖  Hakkında",
+                text = stringResource(R.string.welcome_about),
                 color = titleColor,
                 fontSize = 14.sp
             )

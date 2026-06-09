@@ -2,62 +2,42 @@ package com.tayyipgunay.harputarguide.data.asset
 
 import com.tayyipgunay.harputarguide.domain.model.Place
 
+/** Asset JSON okunamadığında kullanılan yedek liste — yalnızca 5 AR noktası. */
 object SamplePlaces {
     val list: List<Place> = listOf(
         Place(
-            id = "kale_surlari",
-            name = "Kale Surları",
-            description = "Harput Kalesi'nin etkileyici sur kalıntıları.",
-            distance = "1.2 km",
-            isVisited = true
-        ),
-        Place(
-            id = "harput_kalesi",
+            id = "harput-kalesi",
             name = "Harput Kalesi",
-            description = "Harput'un simgesi, tarihi kalenin büyüleyici yapısı.",
+            description = "Harput Kalesi'nin dış surları, burçları ve taş duvar dokusu.",
             distance = "1.3 km",
-            isVisited = true
-        ),
-        Place(
-            id = "seyir_noktasi",
-            name = "Seyir Noktası",
-            description = "Harput'u kuşbakışı görebileceğiniz nokta.",
-            distance = "1.6 km",
             isVisited = false
         ),
         Place(
-            id = "ulu_cami",
-            name = "Ulu Cami",
-            description = "Tarihi Ulu Cami kalıntıları.",
-            distance = "1.5 km",
+            id = "harput-kalesi-genis-aci",
+            name = "Harput Kalesi - Geniş Açı",
+            description = "Kalenin genel kütlesi, sur hatları ve burçları geniş açıdan.",
+            distance = "1.3 km",
             isVisited = false
         ),
         Place(
-            id = "kuyu_ve_sarnic",
-            name = "Kuyu ve Sarnıç",
-            description = "Tarihi su kuyusu ve sarnıçlar.",
+            id = "ic-kale-ve-kazi-alani",
+            name = "İç Kale ve Kazı Alanı",
+            description = "Kazı zemini, seramik kaplar ve yapı kalıntıları.",
+            distance = "1.2 km",
+            isVisited = false
+        ),
+        Place(
+            id = "artuklu-sarnici-ve-zindani",
+            name = "Urartu Sarnıcı ve Zindan Geçidi",
+            description = "Kayaya oyulmuş sarnıç ve zindan geçidi.",
             distance = "1.1 km",
-            isVisited = true
-        ),
-        Place(
-            id = "kale_giris_kapisi",
-            name = "Kale Giriş Kapısı",
-            description = "Kalenin ana giriş bölümü ve savunma geçidi.",
-            distance = "1.4 km",
             isVisited = false
         ),
         Place(
-            id = "ic_kale_ust_alan",
-            name = "İç Kale / Üst Alan",
-            description = "Kalenin iç bölümünde yer alan tarihi alan.",
-            distance = "1.7 km",
-            isVisited = false
-        ),
-        Place(
-            id = "sefik_gul_kultur_evi",
-            name = "Şefik Gül Kültür Evi",
-            description = "Harput kültürünü yansıtan geleneksel yapı.",
-            distance = "900 m",
+            id = "ulu-cami",
+            name = "Harput Ulu Cami",
+            description = "Eğri minare, tuğla örgü ve moloz taş duvarlar.",
+            distance = "1.5 km",
             isVisited = false
         )
     )

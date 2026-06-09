@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Harput AR Guide</string>
+    <string name="app_brand">HARPUT</string>
+    <string name="app_tagline">SMART AR TOUR GUIDE</string>
 
     <string name="tab_home">Home</string>
     <string name="tab_places">Places</string>
@@ -8,6 +10,52 @@
     <string name="tab_visited">Visited</string>
     <string name="tab_about">About</string>
 
+    <string name="action_retry">Try again</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_back">Go back</string>
+    <string name="cd_menu">Menu</string>
+    <string name="cd_filter">Filter</string>
+    <string name="cd_back">Back</string>
+    <string name="cd_favorite">Favorite</string>
+    <string name="cd_visited">Visited</string>
+    <string name="cd_info">Info</string>
+    <string name="cd_close">Close</string>
+
+    <string name="splash_loading">Starting the historic journey…</string>
+    <string name="cd_app_logo">Harput logo</string>
+
+    <string name="welcome_title">Are you ready to\nexplore Harput Castle?</string>
+    <string name="welcome_description">Discover historic sites, compare the past\nwith the present and enjoy exploring\nHarput in AR.</string>
+    <string name="welcome_start_tour">Start Tour</string>
+    <string name="welcome_favorites">♡  Favorites</string>
+    <string name="welcome_about">⌖  About</string>
+    <string name="cd_castle_image">Harput Castle</string>
+
+    <string name="onboarding_title">How does it work?</string>
+    <string name="onboarding_subtitle">Exploring Harput is easy!</string>
+    <string name="onboarding_start">Let\'s start</string>
+    <string name="onboarding_step1_title">Pick a Site</string>
+    <string name="onboarding_step1_desc">Choose key sites in Harput.</string>
+    <string name="onboarding_step2_title">Follow the Guidance</string>
+    <string name="onboarding_step2_desc">The app takes you to the site you picked.</string>
+    <string name="onboarding_step3_title">Explore in AR</string>
+    <string name="onboarding_step3_desc">Open the camera and see info layers on the structure.</string>
+    <string name="onboarding_step4_title">Explore and Learn</string>
+    <string name="onboarding_step4_desc">Examine structures, materials, and historic texture interactively with AR.</string>
+
+    <string name="home_menu_start_tour_title">Start Tour</string>
+    <string name="home_menu_start_tour_desc">Start exploring right away.</string>
+    <string name="home_menu_ar_title">Open AR Camera</string>
+    <string name="home_menu_ar_desc">Open the camera, see the past.</string>
+    <string name="home_menu_favorites_title">Favorites</string>
+    <string name="home_menu_favorites_desc">See the places you saved.</string>
+    <string name="home_menu_visited_title">Visited Places</string>
+    <string name="home_menu_visited_desc">View the places you explored.</string>
+    <string name="home_menu_faq_title">Ask the Guide</string>
+    <string name="home_menu_faq_desc">Ask what you wonder, get answers.</string>
+    <string name="home_menu_about_title">About</string>
+    <string name="home_menu_about_desc">Learn about the app.</string>
+
     <string name="places_title">Historic Places</string>
     <string name="places_subtitle">Choose key sites in Harput\nand start exploring.</string>
     <string name="places_filter_soon">Filtering will be added soon.</string>
@@ -15,9 +63,6 @@
     <string name="places_error_empty">No places to display.</string>
     <string name="places_empty_title">No places found</string>
     <string name="places_empty_description">There are no historic sites to list yet.</string>
-    <string name="action_retry">Try again</string>
-    <string name="cd_menu">Menu</string>
-    <string name="cd_filter">Filter</string>
 
     <string name="place_detail_error_load">Could not load details. Please try again.</string>
     <string name="place_detail_error_missing">Details for this place were not found.</string>
@@ -26,11 +71,78 @@
     <string name="place_detail_category">Category</string>
     <string name="place_detail_highlights">Highlights</string>
     <string name="place_detail_navigate">Get directions</string>
+    <string name="navigation_location_not_found">Location not found</string>
     <string name="place_detail_ar">View in AR</string>
-    <string name="place_detail_model">View 3D model</string>
-    <string name="cd_back">Back</string>
-    <string name="cd_favorite">Favorite</string>
-    <string name="cd_visited">Visited</string>
+    <string name="place_detail_model">Architectural Analysis</string>
+    <string name="place_detail_mark_visited">Mark as visited</string>
+    <string name="place_detail_visited">Visited</string>
+    <string name="place_detail_visited_added">Marked as visited.</string>
+    <string name="place_detail_visited_removed">Visited mark removed.</string>
+    <string name="place_detail_favorite_added">Added to favorites.</string>
+    <string name="place_detail_favorite_removed">Removed from favorites.</string>
+    <string name="place_detail_action_failed">Action could not be completed. Please try again.</string>
+
+    <string name="favorites_title">Favorites</string>
+    <string name="favorites_subtitle">View the historic sites you have saved here.</string>
+    <string name="favorites_info">Your favorites are stored permanently on your device.</string>
+    <string name="favorites_error_load">Could not load places. Please try again.</string>
+    <string name="favorites_remove_failed">Could not remove favorite. Please try again.</string>
+    <string name="favorites_empty_title">No favorites yet</string>
+    <string name="favorites_empty_description">When you add places to favorites, they will be listed here.</string>
+    <string name="favorites_count">%1$d places</string>
+    <string name="favorites_removed">%1$s was removed from favorites.</string>
+    <string name="favorites_remove_title">Remove from favorites</string>
+    <string name="favorites_remove_message">Remove \"%1$s\" from favorites?\n\nAre you sure you want to delete it?</string>
+    <string name="favorites_remove_confirm">Yes, delete</string>
+    <string name="cd_remove_favorite">Remove from favorites</string>
+
+    <string name="visited_title">Visited Places</string>
+    <string name="visited_subtitle">A list of the historic sites you have visited.</string>
+    <string name="visited_info">Visited places are now stored permanently on your device.</string>
+    <string name="visited_error_load">Could not load places. Please try again.</string>
+    <string name="visited_empty_title">No visited places yet</string>
+    <string name="visited_empty_description">When you mark a place as visited, it will appear here.</string>
+    <string name="visited_count">%1$d places visited</string>
+
+    <string name="faq_title">Ask the Guide</string>
+    <string name="faq_greeting">Hello, I\'m your virtual guide. You can ask your questions about Harput.</string>
+    <string name="faq_custom_reply">This feature will be enhanced with live guide support in a later version. For now you can pick one of the suggested questions.</string>
+    <string name="faq_info">Answers come from a prepared knowledge base. Live AI will be added in a later version.</string>
+    <string name="faq_suggested_title">Suggested Questions</string>
+    <string name="faq_more_title">More Questions</string>
+    <string name="faq_more_expand">Show all questions</string>
+    <string name="faq_more_collapse">Show less</string>
+    <string name="faq_input_placeholder">Type your question…</string>
+    <string name="faq_input_footer">Answers come from a prepared knowledge base.</string>
+
+    <string name="about_title">About</string>
+    <string name="about_hero_title">Harput</string>
+    <string name="about_hero_subtitle">AR Guide</string>
+    <string name="about_hero_tagline">Discover history, experience the future with augmented reality.</string>
+    <string name="about_card_title">About the App</string>
+    <string name="about_card_body">Harput AR Guide is a mobile guide designed to help you explore Harput\'s historic and cultural heritage with augmented reality. With this experience connecting the past to the present, you can get to know Harput more closely and examine structures, materials, and historic texture interactively.</string>
+    <string name="about_info_snackbar">Harput AR Guide brings the cultural heritage experience with augmented reality.</string>
+    <string name="about_features_title">Highlights</string>
+    <string name="about_feature_ar_title">Augmented Reality</string>
+    <string name="about_feature_ar_desc">Examine historic structures with the camera and see AR info layers.</string>
+    <string name="about_feature_past_title">See the Past</string>
+    <string name="about_feature_past_desc">Compare the past and present states of historic structures.</string>
+    <string name="about_feature_structure_title">Structure Info</string>
+    <string name="about_feature_structure_desc">Learn about structural elements, materials and architectural details.</string>
+    <string name="about_feature_inscription_title">Read Inscription</string>
+    <string name="about_feature_inscription_desc">Scan inscriptions and view their descriptions and translations.</string>
+    <string name="about_feature_audio_title">Audio Guide</string>
+    <string name="about_feature_audio_desc">Get information about Harput with audio narration.</string>
+    <string name="about_link_privacy">Privacy Policy</string>
+    <string name="about_link_terms">Terms of Use</string>
+    <string name="about_link_faq">Frequently Asked Questions</string>
+    <string name="about_link_contact">Contact</string>
+    <string name="about_privacy_soon">Privacy policy will be added soon.</string>
+    <string name="about_terms_soon">Terms of use will be added soon.</string>
+    <string name="about_contact_soon">Contact information will be added soon.</string>
+    <string name="about_footer_version">Version 1.0.0</string>
+    <string name="about_footer_tech">Kotlin • Jetpack Compose • AR-Powered Mobile Guide</string>
+    <string name="about_footer_copyright">© 2026 HarputARGuide. All rights reserved.</string>
 
     <string name="language_section_title">Language / Dil</string>
     <string name="language_section_description">App UI and place content are shown in the selected language.</string>
@@ -38,5 +150,80 @@
     <string name="language_english">English</string>
     <string name="language_changed">Language updated.</string>
 
-    <string name="about_title">About</string>
+    <string name="ar_cd_camera">Camera view</string>
+    <string name="ar_structure_title">Structure Info</string>
+    <string name="ar_sample_hotspot">Sample hotspot data</string>
+    <string name="ar_past_title">See the Past</string>
+    <string name="ar_structure_hint">Tap the points on the screen for detailed info.</string>
+    <string name="ar_help_hint">For the best experience, point the camera at the structure.</string>
+    <string name="ar_inscription_read">Read Inscription</string>
+    <string name="ar_inscription_ocr_info">The inscription text is sample data for now. It will be detected with OCR later.</string>
+    <string name="ar_past_info">Past visuals are representative reconstructions based on historic sources. Use the slider to compare past and present.</string>
+    <string name="ar_past_unavailable">Past view is not available for this location.</string>
+    <string name="ar_listen_switched">Switched to listen mode.</string>
+    <string name="ar_inscription_detail_title">Inscription Description</string>
+    <string name="ar_inscription_detail_body">The inscription tells who commissioned the structure and in which period it was completed. This text is shown as prepared data in the first version.</string>
+    <string name="ar_content_placeholder">AR content for this place is not ready yet; a representative sample view is shown.</string>
+    <string name="ar_tracking_searching">Point at the reference — perfect alignment is not required</string>
+    <string name="ar_hotspots_preparing">Match detected — preparing hotspots…</string>
+    <string name="ar_tracking_aligned">Partial match — hotspots active</string>
+    <string name="ar_tracking_locked">Hotspots active — live AR tracking</string>
+    <string name="ar_tracking_assisted">Approximate placement — hotspots shown</string>
+    <string name="ar_live_badge">AR LIVE</string>
+    <string name="ar_hud_locked">LOCKED</string>
+    <string name="ar_tracking_lost">Tracking lost — realign to the reference</string>
+    <string name="ar_permission_denied">Camera permission required. Grant in settings or static preview is used.</string>
+    <string name="ar_unsupported">ARCore is not supported on this device. Using static preview mode.</string>
+    <string name="ar_point_reference_hint">Point the camera at the reference photo on your computer screen.</string>
+    <string name="ar_audio_playing">Audio narration playing…</string>
+    <string name="ar_audio_ready">Listen mode: audio starts after image recognition.</string>
+    <string name="place_detail_ar_unavailable">AR content is not ready for this place yet.</string>
+
+
+    <string name="hotspot_sample_notice">These structure details are representative sample data.</string>
+    <string name="hotspot_description_title">Description</string>
+    <string name="hotspot_properties_title">Properties</string>
+    <string name="hotspot_highlights_title">Key Features</string>
+    <string name="hotspot_section_short">Brief Description</string>
+    <string name="hotspot_section_material">What Is It Made Of?</string>
+    <string name="hotspot_section_construction">How Was It Built?</string>
+    <string name="hotspot_section_purpose">What Is It For?</string>
+    <string name="hotspot_section_significance">Architectural / Historical / Archaeological Significance</string>
+    <string name="hotspot_construction_process">Construction Process</string>
+    <string name="hotspot_material_analysis">Material Analysis</string>
+    <string name="hotspot_view_3d">View Details</string>
+    <string name="hotspot_content_missing">Detail content not found for this hotspot.</string>
+    <string name="hotspot_image_load_failed">Image could not be loaded</string>
+    <string name="hotspot_open_full_detail">Full screen detail</string>
+    <string name="hotspot_material_section_hint">This section covers wall texture, masonry pattern, and binder properties.</string>
+    <string name="hotspot_history_title">Past View</string>
+    <string name="hotspot_audio_title">Audio Narration</string>
+    <string name="analysis_history_before">Earlier state</string>
+    <string name="analysis_history_after">Current state</string>
+    <string name="analysis_audio_soon">Audio will be added soon.</string>
+    <string name="model_viewer_file_label">Image file</string>
+    <string name="model_viewer_demo_notice">Representative image.</string>
+    <string name="model_viewer_missing">Image not found.</string>
+    <string name="model_viewer_load_failed">Could not load image.</string>
+    <string name="model_viewer_interaction_hint">Drag to rotate, pinch to zoom.</string>
+
+    <string name="construction_title">How Was It Built?</string>
+
+    <string name="material_title">Material Analysis</string>
+    <string name="material_cd_diagram">Material cross-section</string>
+    <string name="material_info_title">Material Information</string>
+    <string name="architectural_info_title">Architectural Information</string>
+    <string name="analysis_bookmark_cd">Bookmark</string>
+    <string name="analysis_bookmark_soon">Bookmark feature coming soon.</string>
+    <string name="material_share">Share</string>
+    <string name="material_save">Save</string>
+    <string name="material_share_soon">Share feature will be added soon.</string>
+    <string name="material_save_soon">Save feature will be added soon.</string>
+
+    <string name="model_viewer_title">Architectural Analysis</string>
+    <string name="model_analysis_title">Material / Architectural Analysis</string>
+    <string name="model_viewer_cd_viewport">Analysis viewport</string>
+    <string name="model_analysis_no_features_label">Info</string>
+    <string name="model_analysis_no_features_value">No feature data available</string>
+    <string name="model_viewer_description">A detail screen for this place will be added soon.</string>
 </resources>

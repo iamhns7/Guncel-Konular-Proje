@@ -1,10 +1,8 @@
 package com.tayyipgunay.harputarguide.core.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.ui.platform.LocalContext
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -12,23 +10,20 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.tayyipgunay.harputarguide.feature.about.AboutScreen
 import com.tayyipgunay.harputarguide.feature.ar.ARScreen
-import com.tayyipgunay.harputarguide.feature.auth.LoginScreen
 import com.tayyipgunay.harputarguide.feature.constructionprocess.ConstructionProcessScreen
 import com.tayyipgunay.harputarguide.feature.hotspotdetail.HotspotDetailScreen
-import com.tayyipgunay.harputarguide.feature.materialanalysis.MaterialAnalysisScreen
 import com.tayyipgunay.harputarguide.feature.faq.FaqScreen
 import com.tayyipgunay.harputarguide.feature.favorites.FavoritesScreen
+import com.tayyipgunay.harputarguide.feature.favorites.FavoritesViewModel
 import com.tayyipgunay.harputarguide.feature.home.HomeScreen
-import com.tayyipgunay.harputarguide.feature.modelviewer.ModelViewerScreen
 import com.tayyipgunay.harputarguide.feature.onboarding.OnboardingScreen
-import com.tayyipgunay.harputarguide.data.repository.RepositoryProvider
 import com.tayyipgunay.harputarguide.feature.placedetail.PlaceDetailScreen
 import com.tayyipgunay.harputarguide.feature.placedetail.PlaceDetailViewModel
 import com.tayyipgunay.harputarguide.feature.places.PlacesScreen
 import com.tayyipgunay.harputarguide.feature.places.PlacesViewModel
 import com.tayyipgunay.harputarguide.feature.splash.SplashScreen
-import com.tayyipgunay.harputarguide.feature.tournavigation.TourNavigationScreen
 import com.tayyipgunay.harputarguide.feature.visited.VisitedScreen
+import com.tayyipgunay.harputarguide.feature.visited.VisitedViewModel
 import com.tayyipgunay.harputarguide.core.locale.AppLocaleManager
 import com.tayyipgunay.harputarguide.feature.welcome.WelcomeScreen
 
@@ -38,10 +33,6 @@ fun AppNavGraph(
     onAppLocaleChanged: () -> Unit
 ) {
     val navController = rememberNavController()
-    val context = LocalContext.current
-    val placeRepository = remember {
-        RepositoryProvider.providePlaceRepository(context.applicationContext)
-    }
     val currentLanguage = localeManager.contentLocale.collectAsStateWithLifecycle().value
 
     NavHost(
@@ -60,17 +51,9 @@ fun AppNavGraph(
 
         composable(AppRoute.WELCOME) {
             WelcomeScreen(
-                onStartTourClick = { navController.navigate(AppRoute.LOGIN) },
+                onStartTourClick = { navController.navigate(AppRoute.ONBOARDING) },
                 onFavoritesClick = { navController.navigate(AppRoute.FAVORITES) },
                 onAboutClick = { navController.navigate(AppRoute.ABOUT) }
-            )
-        }
-
-        composable(AppRoute.LOGIN) {
-            LoginScreen(
-                onGoogleSignInClick = {
-                    navController.navigate(AppRoute.ONBOARDING)
-                }
             )
         }
 
@@ -88,7 +71,6 @@ fun AppNavGraph(
         composable(AppRoute.HOME) {
             HomeScreen(
                 onStartTourClick = { navController.navigateToPlacesTab() },
-                onOpenArClick = { navController.navigateToDefaultAr() },
                 onFavoritesClick = { navController.navigateFromHomeHub(AppRoute.FAVORITES) },
                 onVisitedClick = { navController.navigateFromHomeHub(AppRoute.VISITED) },
                 onFaqClick = { navController.navigateFromHomeHub(AppRoute.FAQ) },
@@ -97,9 +79,7 @@ fun AppNavGraph(
         }
 
         composable(AppRoute.PLACES) {
-            val placesViewModel: PlacesViewModel = viewModel(
-                factory = PlacesViewModel.factory(placeRepository, localeManager)
-            )
+            val placesViewModel: PlacesViewModel = hiltViewModel()
             val placesUiState = placesViewModel.uiState.collectAsStateWithLifecycle().value
 
             PlacesScreen(
@@ -120,42 +100,20 @@ fun AppNavGraph(
             arguments = listOf(navArgument(AppRoute.PLACE_ID_ARG) { type = NavType.StringType })
         ) { backStackEntry ->
             val placeId = backStackEntry.arguments?.getString(AppRoute.PLACE_ID_ARG).orEmpty()
-            val placeDetailViewModel: PlaceDetailViewModel = viewModel(
-                factory = PlaceDetailViewModel.factory(placeId, placeRepository, localeManager)
-            )
+            val placeDetailViewModel: PlaceDetailViewModel = hiltViewModel()
             val placeDetailUiState = placeDetailViewModel.uiState.collectAsStateWithLifecycle().value
 
             PlaceDetailScreen(
                 placeId = placeId,
                 uiState = placeDetailUiState,
                 onRetry = placeDetailViewModel::loadPlaceDetail,
+                onToggleVisited = placeDetailViewModel::toggleVisited,
+                onToggleFavorite = placeDetailViewModel::toggleFavorite,
+                onMessageConsumed = placeDetailViewModel::consumeMessage,
                 onBackClick = { navController.popBackStack() },
-                onNavigateClick = { id ->
-                    navController.navigate(AppRoute.tourNavigation(id))
-                },
                 onArClick = { id ->
                     navController.navigate(AppRoute.ar(id))
                 },
-                onModelViewerClick = { id ->
-                    navController.navigate(AppRoute.modelViewer(id))
-                },
-                onHomeClick = { navController.navigateToHomeTab() },
-                onPlacesClick = { navController.navigateToPlacesTab() },
-                onVisitedClick = { navController.navigateBetweenExploreTabs(AppRoute.VISITED) },
-                onFavoritesClick = { navController.navigateBetweenExploreTabs(AppRoute.FAVORITES) },
-                onAboutClick = { navController.navigateBetweenExploreTabs(AppRoute.ABOUT) }
-            )
-        }
-
-        composable(
-            route = AppRoute.TOUR_NAVIGATION,
-            arguments = listOf(navArgument(AppRoute.PLACE_ID_ARG) { type = NavType.StringType })
-        ) { backStackEntry ->
-            val placeId = backStackEntry.arguments?.getString(AppRoute.PLACE_ID_ARG).orEmpty()
-            TourNavigationScreen(
-                placeId = placeId,
-                onCancelClick = { navController.popBackStack() },
-                onArClick = { id -> navController.navigate(AppRoute.ar(id)) },
                 onHomeClick = { navController.navigateToHomeTab() },
                 onPlacesClick = { navController.navigateToPlacesTab() },
                 onVisitedClick = { navController.navigateBetweenExploreTabs(AppRoute.VISITED) },
@@ -191,19 +149,7 @@ fun AppNavGraph(
             HotspotDetailScreen(
                 placeId = placeId,
                 hotspotId = hotspotId,
-                onBackClick = { navController.popBackStack() },
-                onCloseClick = {
-                    navController.popBackStack(AppRoute.ar(placeId), inclusive = false)
-                },
-                onConstructionProcessClick = { pid, hid ->
-                    navController.navigate(AppRoute.constructionProcess(pid, hid))
-                },
-                onMaterialAnalysisClick = { pid, hid ->
-                    navController.navigate(AppRoute.materialAnalysis(pid, hid))
-                },
-                onModelViewerClick = { pid ->
-                    navController.navigate(AppRoute.modelViewer(pid))
-                }
+                onBackClick = { navController.popBackStack() }
             )
         }
 
@@ -235,7 +181,7 @@ fun AppNavGraph(
         ) { backStackEntry ->
             val placeId = backStackEntry.arguments?.getString(AppRoute.PLACE_ID_ARG).orEmpty()
             val hotspotId = backStackEntry.arguments?.getString(AppRoute.HOTSPOT_ID_ARG).orEmpty()
-            MaterialAnalysisScreen(
+            HotspotDetailScreen(
                 placeId = placeId,
                 hotspotId = hotspotId,
                 onBackClick = { navController.popBackStack() }
@@ -244,17 +190,28 @@ fun AppNavGraph(
 
         composable(
             route = AppRoute.MODEL_VIEWER,
-            arguments = listOf(navArgument(AppRoute.PLACE_ID_ARG) { type = NavType.StringType })
+            arguments = listOf(
+                navArgument(AppRoute.PLACE_ID_ARG) { type = NavType.StringType },
+                navArgument(AppRoute.HOTSPOT_ID_ARG) { type = NavType.StringType }
+            )
         ) { backStackEntry ->
             val placeId = backStackEntry.arguments?.getString(AppRoute.PLACE_ID_ARG).orEmpty()
-            ModelViewerScreen(
+            val hotspotId = backStackEntry.arguments?.getString(AppRoute.HOTSPOT_ID_ARG).orEmpty()
+            HotspotDetailScreen(
                 placeId = placeId,
-                onBack = { navController.popBackStack() }
+                hotspotId = hotspotId,
+                onBackClick = { navController.popBackStack() }
             )
         }
 
         composable(AppRoute.FAVORITES) {
+            val favoritesViewModel: FavoritesViewModel = hiltViewModel()
+            val favoritesUiState = favoritesViewModel.uiState.collectAsStateWithLifecycle().value
             FavoritesScreen(
+                uiState = favoritesUiState,
+                onRetry = favoritesViewModel::loadPlaces,
+                onRemoveFavorite = favoritesViewModel::removeFavorite,
+                onRemoveFailedConsumed = favoritesViewModel::consumeRemoveFailed,
                 onBackClick = { navController.popBackStack() },
                 onPlaceClick = { placeId ->
                     navController.navigate(AppRoute.placeDetail(placeId))
@@ -268,7 +225,11 @@ fun AppNavGraph(
         }
 
         composable(AppRoute.VISITED) {
+            val visitedViewModel: VisitedViewModel = hiltViewModel()
+            val visitedUiState = visitedViewModel.uiState.collectAsStateWithLifecycle().value
             VisitedScreen(
+                uiState = visitedUiState,
+                onRetry = visitedViewModel::loadPlaces,
                 onBackClick = { navController.popBackStack() },
                 onPlaceClick = { placeId ->
                     navController.navigate(AppRoute.placeDetail(placeId))

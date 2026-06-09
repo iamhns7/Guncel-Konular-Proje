@@ -1,0 +1,217 @@
+{
+  "placeId": "ic-kale-ve-kazi-alani",
+  "title": "İç Kale ve Kazı Alanı",
+  "purpose": "Bu dosya sadece hotspot tıklanınca açılacak detay içerikleri için kullanılır. AR referans fotoğrafı veya hotspot overlay kurulumu içermez.",
+  "hotspots": [
+    {
+      "id": "kazi_zemini",
+      "name": "Kazı Zemini",
+      "contentType": "info_card",
+      "shortDescription": "Kazı zemini, geçmiş kullanım izlerinin ve yapı düzeninin anlaşılması için incelenen alanlardan biridir.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Kazı zemini toprak, taş parçaları, sıkışmış yüzeyler ve geçmiş dönemlere ait kalıntı izlerinden oluşabilir. Bu alan doğal zemin ile insan kullanımının bıraktığı izlerin birleşimi olarak değerlendirilir.",
+        "construction": "Zemin, zaman içinde kullanım, yıkım, dolgu ve kazı süreçleriyle katmanlı hâle gelir. Arkeolojik çalışmalar bu katmanları ortaya çıkarır. Her katman geçmişteki bir kullanım evresine işaret edebilir.",
+        "purpose": "Kazı zemini, geçmişte alanın nasıl kullanıldığına dair ipuçları verir. Yapıların konumu, günlük yaşam izleri veya mekân sınırları bu zeminden anlaşılabilir.",
+        "significance": "Kazı zemini kesin bir yapı elemanı gibi değil, geçmişin izlerini taşıyan bir okuma alanı olarak değerlendirilmelidir."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Toprak / taş / arkeolojik dolgu"
+        },
+        {
+          "label": "Oluşum",
+          "value": "Kullanım, yıkım ve kazı katmanları"
+        },
+        {
+          "label": "İşlev",
+          "value": "Geçmiş kullanım izlerini gösterme"
+        },
+        {
+          "label": "Yorum",
+          "value": "Arkeolojik bağlama bağlı"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/ic-kale-ve-kazi-alani-kazi_zemini.jpg"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "seramik_kap_kup",
+      "name": "Seramik Kap / Küp",
+      "contentType": "material_analysis",
+      "shortDescription": "Seramik kap veya küp, kazı alanında görülen pişmiş toprak buluntu türünü temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Seramik kaplar genellikle kilin şekillendirilip pişirilmesiyle yapılır. Pişmiş toprak, dayanıklı ve uzun süre korunabilen bir malzeme olduğu için arkeolojik alanlarda sık karşılaşılan buluntu türlerindendir.",
+        "construction": "Kil önce yoğrulur ve şekillendirilir. Kap formu elle, kalıpla veya çark benzeri yöntemlerle oluşturulabilir. Kurutulduktan sonra fırınlanarak sertleştirilir. Bazı kapların yüzeyinde bezeme, astar veya kullanım izleri bulunabilir.",
+        "purpose": "Seramik kaplar depolama, taşıma, pişirme veya günlük kullanım amaçlı kullanılmış olabilir. Ancak kesin işlevi, bulunduğu kazı bağlamına göre değerlendirilmelidir.",
+        "significance": "Seramik buluntular, geçmiş yaşam biçimi, üretim teknolojisi, ticaret ilişkileri ve kullanım alışkanlıkları hakkında bilgi verebilir."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Pişmiş toprak / seramik"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Kil şekillendirme + fırınlama"
+        },
+        {
+          "label": "Olası Kullanım",
+          "value": "Depolama / günlük kullanım"
+        },
+        {
+          "label": "Yorum",
+          "value": "Kazı bağlamına bağlı"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": true
+      },
+      "media": {
+        "detailImage": "detail_images/ic-kale-ve-kazi-alani-seramik_kap_kup.png"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "cukur_alan",
+      "name": "Çukur Alan",
+      "contentType": "info_card",
+      "shortDescription": "Çukur alan, kazı zemini içinde açığa çıkmış boşluk veya oyuk bölümü temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Çukur alan toprak, taş veya oyulmuş zemin boşluğu olarak görülebilir. Bu alanın malzemesi bulunduğu zeminin yapısına göre değişebilir.",
+        "construction": "Bu tür boşluklar insan eliyle açılmış olabilir, zamanla yıkım veya dolgu süreçleriyle oluşmuş olabilir ya da kazı sırasında ortaya çıkarılmış olabilir. Kesin oluşum nedeni arkeolojik değerlendirme gerektirir.",
+        "purpose": "Çukur alanın işlevi kesin olarak bilinmeyebilir. Depolama, yapı temeli, boşluk, kullanım izi veya farklı bir mimari unsurla ilişkili olabilir. Ancak uygulamada kesin bir işlev iddia edilmemelidir.",
+        "significance": "Bu hotspot, arkeolojik alanlarda her çukurun dikkatle yorumlanması gerektiğini göstermek için kullanılabilir."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Toprak / taş / kazı dolgusu"
+        },
+        {
+          "label": "Oluşum",
+          "value": "Kesin değildir"
+        },
+        {
+          "label": "İşlev",
+          "value": "Arkeolojik bağlama göre değişebilir"
+        },
+        {
+          "label": "Yorum",
+          "value": "Dikkatli değerlendirme gerekir"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/ic-kale-ve-kazi-alani-cukur_alan.jpg"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "tas_duvar",
+      "name": "Taş Duvar",
+      "contentType": "material_analysis",
+      "shortDescription": "Taş duvar, kazı alanında görülen yapısal kalıntılardan biridir.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Taş duvar, farklı boyutlarda taşlar ve bağlayıcı harç kullanılarak yapılmış olabilir. Bazı bölümlerde taşlar daha düzensiz dizilmiş olabilir.",
+        "construction": "Taşlar yapı sınırı oluşturacak şekilde üst üste yerleştirilir. Aradaki boşluklar küçük taşlar ve harçla doldurulur. Bu sistem hem sınır oluşturur hem de yapıya taşıyıcı kütle kazandırır.",
+        "purpose": "Taş duvar, geçmişte bir mekânı sınırlamak, desteklemek veya taşıyıcı görev görmek için kullanılmış olabilir. Kazı alanında duvar izleri mekân planını anlamaya yardımcı olur.",
+        "significance": "Duvar kalıntıları, geçmiş mimari düzenin en önemli izlerinden biridir. Alanın nasıl bölündüğünü ve yapıların nerede bulunduğunu anlamaya yardım eder."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Taş / harç"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Taş örgü duvar"
+        },
+        {
+          "label": "İşlev",
+          "value": "Sınır / destek / yapı elemanı"
+        },
+        {
+          "label": "Doku",
+          "value": "Düzensiz taş örgü"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": true
+      },
+      "media": {
+        "detailImage": "detail_images/ic-kale-ve-kazi-alani-tas_duvar.png"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "yapi_kalintisi",
+      "name": "Yapı Kalıntısı",
+      "contentType": "history_slider",
+      "shortDescription": "Yapı kalıntısı, geçmişte var olan bir mimari düzenin günümüze ulaşmış izlerini temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Yapı kalıntıları taş, harç, toprak dolgu veya eski yapı malzemelerinden oluşabilir. Günümüze ulaşan kısımlar çoğu zaman yapının yalnızca temel, duvar ya da zemin izleridir.",
+        "construction": "Yapı zaman içinde yıkılmış, üzeri dolmuş veya farklı dönemlerde yeniden kullanılmış olabilir. Kazı çalışmaları bu kalıntıları ortaya çıkarır.",
+        "purpose": "Yapı kalıntıları geçmişteki mekânların sınırlarını, kullanım alanlarını ve mimari düzenini anlamaya yardımcı olur.",
+        "significance": "Bu hotspot, kullanıcının bir kalıntıdan geçmişteki yapıyı hayal etmesini sağlar. Kesin işlev iddia edilmeden, “mimari iz” olarak anlatılmalıdır."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Taş / harç / dolgu"
+        },
+        {
+          "label": "Oluşum",
+          "value": "Yıkım ve kazı süreçleri"
+        },
+        {
+          "label": "İşlev",
+          "value": "Geçmiş mekân düzenini anlama"
+        },
+        {
+          "label": "Yorum",
+          "value": "Arkeolojik değerlendirme gerektirir"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": true,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/ic-kale-ve-kazi-alani-yapi_kalintisi.jpg"
+      },
+      "audioText": null,
+      "historyIdea": "Bugünkü düşük kalıntı seviyesi, geçmişte daha bütünlüklü bir yapı hacmi olarak temsilî biçimde gösterilebilir."
+    }
+  ]
+}

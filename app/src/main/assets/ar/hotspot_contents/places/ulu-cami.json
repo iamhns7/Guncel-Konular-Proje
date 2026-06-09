@@ -1,0 +1,175 @@
+{
+  "placeId": "ulu-cami",
+  "title": "Harput Ulu Cami",
+  "purpose": "Bu dosya sadece hotspot tıklanınca açılacak detay içerikleri için kullanılır. AR referans fotoğrafı veya hotspot overlay kurulumu içermez.",
+  "hotspots": [
+    {
+      "id": "egri_minare",
+      "name": "Eğri Minare",
+      "contentType": "model_3d",
+      "shortDescription": "Eğri minare, Harput Ulu Cami’nin en dikkat çekici mimari unsurlarından biridir.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Minare gövdesinde tuğla ağırlıklı bir örgü sistemi bulunur. Alt kısımlarda taş malzeme, gövdede ise tuğla dokusu öne çıkarılabilir. Kesin malzeme ayrımı kaynak ve yerinde inceleme ile desteklenmelidir.",
+        "construction": "Minare, silindirik gövde mantığıyla yükseltilir. Tuğlalar yatay halkalar hâlinde dizilerek gövde formu oluşturur. Zaman içinde zemin hareketi, malzeme yorulması veya yapısal etkiler nedeniyle eğimli görünüm oluşmuş olabilir. Kesin neden uzman incelemesi gerektirir.",
+        "purpose": "Minare caminin çağrı ve sembol yapısıdır. Aynı zamanda yapının silüetini belirleyen en dikkat çekici mimari elemandır.",
+        "significance": "Eğri minare, Harput Ulu Cami’nin kimliğini güçlendiren ayırt edici unsurdur. Ziyaretçiler için yapının en kolay hatırlanan bölümüdür."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Tuğla ağırlıklı gövde"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Silindirik tuğla örgü"
+        },
+        {
+          "label": "İşlev",
+          "value": "Minare / sembol yapı"
+        },
+        {
+          "label": "Ayırt Edici Özellik",
+          "value": "Eğik görünüm"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": true,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/ulu-cami-egri_minare.png"
+      },
+      "audioText": null,
+      "historyIdea": "Slider ile minarenin temsilî daha dik hâli ve bugünkü eğik görünümü karşılaştırılabilir."
+    },
+    {
+      "id": "tugla_orgu",
+      "name": "Tuğla Örgü",
+      "contentType": "material_analysis",
+      "shortDescription": "Tuğla örgü, minare yüzeyinde görülen düzenli malzeme dokusunu temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Tuğla örgü, pişmiş toprak tuğlalardan oluşur. Tuğla, kilin şekillendirilip pişirilmesiyle elde edilen dayanıklı bir yapı malzemesidir.",
+        "construction": "Tuğlalar yatay sıralar hâlinde dizilir. Aralarına harç uygulanarak gövde bütünlüğü sağlanır. Silindirik yüzeyde tuğla dizilimi, minarenin yuvarlak formuna uyacak şekilde düzenlenir.",
+        "purpose": "Tuğla örgü, minare gövdesinin taşıyıcı ve görsel yüzeyini oluşturur. Aynı zamanda yapıya ritmik ve düzenli bir yüzey dokusu kazandırır.",
+        "significance": "Bu hotspot, kullanıcının minareyi sadece uzaktan bir form olarak değil, malzeme ve işçilik açısından da incelemesini sağlar."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Pişmiş tuğla"
+        },
+        {
+          "label": "Bağlayıcı",
+          "value": "Harç"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Yatay tuğla sıraları"
+        },
+        {
+          "label": "Doku",
+          "value": "Ritmik örgü yüzey"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": true
+      },
+      "media": {
+        "detailImage": "detail_images/ulu-cami-tugla_orgu.png"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "moloz_tas_duvar",
+      "name": "Moloz Taş Duvar",
+      "contentType": "material_analysis",
+      "shortDescription": "Moloz taş duvar, caminin beden duvarında görülen taş dokusunu temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Moloz taş duvar, farklı boyutlarda ve düzensiz biçimli taşların harçla bir araya getirilmesiyle oluşur. Kesme taş kadar düzenli değildir; daha doğal ve parçalı bir yüzey verir.",
+        "construction": "Taşlar uygun şekilde yerleştirilir, aradaki boşluklar küçük taş parçaları ve harçla doldurulur. Bu yöntem duvara kütle ve dayanıklılık sağlar. Dış yüzeyde taşların boyut ve biçim farklılıkları görülebilir.",
+        "purpose": "Moloz taş duvar, caminin beden duvarını oluşturur. Yapıyı çevreleyen ve taşıyan ana duvar kütlesinin bir parçasıdır.",
+        "significance": "Bu hotspot, Harput Ulu Cami’nin malzeme çeşitliliğini gösterir. Minaredeki tuğla dokuyla beden duvarındaki taş doku arasındaki fark kullanıcıya anlatılabilir."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Moloz taş"
+        },
+        {
+          "label": "Bağlayıcı",
+          "value": "Harç"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Düzensiz taş örgü"
+        },
+        {
+          "label": "İşlev",
+          "value": "Beden duvarı"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": true
+      },
+      "media": {
+        "detailImage": "detail_images/ulu-cami-moloz_tas_duvar.jpg"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "giris_kemeri",
+      "name": "Giriş Kemeri",
+      "contentType": "info_card",
+      "shortDescription": "Giriş kemeri, camiye geçiş sağlayan mimari açıklığı temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Giriş kemeri taş veya tuğla malzeme ile oluşturulmuş olabilir. Kemer çevresinde taşıyıcı duvar dokusu ve harç bağlantıları bulunur.",
+        "construction": "Kemer, açıklığın üzerine yarım daire veya sivri forma yakın taş/tuğla dizilimiyle kurulur. Kemer taşları yükü aşağı doğru değil, yanlara doğru aktarır. Bu sayede kapı veya geçiş açıklığı güvenli şekilde taşınır.",
+        "purpose": "Giriş kemeri, camiye geçiş sağlar ve giriş alanını mimari olarak vurgular. Aynı zamanda açıklık geçme problemi için taşıyıcı çözüm sunar.",
+        "significance": "Kemer, İslam ve Anadolu mimarisinde hem işlevsel hem de estetik bir elemandır. Bu hotspot kullanıcıya kemerin neden kullanıldığını anlatır."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Taş / tuğla / harç"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Yükü yanlara aktaran kemer formu"
+        },
+        {
+          "label": "İşlev",
+          "value": "Giriş açıklığı"
+        },
+        {
+          "label": "Mimari Rol",
+          "value": "Giriş vurgusu"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/ulu-cami-giris_kemeri.jpg"
+      },
+      "audioText": null,
+      "historyIdea": null
+    }
+  ]
+}

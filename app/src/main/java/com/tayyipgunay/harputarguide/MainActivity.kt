@@ -8,7 +8,9 @@ import androidx.activity.enableEdgeToEdge
 import com.tayyipgunay.harputarguide.core.design.theme.HarputARGuideTheme
 import com.tayyipgunay.harputarguide.core.locale.AppLocaleManager
 import com.tayyipgunay.harputarguide.core.navigation.AppNavGraph
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     private val localeManager: AppLocaleManager by lazy {

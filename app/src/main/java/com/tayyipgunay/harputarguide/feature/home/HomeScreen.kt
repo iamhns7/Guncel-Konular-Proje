@@ -18,7 +18,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CameraAlt
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.LocationOn
@@ -36,12 +35,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.tayyipgunay.harputarguide.R
 import com.tayyipgunay.harputarguide.core.design.component.HarputBottomBar
+import com.tayyipgunay.harputarguide.core.design.theme.HarputColors
 import com.tayyipgunay.harputarguide.core.design.component.HarputBottomBarStyle
 import com.tayyipgunay.harputarguide.core.design.component.HarputBottomTab
 import com.tayyipgunay.harputarguide.core.design.component.HomeMenuCard
@@ -56,56 +57,49 @@ private data class HomeMenuItem(
 @Composable
 fun HomeScreen(
     onStartTourClick: () -> Unit,
-    onOpenArClick: () -> Unit,
     onFavoritesClick: () -> Unit,
     onVisitedClick: () -> Unit,
     onFaqClick: () -> Unit,
     onAboutClick: () -> Unit
 ) {
-    val cream = Color(0xFFF5EBDD)
-    val cardColor = Color(0xFFF8F1E6)
-    val darkBrown = Color(0xFF4B2E1F)
-    val softBrown = Color(0xFF72533C)
-    val bottomBarBg = Color(0xFFF0E4D4)
-    val iconTint = Color(0xFFF5EBDD)
+    val cream = HarputColors.Cream
+    val cardColor = HarputColors.CardCream
+    val darkBrown = HarputColors.DarkBrown
+    val softBrown = HarputColors.SoftBrown
+    val bottomBarBg = HarputColors.BottomBarBg
+    val iconTint = HarputColors.Cream
 
     val scrollState = rememberScrollState()
     val scope = rememberCoroutineScope()
 
     val menuItems = listOf(
         HomeMenuItem(
-            title = "Turu Başlat",
-            description = "Keşfetmeye hemen başla.",
+            title = stringResource(R.string.home_menu_start_tour_title),
+            description = stringResource(R.string.home_menu_start_tour_desc),
             icon = Icons.Filled.LocationOn,
             onClick = onStartTourClick
         ),
         HomeMenuItem(
-            title = "AR Kamera Aç",
-            description = "Kamerayı aç, geçmişi gör.",
-            icon = Icons.Filled.CameraAlt,
-            onClick = onOpenArClick
-        ),
-        HomeMenuItem(
-            title = "Favorilerim",
-            description = "Kaydettiğin noktaları gör.",
+            title = stringResource(R.string.home_menu_favorites_title),
+            description = stringResource(R.string.home_menu_favorites_desc),
             icon = Icons.Filled.Star,
             onClick = onFavoritesClick
         ),
         HomeMenuItem(
-            title = "Gezdiğim Noktalar",
-            description = "Keşfettiğin yerleri görüntüle.",
+            title = stringResource(R.string.home_menu_visited_title),
+            description = stringResource(R.string.home_menu_visited_desc),
             icon = Icons.Filled.CheckCircle,
             onClick = onVisitedClick
         ),
         HomeMenuItem(
-            title = "Rehbere Sor",
-            description = "Merak ettiklerini sor, cevap al.",
+            title = stringResource(R.string.home_menu_faq_title),
+            description = stringResource(R.string.home_menu_faq_desc),
             icon = Icons.Filled.QuestionAnswer,
             onClick = onFaqClick
         ),
         HomeMenuItem(
-            title = "Hakkında",
-            description = "Uygulama hakkında bilgi al.",
+            title = stringResource(R.string.home_menu_about_title),
+            description = stringResource(R.string.home_menu_about_desc),
             icon = Icons.Filled.Info,
             onClick = onAboutClick
         )
@@ -145,7 +139,7 @@ fun HomeScreen(
             style = HarputBottomBarStyle.Main,
             onHomeClick = { scope.launch { scrollState.animateScrollTo(0) } },
             onPlacesClick = onStartTourClick,
-            onArClick = onOpenArClick,
+            onArClick = { },
             onVisitedClick = onVisitedClick,
             onFavoritesClick = onFavoritesClick,
             onAboutClick = onAboutClick,
@@ -198,14 +192,14 @@ private fun HomeHeroSection(
                 )
             }
             Text(
-                text = "HARPUT",
+                text = stringResource(R.string.app_brand),
                 color = darkBrown,
                 fontFamily = FontFamily.Serif,
                 fontWeight = FontWeight.Bold,
                 fontSize = 34.sp
             )
             Text(
-                text = "AKILLI AR TUR REHBERİ",
+                text = stringResource(R.string.app_tagline),
                 color = softBrown,
                 fontSize = 11.sp,
                 fontWeight = FontWeight.Medium,
@@ -220,7 +214,7 @@ private fun HomeHeroSection(
         ) {
             Image(
                 painter = painterResource(id = R.drawable.harput_welcome_png),
-                contentDescription = "Harput Kalesi",
+                contentDescription = stringResource(R.string.cd_castle_image),
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop
             )

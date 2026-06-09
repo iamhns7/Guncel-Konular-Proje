@@ -1,0 +1,49 @@
+{
+  "placeId": "harput-kalesi-genis-aci",
+  "title": "Harput Kalesi - Geniş Açı",
+  "referenceImage": "harput-kalesi-genis-aci-reference.jpg",
+  "physicalWidthMeters": 2.0,
+  "shortDescription": "Harput Kalesi'nin genel kütlesini, sur hatlarını, burçlarını ve kayalık temelini geniş açıdan tanıtan AR deneyimi.",
+  "info": {
+    "constructionPeriod": "Harput Kalesi'nin ana savunma yapısı farklı tarihî dönemlerde ekleme ve onarımlarla günümüze ulaşmıştır.",
+    "materialAndArchitecture": "Geniş açı görünüm, kalenin ana kütlesi, sol sur hattı, burçları ve kayalık zeminle kurduğu ilişkiyi bütüncül şekilde gösterir.",
+    "historySliderIdea": "Geçmişi Gör modunda kale kütlesinin daha bütünlüklü surlarla çevrildiği savunma silüeti gösterilebilir."
+  },
+  "hotspots": [
+    {
+      "id": "ana_kale_kutlesi",
+      "name": "Ana Kale Kütlesi",
+      "x": 0.501,
+      "y": 0.441,
+      "shortDescription": "Kalenin genel mimari kütlesini temsil eder. Bu nokta, yapının Harput silüetindeki baskın konumunu ve savunma amaçlı yerleşimini açıklar."
+    },
+    {
+      "id": "sol_sur_hatti",
+      "name": "Sol Sur Hattı",
+      "x": 0.179,
+      "y": 0.457,
+      "shortDescription": "Kalenin sol tarafta uzanan sur çizgisidir. Bu alan, savunma hattının araziye göre nasıl yayıldığını göstermek için kullanılabilir."
+    },
+    {
+      "id": "orta_burc",
+      "name": "Orta Burç",
+      "x": 0.618,
+      "y": 0.41,
+      "shortDescription": "Geniş açı görüntüde kalenin orta bölümündeki burç alanını temsil eder. Burçlar, gözetleme ve savunma amaçlı çıkıntılı yapı elemanlarıdır."
+    },
+    {
+      "id": "sag_burc",
+      "name": "Sağ Burç",
+      "x": 0.778,
+      "y": 0.478,
+      "shortDescription": "Kalenin sağ tarafındaki burç alanıdır. Bu nokta, savunma mimarisinde farklı cephelerin kontrol edilmesini anlatmak için uygundur."
+    },
+    {
+      "id": "kayalik_temel",
+      "name": "Kayalık Temel",
+      "x": 0.479,
+      "y": 0.699,
+      "shortDescription": "Kalenin doğal kayalık zeminle ilişkisini gösterir. Bu konum, kalenin savunma açısından neden yüksek ve sarp bir noktada kurulduğunu açıklar."
+    }
+  ]
+}

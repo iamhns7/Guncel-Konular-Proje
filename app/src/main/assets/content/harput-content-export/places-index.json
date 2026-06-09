@@ -1,154 +1,42 @@
 [
     {
-        "id":  "artuklu-sarayi-kalintilari",
-        "name":  "ARTUKLU SARAYI KALINTILARI",
-        "imageFile":  "Artuklu-sarayi-kalintilari.jpg",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
+        "id": "harput-kalesi",
+        "name": "Harput Kalesi",
+        "imageFile": "ar/images/harput-kalesi-reference.jpg",
+        "yearOrEra": "12. Yüzyıl",
+        "latitude": 38.705,
+        "longitude": 39.255
     },
     {
-        "id":  "artuklu-sarayi-kazi",
-        "name":  "ARTUKLU SARAYI KAZI",
-        "imageFile":  "Artuklu-sarayi-kazi.jpg",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
+        "id": "harput-kalesi-genis-aci",
+        "name": "Harput Kalesi - Geniş Açı",
+        "imageFile": "ar/images/harput-kalesi-genis-aci-reference.jpg",
+        "yearOrEra": "12. Yüzyıl",
+        "latitude": 38.705,
+        "longitude": 39.255
     },
     {
-        "id":  "artuklu-sarnici-ve-zindani",
-        "name":  "ARTUKLU SARNICI VE ZINDANI",
-        "imageFile":  "Artuklu-sarnici-ve-zindani.jpg",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
+        "id": "ic-kale-ve-kazi-alani",
+        "name": "İç Kale ve Kazı Alanı",
+        "imageFile": "ar/images/ic-kale-ve-kazi-alani-reference.jpg",
+        "yearOrEra": "12. Yüzyıl",
+        "latitude": 38.705,
+        "longitude": 39.255
     },
     {
-        "id":  "aslanli-burc-ve-kale-kitabesi",
-        "name":  "ASLANLI BURC VE KALE KITABESI",
-        "imageFile":  "Aslanli-burc-ve-kale-kitabesi-.jpg",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
+        "id": "artuklu-sarnici-ve-zindani",
+        "name": "Urartu Sarnıcı ve Zindan Geçidi",
+        "imageFile": "ar/images/artuklu-sarnici-ve-zindani-reference.jpg",
+        "yearOrEra": "12. Yüzyıl",
+        "latitude": 38.705,
+        "longitude": 39.255
     },
     {
-        "id":  "harput-genel",
-        "name":  "HARPUT GENEL",
-        "imageFile":  "harput-genel.webp",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "harput-ici",
-        "name":  "HARPUT ICI",
-        "imageFile":  "harput-ici.webp",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "harput-kalesi-dogu-terasi",
-        "name":  "HARPUT KALESI DOGU TERASI",
-        "imageFile":  "Harput-kalesi-dogu-terasi.jpg",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "harput-kalesi-girisi",
-        "name":  "HARPUT KALESI GIRISI",
-        "imageFile":  "Harput-kalesi-girisi.jpg",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "harput-kalesi-ici-ve-artuklu-cami-harabeleri",
-        "name":  "HARPUT KALESI ICI VE ARTUKLU CAMI HARABELERI",
-        "imageFile":  "Harput-kalesi-ici-ve-Artuklu-cami-harabeleri.jpg",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "harput-kalesi-orijinal-kesme-taslari",
-        "name":  "HARPUT KALESI ORIJINAL KESME TASLARI",
-        "imageFile":  "Harput-kalesi-orijinal-kesme-taslari.jpg",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "harput-kalesi-tarihi-hamami",
-        "name":  "HARPUT KALESI TARIHI HAMAMI",
-        "imageFile":  "Harput-kalesi-tarihi-hamami.jpg",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "harput-kalesi-ucuncu-bolge-kazilari-ve-manzarasi",
-        "name":  "HARPUT KALESI UCUNCU BOLGE KAZILARI VE MANZARASI",
-        "imageFile":  "Harput-kalesi-ucuncu-bolge-kazilari-ve-manzarasi.jpg",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "harput-kalesi-ve-suryani-kadim-meryem-ana-kilisesi",
-        "name":  "HARPUT KALESI VE SURYANI KADIM MERYEM ANA KILISESI",
-        "imageFile":  "Harput-kalesi-ve-Suryani-Kadim-Meryem-Ana-Kilisesi.jpg",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "harput-kalesi",
-        "name":  "HARPUT KALESI",
-        "imageFile":  "Harput-kalesi.jpg",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "harput-yakindan",
-        "name":  "HARPUT YAKINDAN",
-        "imageFile":  "harput-yakindan.webp",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "harput-zindani-sonu",
-        "name":  "HARPUT ZINDANI SONU",
-        "imageFile":  "harput-zindani-sonu.webp",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "harput-zindani",
-        "name":  "HARPUT ZINDANI",
-        "imageFile":  "harput-zindani.webp",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "mancanik",
-        "name":  "MANCANIK",
-        "imageFile":  "mancanik.webp",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
-    },
-    {
-        "id":  "ulu-cami",
-        "name":  "ULU CAMI",
-        "imageFile":  "ulu-cami.webp",
-        "yearOrEra":  "12. YÃ¼zyÄ±l",
-        "latitude":  38.705,
-        "longitude":  39.255
+        "id": "ulu-cami",
+        "name": "Harput Ulu Cami",
+        "imageFile": "ar/images/ulu-cami-reference.jpg",
+        "yearOrEra": "12. Yüzyıl",
+        "latitude": 38.705,
+        "longitude": 39.255
     }
 ]

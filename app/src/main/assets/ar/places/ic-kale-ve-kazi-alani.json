@@ -1,0 +1,49 @@
+{
+  "placeId": "ic-kale-ve-kazi-alani",
+  "title": "İç Kale ve Kazı Alanı",
+  "referenceImage": "ic-kale-ve-kazi-alani-reference.jpg",
+  "physicalWidthMeters": 2.0,
+  "shortDescription": "İç kale alanındaki kazı zemini, seramik kaplar, çukur alanlar, taş duvarlar ve yapı kalıntılarını tanıtan AR deneyimi.",
+  "info": {
+    "constructionPeriod": "İç kale alanı farklı dönemlere ait yapı kalıntıları ve kazı buluntularıyla ilişkilendirilebilir. Kesin yorumlar için arkeolojik kaynak kontrolü gerekir.",
+    "materialAndArchitecture": "Kazı alanında taş duvarlar, zemin izleri, seramik kaplar ve çeşitli yapı kalıntıları gözlemlenebilir.",
+    "historySliderIdea": "Geçmişi Gör modunda günümüzde yalnızca izleri görülen yapı kalıntılarının eski kullanım alanları temsilî olarak canlandırılabilir."
+  },
+  "hotspots": [
+    {
+      "id": "kazi_zemini",
+      "name": "Kazı Zemini",
+      "x": 0.365,
+      "y": 0.764,
+      "shortDescription": "Kazı alanının zemin bölümünü gösterir. Bu nokta, arkeolojik kazılarda zemindeki izlerin ve tabakaların nasıl yorumlandığını anlatmak için kullanılabilir."
+    },
+    {
+      "id": "seramik_kap_kup",
+      "name": "Seramik Kap / Küp",
+      "x": 0.566,
+      "y": 0.492,
+      "shortDescription": "Kazı alanında görülen seramik kap veya küp benzeri buluntu alanını temsil eder. Bu tür kaplar depolama, günlük kullanım veya üretim faaliyetleriyle ilişkilendirilebilir."
+    },
+    {
+      "id": "cukur_alan",
+      "name": "Çukur Alan",
+      "x": 0.329,
+      "y": 0.506,
+      "shortDescription": "Kazı alanındaki çukur veya oyuk bölümü gösterir. Bu alan, yapı içi kullanım izleri veya kazı sırasında ortaya çıkarılan boşluklar hakkında bilgi vermek için kullanılabilir."
+    },
+    {
+      "id": "tas_duvar",
+      "name": "Taş Duvar",
+      "x": 0.352,
+      "y": 0.2,
+      "shortDescription": "Arka planda görülen taş duvar dokusudur. Bu nokta, alanın yapısal sınırlarını ve taş örgü karakterini açıklamak için uygundur."
+    },
+    {
+      "id": "yapi_kalintisi",
+      "name": "Yapı Kalıntısı",
+      "x": 0.664,
+      "y": 0.672,
+      "shortDescription": "Kazı alanında görülen yapı izi veya kalıntı bölümünü temsil eder. Kesin işlevi arkeolojik değerlendirme gerektirse de kullanıcıya yapı kalıntısı kavramı burada açıklanabilir."
+    }
+  ]
+}

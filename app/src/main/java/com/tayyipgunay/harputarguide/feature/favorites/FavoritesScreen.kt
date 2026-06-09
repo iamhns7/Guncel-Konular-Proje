@@ -1,6 +1,7 @@
 package com.tayyipgunay.harputarguide.feature.favorites
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,41 +14,46 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.tayyipgunay.harputarguide.R
 import com.tayyipgunay.harputarguide.core.design.component.CollectionPlacesTopBar
 import com.tayyipgunay.harputarguide.core.design.component.FavoritePlaceListItem
 import com.tayyipgunay.harputarguide.core.design.component.HarputBottomBar
 import com.tayyipgunay.harputarguide.core.design.component.HarputBottomBarStyle
 import com.tayyipgunay.harputarguide.core.design.component.HarputBottomTab
 import com.tayyipgunay.harputarguide.core.design.component.PlaceListEmptyState
-import com.tayyipgunay.harputarguide.data.asset.SampleUserPlaces
+import com.tayyipgunay.harputarguide.core.design.theme.HarputColors
 import com.tayyipgunay.harputarguide.domain.model.Place
 import kotlinx.coroutines.launch
 
-private val imageGradients = listOf(
-    listOf(Color(0xFFDCC7A8), Color(0xFFBEA07A)),
-    listOf(Color(0xFFC9B59A), Color(0xFF9A7B5C)),
-    listOf(Color(0xFFE0D0B8), Color(0xFFB8956E)),
-    listOf(Color(0xFFD4C4AA), Color(0xFFA6845F))
-)
+private val imageGradients = HarputColors.PlaceholderGradients
 
 @Composable
 fun FavoritesScreen(
+    uiState: FavoritesUiState,
+    onRetry: () -> Unit,
+    onRemoveFavorite: (String) -> Unit,
+    onRemoveFailedConsumed: () -> Unit,
     onBackClick: () -> Unit,
     onPlaceClick: (String) -> Unit,
     onHomeClick: () -> Unit,
@@ -56,30 +62,43 @@ fun FavoritesScreen(
     onFavoritesClick: () -> Unit,
     onAboutClick: () -> Unit
 ) {
-    var favorites by remember { mutableStateOf(SampleUserPlaces.getFavorites()) }
     var placePendingDelete by remember { mutableStateOf<Place?>(null) }
 
-    val cream = Color(0xFFF5EBDD)
-    val cardColor = Color(0xFFF8F1E6)
-    val darkBrown = Color(0xFF4B2E1F)
-    val softBrown = Color(0xFF72533C)
-    val bottomBarBg = Color(0xFFF0E4D4)
-    val visitedGreen = Color(0xFF5A8F4A)
-    val favoriteGold = Color(0xFFB8860B)
-    val deleteRed = Color(0xFF9B3D3D)
+    val cream = HarputColors.Cream
+    val cardColor = HarputColors.CardCream
+    val darkBrown = HarputColors.DarkBrown
+    val softBrown = HarputColors.SoftBrown
+    val bottomBarBg = HarputColors.BottomBarBg
+    val visitedGreen = HarputColors.VisitedGreen
+    val favoriteGold = HarputColors.FavoriteGold
+    val deleteRed = HarputColors.DeleteRed
 
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
+    val removedTemplate = stringResource(R.string.favorites_removed)
+    val favoritesInfo = stringResource(R.string.favorites_info)
+    val removeFailedMsg = stringResource(R.string.favorites_remove_failed)
+    val errorMessage = when (uiState.error) {
+        FavoritesError.LOAD_FAILED -> stringResource(R.string.favorites_error_load)
+        null -> null
+    }
+
+    LaunchedEffect(uiState.removeFailed) {
+        if (uiState.removeFailed) {
+            snackbarHostState.showSnackbar(removeFailedMsg)
+            onRemoveFailedConsumed()
+        }
+    }
 
     placePendingDelete?.let { place ->
         RemoveFavoriteDialog(
             placeName = place.name,
             onDismiss = { placePendingDelete = null },
             onConfirmDelete = {
-                favorites = favorites.filter { it.id != place.id }
+                onRemoveFavorite(place.id)
                 placePendingDelete = null
                 scope.launch {
-                    snackbarHostState.showSnackbar("${place.name} favorilerden kaldırıldı.")
+                    snackbarHostState.showSnackbar(removedTemplate.format(place.name))
                 }
             },
             darkBrown = darkBrown,
@@ -117,59 +136,100 @@ fun FavoritesScreen(
                 .padding(innerPadding)
         ) {
             CollectionPlacesTopBar(
-                title = "Favorilerim",
-                subtitle = "Kaydettiğin tarihi noktaları buradan görüntüleyebilirsin.",
+                title = stringResource(R.string.favorites_title),
+                subtitle = stringResource(R.string.favorites_subtitle),
                 onBackClick = onBackClick,
                 onInfoClick = {
                     scope.launch {
-                        snackbarHostState.showSnackbar(
-                            "Favoriler şimdilik bu oturumda düzenlenebilir. Kalıcı kayıt sonraki sürümde eklenecek."
-                        )
+                        snackbarHostState.showSnackbar(favoritesInfo)
                     }
                 },
                 darkBrown = darkBrown,
                 softBrown = softBrown
             )
 
-            if (favorites.isEmpty()) {
-                PlaceListEmptyState(
-                    icon = Icons.Filled.Star,
-                    title = "Henüz favori nokta yok",
-                    description = "Beğendiğin noktaları favorilere eklediğinde burada listelenecek.",
-                    iconTint = favoriteGold,
-                    titleColor = darkBrown,
-                    descriptionColor = softBrown
-                )
-            } else {
-                Text(
-                    text = "${favorites.size} nokta",
-                    color = softBrown,
-                    fontSize = 13.sp,
-                    fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp)
-                )
+            when {
+                uiState.isLoading -> {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(24.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        CircularProgressIndicator(color = darkBrown)
+                    }
+                }
 
-                LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-                    verticalArrangement = Arrangement.spacedBy(12.dp)
-                ) {
-                    itemsIndexed(
-                        items = favorites,
-                        key = { _, place -> place.id }
-                    ) { index, place ->
-                        FavoritePlaceListItem(
-                            place = place,
-                            onPlaceClick = { onPlaceClick(place.id) },
-                            onDeleteClick = { placePendingDelete = place },
-                            cardColor = cardColor,
-                            titleColor = darkBrown,
-                            descriptionColor = softBrown,
-                            visitedGreen = visitedGreen,
-                            imagePlaceholderColors = imageGradients[index % imageGradients.size],
-                            favoriteColor = favoriteGold,
-                            deleteIconColor = deleteRed
+                errorMessage != null -> {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(horizontal = 24.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center
+                    ) {
+                        Text(
+                            text = errorMessage,
+                            color = softBrown,
+                            fontSize = 15.sp,
+                            lineHeight = 22.sp,
+                            textAlign = TextAlign.Center
                         )
+                        Button(
+                            onClick = onRetry,
+                            modifier = Modifier.padding(top = 16.dp),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = darkBrown,
+                                contentColor = cream
+                            )
+                        ) {
+                            Text(text = stringResource(R.string.action_retry))
+                        }
+                    }
+                }
+
+                uiState.favoritePlaces.isEmpty() -> {
+                    PlaceListEmptyState(
+                        icon = Icons.Filled.Star,
+                        title = stringResource(R.string.favorites_empty_title),
+                        description = stringResource(R.string.favorites_empty_description),
+                        iconTint = favoriteGold,
+                        titleColor = darkBrown,
+                        descriptionColor = softBrown
+                    )
+                }
+
+                else -> {
+                    Text(
+                        text = stringResource(R.string.favorites_count, uiState.favoritePlaces.size),
+                        color = softBrown,
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Medium,
+                        modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp)
+                    )
+
+                    LazyColumn(
+                        modifier = Modifier.fillMaxSize(),
+                        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                        verticalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        itemsIndexed(
+                            items = uiState.favoritePlaces,
+                            key = { _, place -> place.id }
+                        ) { index, place ->
+                            FavoritePlaceListItem(
+                                place = place,
+                                onPlaceClick = { onPlaceClick(place.id) },
+                                onDeleteClick = { placePendingDelete = place },
+                                cardColor = cardColor,
+                                titleColor = darkBrown,
+                                descriptionColor = softBrown,
+                                visitedGreen = visitedGreen,
+                                imagePlaceholderColors = imageGradients[index % imageGradients.size],
+                                favoriteColor = favoriteGold,
+                                deleteIconColor = deleteRed
+                            )
+                        }
                     }
                 }
             }
@@ -193,7 +253,7 @@ private fun RemoveFavoriteDialog(
         containerColor = cream,
         title = {
             Text(
-                text = "Favorilerden sil",
+                text = stringResource(R.string.favorites_remove_title),
                 color = darkBrown,
                 fontWeight = FontWeight.Bold,
                 fontSize = 18.sp
@@ -201,7 +261,7 @@ private fun RemoveFavoriteDialog(
         },
         text = {
             Text(
-                text = "\"$placeName\" favorilerden kaldırılsın mı?\n\nSilmek istediğinize emin misiniz?",
+                text = stringResource(R.string.favorites_remove_message, placeName),
                 color = softBrown,
                 fontSize = 14.sp,
                 lineHeight = 20.sp
@@ -210,7 +270,7 @@ private fun RemoveFavoriteDialog(
         dismissButton = {
             TextButton(onClick = onDismiss) {
                 Text(
-                    text = "Vazgeç",
+                    text = stringResource(R.string.action_cancel),
                     color = softBrown,
                     fontWeight = FontWeight.Medium
                 )
@@ -226,7 +286,7 @@ private fun RemoveFavoriteDialog(
                 shape = RoundedCornerShape(12.dp)
             ) {
                 Text(
-                    text = "Evet, Sil",
+                    text = stringResource(R.string.favorites_remove_confirm),
                     fontWeight = FontWeight.SemiBold
                 )
             }

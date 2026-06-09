@@ -1,0 +1,12 @@
+{
+  "id": "harput-kalesi-genis-aci",
+  "name": "Harput Castle - Wide Angle",
+  "shortDescription": "AR experience presenting the overall mass, wall lines, towers and rocky base of Harput Castle from a wide angle.",
+  "imageAsset": "ar/images/harput-kalesi-genis-aci-reference.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12th Century"
+}

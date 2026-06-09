@@ -19,34 +19,47 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.Box
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.tayyipgunay.harputarguide.R
+import com.tayyipgunay.harputarguide.core.design.theme.HarputColors
 import com.tayyipgunay.harputarguide.core.design.component.ConstructionStepRow
-import com.tayyipgunay.harputarguide.data.asset.SampleStructureHotspots
+import com.tayyipgunay.harputarguide.feature.hotspotdetail.HotspotDetailViewModel
 
 @Composable
 fun ConstructionProcessScreen(
     placeId: String,
     hotspotId: String,
     onBackClick: () -> Unit,
-    onCloseClick: () -> Unit
+    onCloseClick: () -> Unit,
+    viewModel: HotspotDetailViewModel = hiltViewModel()
 ) {
-    val detail = remember(placeId, hotspotId) {
-        SampleStructureHotspots.getDetail(placeId, hotspotId)
+    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    if (uiState.isLoading || uiState.detail == null) {
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            CircularProgressIndicator()
+        }
+        return
     }
+    val detail = uiState.detail!!
 
-    val cream = Color(0xFFFDFBF7)
-    val darkBrown = Color(0xFF2D241E)
-    val softBrown = Color(0xFF72533C)
-    val accentColor = Color(0xFF4B2E1F)
+    val cream = HarputColors.CardLight
+    val darkBrown = HarputColors.DarkBrownText
+    val softBrown = HarputColors.SoftBrown
+    val accentColor = HarputColors.DarkBrown
     val lineColor = softBrown.copy(alpha = 0.25f)
 
     Scaffold(
@@ -62,12 +75,12 @@ fun ConstructionProcessScreen(
                 IconButton(onClick = onBackClick) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                        contentDescription = "Geri",
+                        contentDescription = stringResource(R.string.cd_back),
                         tint = darkBrown
                     )
                 }
                 Text(
-                    text = "Nasıl Yapılmış?",
+                    text = stringResource(R.string.construction_title),
                     color = darkBrown,
                     fontFamily = FontFamily.Serif,
                     fontWeight = FontWeight.Bold,
@@ -78,11 +91,11 @@ fun ConstructionProcessScreen(
                     onClick = onCloseClick,
                     modifier = Modifier
                         .clip(CircleShape)
-                        .background(Color(0xFFE8DFD0))
+                        .background(HarputColors.IconBg)
                 ) {
                     Icon(
                         imageVector = Icons.Filled.Close,
-                        contentDescription = "Kapat",
+                        contentDescription = stringResource(R.string.cd_close),
                         tint = darkBrown
                     )
                 }

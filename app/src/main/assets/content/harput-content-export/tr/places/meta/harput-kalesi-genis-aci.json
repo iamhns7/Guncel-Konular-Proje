@@ -1,0 +1,12 @@
+{
+  "id": "harput-kalesi-genis-aci",
+  "name": "Harput Kalesi - Geniş Açı",
+  "shortDescription": "Harput Kalesi'nin genel kütlesini, sur hatlarını, burçlarını ve kayalık temelini geniş açıdan tanıtan AR deneyimi.",
+  "imageAsset": "ar/images/harput-kalesi-genis-aci-reference.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12. Yüzyıl"
+}

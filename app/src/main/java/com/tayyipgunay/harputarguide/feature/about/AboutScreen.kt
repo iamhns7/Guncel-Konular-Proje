@@ -23,7 +23,6 @@ import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material.icons.filled.ViewInAr
-import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
@@ -41,10 +40,12 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.annotation.StringRes
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import com.tayyipgunay.harputarguide.R
+import com.tayyipgunay.harputarguide.core.design.theme.HarputColors
 import com.tayyipgunay.harputarguide.core.design.component.AboutFeatureItem
 import com.tayyipgunay.harputarguide.core.design.component.AboutFooter
 import com.tayyipgunay.harputarguide.core.design.component.AboutHeroSection
@@ -57,13 +58,13 @@ import com.tayyipgunay.harputarguide.core.design.component.HarputBottomTab
 import kotlinx.coroutines.launch
 
 private data class AboutFeature(
-    val title: String,
-    val description: String,
+    @StringRes val titleRes: Int,
+    @StringRes val descRes: Int,
     val icon: ImageVector
 )
 
 private data class AboutLink(
-    val label: String,
+    @StringRes val labelRes: Int,
     val icon: ImageVector,
     val action: AboutLinkAction
 )
@@ -77,37 +78,27 @@ private enum class AboutLinkAction {
 
 private val aboutFeatures = listOf(
     AboutFeature(
-        title = "Artırılmış Gerçeklik",
-        description = "Kamera ile tarihi yapıları inceleyin ve AR bilgi katmanlarını görün.",
+        titleRes = R.string.about_feature_ar_title,
+        descRes = R.string.about_feature_ar_desc,
         icon = Icons.Filled.ViewInAr
     ),
     AboutFeature(
-        title = "Geçmişi Gör",
-        description = "Tarihi yapıların geçmiş ve günümüz halini karşılaştırın.",
+        titleRes = R.string.about_feature_past_title,
+        descRes = R.string.about_feature_past_desc,
         icon = Icons.Filled.History
     ),
     AboutFeature(
-        title = "Yapı Bilgisi",
-        description = "Yapı elemanları, malzemeler ve mimari detayları öğrenin.",
+        titleRes = R.string.about_feature_structure_title,
+        descRes = R.string.about_feature_structure_desc,
         icon = Icons.Filled.Apartment
-    ),
-    AboutFeature(
-        title = "Kitabe Oku",
-        description = "Kitabeleri tarayın, açıklamalarını ve çevirilerini görüntüleyin.",
-        icon = Icons.Filled.MenuBook
-    ),
-    AboutFeature(
-        title = "Sesli Rehber",
-        description = "Harput hakkında sesli anlatımlarla bilgi alın.",
-        icon = Icons.Filled.VolumeUp
     )
 )
 
 private val aboutLinks = listOf(
-    AboutLink("Gizlilik Politikası", Icons.Filled.Shield, AboutLinkAction.Privacy),
-    AboutLink("Kullanım Koşulları", Icons.Filled.Gavel, AboutLinkAction.Terms),
-    AboutLink("Sıkça Sorulan Sorular", Icons.Filled.Help, AboutLinkAction.Faq),
-    AboutLink("İletişim", Icons.Filled.Email, AboutLinkAction.Contact)
+    AboutLink(R.string.about_link_privacy, Icons.Filled.Shield, AboutLinkAction.Privacy),
+    AboutLink(R.string.about_link_terms, Icons.Filled.Gavel, AboutLinkAction.Terms),
+    AboutLink(R.string.about_link_faq, Icons.Filled.Help, AboutLinkAction.Faq),
+    AboutLink(R.string.about_link_contact, Icons.Filled.Email, AboutLinkAction.Contact)
 )
 
 @Composable
@@ -121,16 +112,20 @@ fun AboutScreen(
     onFavoritesClick: () -> Unit,
     onFaqClick: () -> Unit
 ) {
-    val cream = Color(0xFFF5EBDD)
-    val cardColor = Color(0xFFFDFBF7)
-    val darkBrown = Color(0xFF4B2E1F)
-    val softBrown = Color(0xFF72533C)
-    val iconBg = Color(0xFFE8DFD0)
-    val dividerColor = Color(0xFFD8C9B6)
-    val bottomBarBg = Color(0xFFF0E4D4)
+    val cream = HarputColors.Cream
+    val cardColor = HarputColors.CardLight
+    val darkBrown = HarputColors.DarkBrown
+    val softBrown = HarputColors.SoftBrown
+    val iconBg = HarputColors.IconBg
+    val dividerColor = HarputColors.Divider
+    val bottomBarBg = HarputColors.BottomBarBg
 
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
+    val aboutInfoMessage = stringResource(R.string.about_info_snackbar)
+    val privacySoon = stringResource(R.string.about_privacy_soon)
+    val termsSoon = stringResource(R.string.about_terms_soon)
+    val contactSoon = stringResource(R.string.about_contact_soon)
 
     fun showPlaceholder(message: String) {
         scope.launch {
@@ -168,11 +163,7 @@ fun AboutScreen(
             item {
                 AboutTopBar(
                     onBackClick = onBackClick,
-                    onInfoClick = {
-                        showPlaceholder(
-                            "Harput AR Rehber, kültürel miras deneyimini artırılmış gerçeklik ile sunar."
-                        )
-                    },
+                    onInfoClick = { showPlaceholder(aboutInfoMessage) },
                     darkBrown = darkBrown
                 )
             }
@@ -180,9 +171,9 @@ fun AboutScreen(
             item {
                 AboutHeroSection(
                     heroImageRes = R.drawable.harput_welcome_png,
-                    title = "Harput",
-                    subtitle = "AR Rehber",
-                    tagline = "Tarihi keşfet, geleceği artırılmış gerçeklikle yaşa.",
+                    title = stringResource(R.string.about_hero_title),
+                    subtitle = stringResource(R.string.about_hero_subtitle),
+                    tagline = stringResource(R.string.about_hero_tagline),
                     darkBrown = darkBrown,
                     softBrown = softBrown
                 )
@@ -190,8 +181,8 @@ fun AboutScreen(
 
             item {
                 AboutInfoCard(
-                    title = "Uygulama Hakkında",
-                    body = "Harput AR Rehber, Harput'un tarihi ve kültürel mirasını artırılmış gerçeklik teknolojisi ile keşfetmeniz için tasarlanmış mobil bir rehberdir. Geçmişi bugüne bağlayan bu deneyimle, Harput'u daha yakından tanıyabilir; yapıları, kitabeleri, malzemeleri ve tarihi dokuyu interaktif bir şekilde inceleyebilirsiniz.",
+                    title = stringResource(R.string.about_card_title),
+                    body = stringResource(R.string.about_card_body),
                     icon = Icons.Filled.MenuBook,
                     cardColor = cardColor,
                     iconContainerColor = iconBg,
@@ -220,7 +211,7 @@ fun AboutScreen(
 
             item {
                 Text(
-                    text = "Öne Çıkan Özellikler",
+                    text = stringResource(R.string.about_features_title),
                     color = darkBrown,
                     fontFamily = FontFamily.Serif,
                     fontWeight = FontWeight.Bold,
@@ -231,8 +222,8 @@ fun AboutScreen(
 
             items(aboutFeatures) { feature ->
                 AboutFeatureItem(
-                    title = feature.title,
-                    description = feature.description,
+                    title = stringResource(feature.titleRes),
+                    description = stringResource(feature.descRes),
                     icon = feature.icon,
                     iconContainerColor = iconBg,
                     iconColor = darkBrown,
@@ -253,20 +244,14 @@ fun AboutScreen(
                 ) {
                     aboutLinks.forEachIndexed { index, link ->
                         AboutLinkRow(
-                            label = link.label,
+                            label = stringResource(link.labelRes),
                             icon = link.icon,
                             onClick = {
                                 when (link.action) {
                                     AboutLinkAction.Faq -> onFaqClick()
-                                    AboutLinkAction.Privacy -> showPlaceholder(
-                                        "Gizlilik politikası yakında eklenecektir."
-                                    )
-                                    AboutLinkAction.Terms -> showPlaceholder(
-                                        "Kullanım koşulları yakında eklenecektir."
-                                    )
-                                    AboutLinkAction.Contact -> showPlaceholder(
-                                        "İletişim bilgileri yakında eklenecektir."
-                                    )
+                                    AboutLinkAction.Privacy -> showPlaceholder(privacySoon)
+                                    AboutLinkAction.Terms -> showPlaceholder(termsSoon)
+                                    AboutLinkAction.Contact -> showPlaceholder(contactSoon)
                                 }
                             },
                             textColor = darkBrown,
@@ -281,9 +266,9 @@ fun AboutScreen(
 
             item {
                 AboutFooter(
-                    version = "Versiyon 1.0.0",
-                    techStack = "Kotlin • Jetpack Compose • AR Destekli Mobil Rehber",
-                    copyright = "© 2026 HarputARGuide. Tüm hakları saklıdır.",
+                    version = stringResource(R.string.about_footer_version),
+                    techStack = stringResource(R.string.about_footer_tech),
+                    copyright = stringResource(R.string.about_footer_copyright),
                     textColor = darkBrown,
                     mutedColor = softBrown
                 )
@@ -326,11 +311,11 @@ private fun AboutTopBar(
             modifier = Modifier
                 .size(40.dp)
                 .clip(CircleShape)
-                .background(Color(0xFFE8DFD0))
+                .background(HarputColors.IconBg)
         ) {
             Icon(
                 imageVector = Icons.Filled.Info,
-                contentDescription = "Bilgi",
+                contentDescription = stringResource(R.string.cd_info),
                 tint = darkBrown,
                 modifier = Modifier.size(22.dp)
             )

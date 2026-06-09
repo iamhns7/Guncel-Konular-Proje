@@ -17,12 +17,9 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBalance
-import androidx.compose.material.icons.filled.Apartment
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.FormatListBulleted
 import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.MenuBook
-import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -39,9 +36,7 @@ import androidx.compose.ui.unit.sp
 enum class ArMode {
     Info,
     Past,
-    Structure,
-    Inscription,
-    Audio
+    Structure
 }
 
 @Composable
@@ -59,10 +54,7 @@ fun ArModeBottomPanel(
 ) {
     val modes = listOf(
         ArModeItem(ArMode.Info, "Bilgi", Icons.Filled.Info),
-        ArModeItem(ArMode.Past, "Geçmişi Gör", Icons.Filled.AccountBalance),
-        ArModeItem(ArMode.Structure, "Yapı Bilgisi", Icons.Filled.Apartment),
-        ArModeItem(ArMode.Inscription, "Kitabe Oku", Icons.Filled.MenuBook),
-        ArModeItem(ArMode.Audio, "Dinle", Icons.Filled.VolumeUp)
+        ArModeItem(ArMode.Past, "Geçmişi Gör", Icons.Filled.AccountBalance)
     )
 
     Column(

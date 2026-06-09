@@ -20,6 +20,9 @@ object ContentAssetPathResolver {
         if (imageReference.isNullOrBlank()) return null
 
         val trimmed = imageReference.trim().trimStart('/')
+        if (trimmed.startsWith("ar/images/") || trimmed.startsWith("ar/")) {
+            return trimmed
+        }
         if (trimmed.startsWith(ContentAssetPaths.IMAGES_DIR)) {
             return trimmed
         }

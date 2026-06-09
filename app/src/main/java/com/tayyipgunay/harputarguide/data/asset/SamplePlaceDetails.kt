@@ -2,137 +2,74 @@ package com.tayyipgunay.harputarguide.data.asset
 
 import com.tayyipgunay.harputarguide.domain.model.PlaceDetail
 
+/** AR / navigasyon yedek detayları — yalnızca 5 AR noktası. */
 object SamplePlaceDetails {
 
     private val details = mapOf(
-        "kale_surlari" to PlaceDetail(
-            id = "kale_surlari",
-            name = "Kale Surları",
-            location = "Harput Kalesi, Elazığ",
-            description = "Harput Kalesi'nin koruyucu surları, bölgeyi dış tehditlere karşı savunmak amacıyla inşa edilmiştir. Kalın taş duvarları ve stratejik konumuyla Orta Çağ savunma mimarisinin önemli örneklerinden biridir.",
-            period = "Orta Çağ",
-            estimatedBuild = "10 – 13. yy",
-            category = "Savunma Yapısı",
-            highlights = listOf(
-                "Kalın taş duvarlar",
-                "Stratejik konum",
-                "Panoramik manzara"
-            )
-        ),
-        "harput_kalesi" to PlaceDetail(
-            id = "harput_kalesi",
+        "harput-kalesi" to PlaceDetail(
+            id = "harput-kalesi",
             name = "Harput Kalesi",
             location = "Harput Kalesi, Elazığ",
-            description = "Harput'un simgesi olan tarihi kale, yüzyıllar boyunca bölgenin savunma ve yönetim merkezi olarak kullanılmıştır.",
+            description = "Harput Kalesi'nin dış surları, burçları, taş duvar dokusu ve kayalık temel yapısını inceleyen AR deneyimi.",
             period = "Orta Çağ",
             estimatedBuild = "8 – 13. yy",
             category = "Kale",
-            highlights = listOf(
-                "Tarihi surlar",
-                "Geniş manzara",
-                "Kültürel miras"
-            )
+            highlights = listOf("Sur duvarları", "Burçlar", "Taş duvar dokusu")
         ),
-        "seyir_noktasi" to PlaceDetail(
-            id = "seyir_noktasi",
-            name = "Seyir Noktası",
-            location = "Harput, Elazığ",
-            description = "Harput'u kuşbakışı görebileceğiniz seyir noktası, ziyaretçilere geniş bir panorama sunar.",
-            period = "Modern Dönem",
-            estimatedBuild = "20. yy",
-            category = "Seyir Noktası",
-            highlights = listOf(
-                "Panoramik görüş",
-                "Fotoğraf noktası",
-                "Kolay erişim"
-            )
+        "harput-kalesi-genis-aci" to PlaceDetail(
+            id = "harput-kalesi-genis-aci",
+            name = "Harput Kalesi - Geniş Açı",
+            location = "Harput Kalesi, Elazığ",
+            description = "Harput Kalesi'nin genel kütlesini, sur hatlarını, burçlarını ve kayalık temelini geniş açıdan tanıtan AR deneyimi.",
+            period = "Orta Çağ",
+            estimatedBuild = "8 – 13. yy",
+            category = "Kale",
+            highlights = listOf("Ana kale kütlesi", "Sur hattı", "Kayalık temel")
         ),
-        "ulu_cami" to PlaceDetail(
-            id = "ulu_cami",
-            name = "Ulu Cami",
+        "ic-kale-ve-kazi-alani" to PlaceDetail(
+            id = "ic-kale-ve-kazi-alani",
+            name = "İç Kale ve Kazı Alanı",
+            location = "Harput Kalesi, Elazığ",
+            description = "İç kale alanındaki kazı zemini, seramik kaplar, çukur alanlar, taş duvarlar ve yapı kalıntılarını tanıtan AR deneyimi.",
+            period = "Tarihi Dönem",
+            estimatedBuild = "—",
+            category = "Kazı Alanı",
+            highlights = listOf("Kazı zemini", "Seramik kaplar", "Yapı kalıntıları")
+        ),
+        "artuklu-sarnici-ve-zindani" to PlaceDetail(
+            id = "artuklu-sarnici-ve-zindani",
+            name = "Urartu Sarnıcı ve Zindan Geçidi",
+            location = "Harput Kalesi, Elazığ",
+            description = "Kayaya oyulmuş sarnıç ve zindan geçidi alanını; basamakları, tünel geçidini ve iniş hattını tanıtan AR deneyimi.",
+            period = "Urartu / Orta Çağ",
+            estimatedBuild = "—",
+            category = "Sarnıç ve Zindan",
+            highlights = listOf("Tünel geçidi", "Basamaklar", "Kayaya oyulmuş yapı")
+        ),
+        "ulu-cami" to PlaceDetail(
+            id = "ulu-cami",
+            name = "Harput Ulu Cami",
             location = "Harput, Elazığ",
-            description = "Tarihi Ulu Cami kalıntıları, Harput'un dini ve kültürel geçmişine ışık tutan önemli bir yapıdır.",
-            period = "Selçuklu Dönemi",
+            description = "Harput Ulu Cami'nin eğri minaresi, tuğla örgüsü, moloz taş duvarı ve giriş kemerini tanıtan AR deneyimi.",
+            period = "Artuklu Dönemi",
             estimatedBuild = "12. yy",
-            category = "Dini Yapı",
-            highlights = listOf(
-                "Tarihi mimari",
-                "Taş işçiliği",
-                "Kültürel önem"
-            )
-        ),
-        "kuyu_ve_sarnic" to PlaceDetail(
-            id = "kuyu_ve_sarnic",
-            name = "Kuyu ve Sarnıç",
-            location = "Harput Kalesi, Elazığ",
-            description = "Kalenin su ihtiyacını karşılayan tarihi kuyu ve sarnıç yapıları, savunma yaşamının önemli parçalarıdır.",
-            period = "Orta Çağ",
-            estimatedBuild = "10 – 13. yy",
-            category = "Altyapı",
-            highlights = listOf(
-                "Tarihi su yapıları",
-                "Savunma desteği",
-                "Arkeolojik değer"
-            )
-        ),
-        "kale_giris_kapisi" to PlaceDetail(
-            id = "kale_giris_kapisi",
-            name = "Kale Giriş Kapısı",
-            location = "Harput Kalesi, Elazığ",
-            description = "Kalenin ana giriş bölümü ve savunma geçidi, ziyaretçileri tarihi kale alanına karşılar.",
-            period = "Orta Çağ",
-            estimatedBuild = "11 – 13. yy",
-            category = "Savunma Yapısı",
-            highlights = listOf(
-                "Ana giriş",
-                "Taş kemer",
-                "Tarihi geçit"
-            )
-        ),
-        "ic_kale_ust_alan" to PlaceDetail(
-            id = "ic_kale_ust_alan",
-            name = "İç Kale / Üst Alan",
-            location = "Harput Kalesi, Elazığ",
-            description = "Kalenin iç bölümünde yer alan üst alan, tarihi yapı kalıntıları ve geniş bir görüş alanı sunar.",
-            period = "Orta Çağ",
-            estimatedBuild = "10 – 13. yy",
-            category = "Kale Alanı",
-            highlights = listOf(
-                "İç kale alanı",
-                "Tarihi kalıntılar",
-                "Yüksek konum"
-            )
-        ),
-        "sefik_gul_kultur_evi" to PlaceDetail(
-            id = "sefik_gul_kultur_evi",
-            name = "Şefik Gül Kültür Evi",
-            location = "Harput, Elazığ",
-            description = "Harput kültürünü yansıtan geleneksel yapı, bölgenin sosyal ve kültürel yaşamına dair ipuçları sunar.",
-            period = "Erken Cumhuriyet",
-            estimatedBuild = "20. yy",
-            category = "Kültür Evi",
-            highlights = listOf(
-                "Geleneksel mimari",
-                "Kültürel etkinlikler",
-                "Yerel miras"
-            )
+            category = "Cami",
+            highlights = listOf("Eğri minare", "Tuğla örgü", "Giriş kemeri")
         )
     )
+
+    fun hasDetail(placeId: String): Boolean = details.containsKey(placeId)
 
     fun getById(placeId: String): PlaceDetail {
         return details[placeId] ?: PlaceDetail(
             id = placeId,
-            name = placeId.replace('_', ' ').replaceFirstChar { it.uppercase() },
+            name = placeId,
             location = "Harput, Elazığ",
-            description = "Bu tarihi nokta hakkında detaylı bilgiler yakında eklenecektir.",
-            period = "Tarihi Dönem",
+            description = "",
+            period = "—",
             estimatedBuild = "—",
-            category = "Tarihi Nokta",
-            highlights = listOf(
-                "Tarihi değer",
-                "Kültürel miras",
-                "Ziyaret noktası"
-            )
+            category = "—",
+            highlights = emptyList()
         )
     }
 }

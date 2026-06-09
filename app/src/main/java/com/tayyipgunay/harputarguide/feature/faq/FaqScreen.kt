@@ -2,6 +2,7 @@ package com.tayyipgunay.harputarguide.feature.faq
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -20,10 +21,12 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.AccountBalance
 import androidx.compose.material.icons.filled.Apartment
+import androidx.compose.material.icons.filled.AutoStories
+import androidx.compose.material.icons.filled.ConfirmationNumber
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Schedule
-import androidx.compose.material.icons.filled.ConfirmationNumber
+import androidx.compose.material.icons.filled.Science
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -44,28 +47,26 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.tayyipgunay.harputarguide.R
+import com.tayyipgunay.harputarguide.core.design.theme.HarputColors
 import com.tayyipgunay.harputarguide.core.design.component.ChatMessageBubble
 import com.tayyipgunay.harputarguide.core.design.component.GuideGreetingHeader
 import com.tayyipgunay.harputarguide.core.design.component.GuideInputBar
 import com.tayyipgunay.harputarguide.core.design.component.HarputBottomBar
 import com.tayyipgunay.harputarguide.core.design.component.HarputBottomBarStyle
-import com.tayyipgunay.harputarguide.core.design.component.HarputBottomTab
 import com.tayyipgunay.harputarguide.core.design.component.SuggestedQuestionCard
+import com.tayyipgunay.harputarguide.data.asset.FaqEntry
 import com.tayyipgunay.harputarguide.data.asset.FaqIconType
 import com.tayyipgunay.harputarguide.data.asset.SampleFaqs
 import kotlinx.coroutines.launch
 
 private const val CHAT_TIMESTAMP = "10:34"
-private const val GREETING =
-    "Merhaba, sanal rehberinizim. Harput hakkında sorularınızı sorabilirsiniz."
-private const val CUSTOM_REPLY =
-    "Bu özellik sonraki sürümde canlı rehber desteğiyle geliştirilecektir. Şimdilik önerilen sorulardan birini seçebilirsiniz."
 
 @Composable
 fun FaqScreen(
@@ -76,21 +77,25 @@ fun FaqScreen(
     onFavoritesClick: () -> Unit,
     onAboutClick: () -> Unit
 ) {
-    val cream = Color(0xFFF5EBDD)
-    val cardColor = Color(0xFFFDFBF7)
-    val darkBrown = Color(0xFF4B2E1F)
-    val softBrown = Color(0xFF72533C)
-    val borderColor = Color(0xFFD8C9B6)
-    val bottomBarBg = Color(0xFFF0E4D4)
-    val guideBubble = Color(0xFFF8F1E6)
+    val cream = HarputColors.Cream
+    val cardColor = HarputColors.CardLight
+    val darkBrown = HarputColors.DarkBrown
+    val softBrown = HarputColors.SoftBrown
+    val borderColor = HarputColors.Divider
+    val bottomBarBg = HarputColors.BottomBarBg
+    val guideBubble = HarputColors.CardCream
 
     var activeFaqId by remember { mutableStateOf(SampleFaqs.defaultEntryId) }
     var inputText by remember { mutableStateOf("") }
     var customQuestion by remember { mutableStateOf<String?>(null) }
     var customAnswer by remember { mutableStateOf<String?>(null) }
+    var moreQuestionsExpanded by remember { mutableStateOf(false) }
 
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
+    val greeting = stringResource(R.string.faq_greeting)
+    val customReply = stringResource(R.string.faq_custom_reply)
+    val faqInfo = stringResource(R.string.faq_info)
 
     val activeFaq = remember(activeFaqId) { SampleFaqs.findById(activeFaqId) }
     val displayQuestion = customQuestion ?: activeFaq?.question.orEmpty()
@@ -102,7 +107,7 @@ fun FaqScreen(
         snackbarHost = { SnackbarHost(snackbarHostState) },
         bottomBar = {
             HarputBottomBar(
-                selectedTab = HarputBottomTab.Places,
+                selectedTab = null,
                 style = HarputBottomBarStyle.Explore,
                 onHomeClick = onHomeClick,
                 onPlacesClick = onPlacesClick,
@@ -129,9 +134,7 @@ fun FaqScreen(
                     onBackClick = onBackClick,
                     onInfoClick = {
                         scope.launch {
-                            snackbarHostState.showSnackbar(
-                                "Yanıtlar hazır bilgi tabanından alınır. Canlı AI sonraki sürümde eklenecektir."
-                            )
+                            snackbarHostState.showSnackbar(faqInfo)
                         }
                     },
                     darkBrown = darkBrown,
@@ -155,7 +158,7 @@ fun FaqScreen(
                         alpha = 0.12f
                     )
                     GuideGreetingHeader(
-                        greeting = GREETING,
+                        greeting = greeting,
                         avatarColor = Color(0xFFD4C4AA),
                         avatarIconColor = darkBrown,
                         bubbleColor = cardColor,
@@ -166,7 +169,7 @@ fun FaqScreen(
 
             item {
                 Text(
-                    text = "Önerilen Sorular",
+                    text = stringResource(R.string.faq_suggested_title),
                     color = darkBrown,
                     fontFamily = FontFamily.Serif,
                     fontWeight = FontWeight.Bold,
@@ -175,22 +178,64 @@ fun FaqScreen(
                 )
             }
 
-            items(SampleFaqs.entries) { entry ->
-                SuggestedQuestionCard(
-                    question = entry.question,
-                    icon = faqIcon(entry.iconType),
-                    onClick = {
+            items(SampleFaqs.featuredEntries) { entry ->
+                FaqQuestionCard(
+                    entry = entry,
+                    cardColor = cardColor,
+                    borderColor = borderColor,
+                    darkBrown = darkBrown,
+                    onSelect = {
                         activeFaqId = entry.id
                         customQuestion = null
                         customAnswer = null
                         inputText = ""
-                    },
-                    cardColor = cardColor,
-                    borderColor = borderColor,
-                    textColor = darkBrown,
-                    iconColor = darkBrown,
-                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 5.dp)
+                    }
                 )
+            }
+
+            item {
+                Spacer(modifier = Modifier.height(8.dp))
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(
+                        text = stringResource(R.string.faq_more_title),
+                        color = darkBrown,
+                        fontFamily = FontFamily.Serif,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 18.sp
+                    )
+                    Text(
+                        text = stringResource(
+                            if (moreQuestionsExpanded) R.string.faq_more_collapse
+                            else R.string.faq_more_expand
+                        ),
+                        color = softBrown,
+                        fontSize = 13.sp,
+                        modifier = Modifier.clickable { moreQuestionsExpanded = !moreQuestionsExpanded }
+                    )
+                }
+            }
+
+            if (moreQuestionsExpanded) {
+                items(SampleFaqs.moreEntries) { entry ->
+                    FaqQuestionCard(
+                        entry = entry,
+                        cardColor = cardColor,
+                        borderColor = borderColor,
+                        darkBrown = darkBrown,
+                        onSelect = {
+                            activeFaqId = entry.id
+                            customQuestion = null
+                            customAnswer = null
+                            inputText = ""
+                        }
+                    )
+                }
             }
 
             item {
@@ -237,11 +282,11 @@ fun FaqScreen(
                         val text = inputText.trim()
                         if (text.isNotEmpty()) {
                             customQuestion = text
-                            customAnswer = CUSTOM_REPLY
+                            customAnswer = customReply
                         }
                     },
-                    placeholder = "Sorunuzu yazın...",
-                    footerNote = "Yanıtlar hazır bilgi tabanından alınır.",
+                    placeholder = stringResource(R.string.faq_input_placeholder),
+                    footerNote = stringResource(R.string.faq_input_footer),
                     fieldColor = cardColor,
                     textColor = darkBrown,
                     mutedColor = softBrown,
@@ -275,7 +320,7 @@ private fun FaqTopBar(
             IconButton(onClick = onBackClick) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = "Geri",
+                    contentDescription = stringResource(R.string.cd_back),
                     tint = darkBrown
                 )
             }
@@ -284,7 +329,7 @@ private fun FaqTopBar(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    text = "Rehbere Sor",
+                    text = stringResource(R.string.faq_title),
                     color = darkBrown,
                     fontFamily = FontFamily.Serif,
                     fontWeight = FontWeight.Bold,
@@ -313,11 +358,11 @@ private fun FaqTopBar(
                 modifier = Modifier
                     .size(40.dp)
                     .clip(CircleShape)
-                    .background(Color(0xFFE8DFD0))
+                    .background(HarputColors.IconBg)
             ) {
                 Icon(
                     imageVector = Icons.Filled.Info,
-                    contentDescription = "Bilgi",
+                    contentDescription = stringResource(R.string.cd_info),
                     tint = darkBrown,
                     modifier = Modifier.size(22.dp)
                 )
@@ -352,9 +397,34 @@ private fun FaqChatDivider(softBrown: Color) {
     }
 }
 
+@Composable
+private fun FaqQuestionCard(
+    entry: FaqEntry,
+    cardColor: Color,
+    borderColor: Color,
+    darkBrown: Color,
+    onSelect: () -> Unit
+) {
+    SuggestedQuestionCard(
+        question = entry.question,
+        icon = faqIcon(entry.iconType),
+        onClick = onSelect,
+        cardColor = cardColor,
+        borderColor = borderColor,
+        textColor = darkBrown,
+        iconColor = darkBrown,
+        modifier = Modifier.padding(horizontal = 16.dp, vertical = 5.dp)
+    )
+}
+
 private fun faqIcon(type: FaqIconType): ImageVector = when (type) {
     FaqIconType.Castle -> Icons.Filled.AccountBalance
     FaqIconType.Ticket -> Icons.Filled.ConfirmationNumber
     FaqIconType.Clock -> Icons.Filled.Schedule
     FaqIconType.Materials -> Icons.Filled.Apartment
+    FaqIconType.History -> Icons.Filled.AccountBalance
+    FaqIconType.Excavation -> Icons.Filled.Science
+    FaqIconType.Location -> Icons.Filled.LocationOn
+    FaqIconType.Legend -> Icons.Filled.AutoStories
+    FaqIconType.Info -> Icons.Filled.Info
 }

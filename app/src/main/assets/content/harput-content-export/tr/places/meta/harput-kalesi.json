@@ -1,8 +1,8 @@
 {
   "id": "harput-kalesi",
-  "name": "HARPUT KALESI",
-  "shortDescription": "Harput kalesi için kısa bir açıklama.",
-  "imageAsset": "media/Harput-kalesi.jpg",
+  "name": "Harput Kalesi",
+  "shortDescription": "Harput Kalesi'nin dış surları, burçları, taş duvar dokusu ve kayalık temel yapısını inceleyen AR deneyimi.",
+  "imageAsset": "ar/images/harput-kalesi-reference.jpg",
   "category": "historical",
   "coordinate": {
     "latitude": 38.705,

@@ -1,0 +1,12 @@
+{
+  "id": "ic-kale-ve-kazi-alani",
+  "name": "Inner Castle and Excavation Area",
+  "shortDescription": "AR experience introducing the excavation ground, ceramic vessels, pits, stone walls and structural remains in the inner castle area.",
+  "imageAsset": "ar/images/ic-kale-ve-kazi-alani-reference.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12th Century"
+}

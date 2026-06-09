@@ -1,8 +1,8 @@
 {
   "id": "artuklu-sarnici-ve-zindani",
-  "name": "ARTUKLU SARNICI VE ZINDANI (EN)",
-  "shortDescription": "A short description for Artuklu sarnici ve zindani.",
-  "imageAsset": "media/Artuklu-sarnici-ve-zindani.jpg",
+  "name": "Urartu Cistern and Dungeon Passage",
+  "shortDescription": "AR experience for the rock-cut cistern and dungeon passage, including steps, tunnel and descent line.",
+  "imageAsset": "ar/images/artuklu-sarnici-ve-zindani-reference.jpg",
   "category": "historical",
   "coordinate": {
     "latitude": 38.705,

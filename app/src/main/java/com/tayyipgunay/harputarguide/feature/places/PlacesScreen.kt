@@ -43,14 +43,10 @@ import com.tayyipgunay.harputarguide.core.design.component.HarputBottomBarStyle
 import com.tayyipgunay.harputarguide.core.design.component.HarputBottomTab
 import com.tayyipgunay.harputarguide.core.design.component.PlaceListCard
 import com.tayyipgunay.harputarguide.core.design.component.PlaceListEmptyState
+import com.tayyipgunay.harputarguide.core.design.theme.HarputColors
 import kotlinx.coroutines.launch
 
-private val imageGradients = listOf(
-    listOf(Color(0xFFDCC7A8), Color(0xFFBEA07A)),
-    listOf(Color(0xFFC9B59A), Color(0xFF9A7B5C)),
-    listOf(Color(0xFFE0D0B8), Color(0xFFB8956E)),
-    listOf(Color(0xFFD4C4AA), Color(0xFFA6845F))
-)
+private val imageGradients = HarputColors.PlaceholderGradients
 
 @Composable
 fun PlacesScreen(
@@ -62,12 +58,12 @@ fun PlacesScreen(
     onFavoritesClick: () -> Unit,
     onAboutClick: () -> Unit
 ) {
-    val cream = Color(0xFFF5EBDD)
-    val cardColor = Color(0xFFF8F1E6)
-    val darkBrown = Color(0xFF4B2E1F)
-    val softBrown = Color(0xFF72533C)
-    val bottomBarBg = Color(0xFFF0E4D4)
-    val visitedGreen = Color(0xFF5A8F4A)
+    val cream = HarputColors.Cream
+    val cardColor = HarputColors.CardCream
+    val darkBrown = HarputColors.DarkBrown
+    val softBrown = HarputColors.SoftBrown
+    val bottomBarBg = HarputColors.BottomBarBg
+    val visitedGreen = HarputColors.VisitedGreen
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     val filterSoonMessage = stringResource(R.string.places_filter_soon)
@@ -201,7 +197,7 @@ private fun PlacesMessageContent(
                 modifier = Modifier.padding(top = 16.dp),
                 colors = androidx.compose.material3.ButtonDefaults.buttonColors(
                     containerColor = darkBrown,
-                    contentColor = Color(0xFFF5EBDD)
+                    contentColor = HarputColors.Cream
                 )
             ) {
                 Text(text = stringResource(R.string.action_retry))

@@ -1,31 +1,44 @@
 package com.tayyipgunay.harputarguide.feature.places
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.tayyipgunay.harputarguide.core.locale.AppLocaleManager
+import com.tayyipgunay.harputarguide.domain.model.Place
 import com.tayyipgunay.harputarguide.domain.repository.PlaceRepository
+import com.tayyipgunay.harputarguide.domain.repository.UserPlaceRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class PlacesViewModel(
+@HiltViewModel
+class PlacesViewModel @Inject constructor(
     private val placeRepository: PlaceRepository,
+    private val userPlaceRepository: UserPlaceRepository,
     private val localeManager: AppLocaleManager
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(PlacesUiState())
     val uiState: StateFlow<PlacesUiState> = _uiState.asStateFlow()
 
+    private val rawPlaces = MutableStateFlow<List<Place>>(emptyList())
+
     init {
         viewModelScope.launch {
-            localeManager.contentLocale
-                .collect { locale ->
-                    loadPlaces(locale)
-                }
+            localeManager.contentLocale.collect { locale ->
+                loadPlaces(locale)
+            }
+        }
+        viewModelScope.launch {
+            combine(rawPlaces, userPlaceRepository.observeVisitedIds()) { places, visitedIds ->
+                places.map { it.copy(isVisited = it.id in visitedIds) }
+            }.collect { merged ->
+                _uiState.update { it.copy(places = merged) }
+            }
         }
     }
 
@@ -39,35 +52,21 @@ class PlacesViewModel(
             runCatching {
                 placeRepository.getPlaces(locale = locale)
             }.onSuccess { places ->
+                rawPlaces.value = places
                 _uiState.update {
                     it.copy(
                         isLoading = false,
-                        places = places,
                         error = if (places.isEmpty()) PlacesError.EMPTY else null
                     )
                 }
             }.onFailure {
+                rawPlaces.value = emptyList()
                 _uiState.update {
                     it.copy(
                         isLoading = false,
                         error = PlacesError.LOAD_FAILED
                     )
                 }
-            }
-        }
-    }
-
-    companion object {
-        fun factory(
-            placeRepository: PlaceRepository,
-            localeManager: AppLocaleManager
-        ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
-            @Suppress("UNCHECKED_CAST")
-            override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                if (modelClass.isAssignableFrom(PlacesViewModel::class.java)) {
-                    return PlacesViewModel(placeRepository, localeManager) as T
-                }
-                throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
             }
         }
     }

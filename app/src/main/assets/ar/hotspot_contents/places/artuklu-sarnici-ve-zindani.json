@@ -1,0 +1,217 @@
+{
+  "placeId": "artuklu-sarnici-ve-zindani",
+  "title": "Urartu Sarnıcı ve Zindan Geçidi",
+  "purpose": "Bu dosya sadece hotspot tıklanınca açılacak detay içerikleri için kullanılır. AR referans fotoğrafı veya hotspot overlay kurulumu içermez.",
+  "hotspots": [
+    {
+      "id": "kaya_oyma_yuzey",
+      "name": "Kaya Oyma Yüzey",
+      "contentType": "material_analysis",
+      "shortDescription": "Kaya oyma yüzey, doğal kaya kütlesinin şekillendirilmesiyle oluşmuş alanı temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Bu alan doğrudan doğal kaya kütlesinden oluşur. Dışarıdan taş getirilerek örülmüş bir duvar değil, mevcut ana kayanın şekillendirilmiş yüzeyidir.",
+        "construction": "Kaya yüzeyi oyularak, kazılarak veya yontularak geçit formuna getirilmiş olabilir. Bu tür yapılarda ana kaya hem malzeme hem de taşıyıcı unsur görevi görür. Yüzeyde görülen pürüzler, oyma işleminin ve doğal kaya dokusunun izleri olarak yorumlanabilir.",
+        "purpose": "Kaya oyma yüzey, geçidin sınırını ve taşıyıcı çevresini oluşturur. Yapının dayanıklı olmasını sağlar ve iç mekânı doğrudan doğal zemin içinde tanımlar.",
+        "significance": "Bu bölüm, yapının en karakteristik özelliğidir: yapı inşa edilmekten çok, kaya içinden çıkarılmış gibi algılanır."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Doğal kaya"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Oyma / yontma"
+        },
+        {
+          "label": "İşlev",
+          "value": "Geçit yüzeyi ve taşıyıcı çevre"
+        },
+        {
+          "label": "Dayanıklılık",
+          "value": "Yüksek"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": true
+      },
+      "media": {
+        "detailImage": "detail_images/artuklu-sarnici-ve-zindani-kaya_oyma_yuzey.png"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "basamaklar",
+      "name": "Basamaklar",
+      "contentType": "info_card",
+      "shortDescription": "Basamaklar, geçidin alt kotlarına doğru inişi sağlayan yapı elemanlarıdır.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Basamaklar doğal kaya yüzeyinin oyulmasıyla oluşturulmuş olabilir. Yani ayrı taş bloklar yerleştirilmiş bir merdivenden çok, kayanın kendi kütlesi içinde şekillendirilmiş basamaklar olarak düşünülebilir.",
+        "construction": "Kaya yüzeyi kademeli şekilde oyularak iniş basamakları oluşturulur. Basamakların ölçüleri ve düzgünlüğü, kullanım ihtiyacına ve kayanın yapısına göre değişebilir. Zamanla aşınma, nem ve ziyaretçi kullanımı basamak yüzeylerini yıpratmış olabilir.",
+        "purpose": "Basamaklar, geçidin alt kotlarına inişi sağlar. Bu sayede kullanıcı sarnıç veya geçit hattı içinde ilerleyebilir.",
+        "significance": "Basamaklar, geçidin sadece bir boşluk olmadığını; yönlendirilmiş bir dolaşım hattı olduğunu gösterir."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Doğal kaya"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Kaya yüzeyi oyularak kademelendirme"
+        },
+        {
+          "label": "İşlev",
+          "value": "Düşey erişim / iniş"
+        },
+        {
+          "label": "Durum",
+          "value": "Zamanla aşınmış olabilir"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/artuklu-sarnici-ve-zindani-basamaklar.png"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "tunel_gecidi",
+      "name": "Tünel Geçidi",
+      "contentType": "audio_story",
+      "shortDescription": "Tünel geçidi, doğal kaya kütlesi içinde açılmış iç mekân hattını temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Tünel geçidi doğal kaya kütlesinin oyulmasıyla oluşturulmuş bir iç mekân hattı olarak anlatılabilir. Yan yüzeyler, zemin ve tavan aynı ana kaya kütlesinin parçaları olabilir.",
+        "construction": "Ana kaya içerisinde ilerleyen bir boşluk açılır. Yan yüzeyler, tavan ve zemin aynı kaya kütlesinin parçalarıdır. Zaman içinde yüzeyler aşınmış, bazı bölümler pürüzlü kalmış veya güvenlik için modern eklemeler yapılmış olabilir.",
+        "purpose": "Tünel geçidi, iç kısımlara ulaşmak, suya erişmek, depolama veya savunma dönemlerinde kontrollü geçiş sağlamak gibi işlevlerle ilişkilendirilebilir. Kesin işlev için tarihî ve arkeolojik bağlam dikkate alınmalıdır.",
+        "significance": "Bu bölüm, yapının derinlik algısını ve kaya oyma mekân karakterini en güçlü biçimde gösterir."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Doğal kaya"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Kaya oyma"
+        },
+        {
+          "label": "İşlev",
+          "value": "İç erişim / geçiş"
+        },
+        {
+          "label": "Algı",
+          "value": "Derinlik ve yön hissi"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/artuklu-sarnici-ve-zindani-tunel_gecidi.png"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "aydinlatma_alani",
+      "name": "Aydınlatma Alanı",
+      "contentType": "history_slider",
+      "shortDescription": "Aydınlatma alanı, geçit içinde ışığın mekânı görünür kıldığı bölümü temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Aydınlatma alanı doğrudan bir yapı malzemesi değildir. Günümüzde doğal ışık, yapay ışık veya ziyaretçi güvenliği için eklenmiş aydınlatma elemanlarıyla görülebilir.",
+        "construction": "Yeraltı veya kaya oyma alanlarda ışık sınırlı olduğu için aydınlık ve karanlık bölgeler mekân algısını belirler. Geçmişte meşale, kandil veya başka aydınlatma yöntemleri kullanılmış olabilir; ancak bu tür yorumlar temsilî anlatılmalıdır.",
+        "purpose": "Işık, geçidin yönünü, derinliğini ve yüzey dokusunu algılamayı sağlar. Kullanıcı açısından mekânın daha güvenli ve anlaşılır görünmesine yardımcı olur.",
+        "significance": "Aydınlatma alanı, geçidin atmosferini ve derinlik hissini güçlendirir."
+      },
+      "features": [
+        {
+          "label": "Alan Türü",
+          "value": "Işık / atmosfer alanı"
+        },
+        {
+          "label": "Malzeme",
+          "value": "Doğrudan yapı malzemesi değildir"
+        },
+        {
+          "label": "İşlev",
+          "value": "Mekân algısını güçlendirme"
+        },
+        {
+          "label": "Geçmişi Gör",
+          "value": "Meşale etkisi temsilî olarak kullanılabilir"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": true,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/artuklu-sarnici-ve-zindani-aydinlatma_alani.jpg"
+      },
+      "audioText": null,
+      "historyIdea": "Bugünkü ışık görünümü ile temsilî meşale aydınlatması karşılaştırılabilir."
+    },
+    {
+      "id": "zemin_inis_hatti",
+      "name": "Zemin / İniş Hattı",
+      "contentType": "info_card",
+      "shortDescription": "Zemin / iniş hattı, geçit boyunca aşağıya doğru ilerleyen hareket yüzeyini temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Zemin hattı doğal kaya yüzeyinden oluşur. Bazı bölümler oyularak düzeltilmiş, bazı kısımlar kullanım ve aşınma sonucu şekillenmiş olabilir.",
+        "construction": "Ana kaya, geçişe uygun bir yüzey oluşturacak şekilde oyulmuş veya düzeltilmiş olabilir. Zemin eğimi, kullanıcının aşağıya doğru hareketini yönlendirir.",
+        "purpose": "Zemin / iniş hattı, geçidin içinde yürüyüş yönünü ve derinleşme hissini belirler. Kullanıcı hangi yönde ilerleyeceğini bu yüzeyden algılar.",
+        "significance": "Bu hotspot, mekânın yalnızca duvar ve tavandan değil, hareketi yönlendiren bir zeminden de oluştuğunu anlatır."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Doğal kaya"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Oyma / düzleme"
+        },
+        {
+          "label": "İşlev",
+          "value": "İniş ve yönlendirme"
+        },
+        {
+          "label": "Algı",
+          "value": "Derinlik ve hareket"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/artuklu-sarnici-ve-zindani-zemin_inis_hatti.jpg"
+      },
+      "audioText": null,
+      "historyIdea": null
+    }
+  ]
+}

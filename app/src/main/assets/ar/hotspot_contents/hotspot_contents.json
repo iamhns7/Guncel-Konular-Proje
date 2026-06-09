@@ -1,0 +1,912 @@
+﻿{
+  "version": 1,
+  "schema": "hotspot-click-content-only",
+  "description": "Sadece hotspot'a tıklanınca açılacak detay içeriklerini içerir. AR sistemini, referans fotoğrafları veya hotspot koordinat overlay kurulumunu içermez.",
+  "assetBasePath": "app/src/main/assets/ar/hotspot_contents",
+  "places": {
+    "artuklu-sarnici-ve-zindani": {
+      "placeId": "artuklu-sarnici-ve-zindani",
+      "title": "Urartu Sarnıcı ve Zindan Geçidi",
+      "purpose": "Bu dosya sadece hotspot tıklanınca açılacak detay içerikleri için kullanılır. AR referans fotoğrafı veya hotspot overlay kurulumu içermez.",
+      "hotspots": [
+        {
+          "id": "kaya_oyma_yuzey",
+          "name": "Kaya Oyma Yüzey",
+          "contentType": "material_analysis",
+          "shortDescription": "Doğal kayanın oyularak oluşturulduğu yüzeyi gösterir.",
+          "detailDescription": "Bu hotspot, geçidin doğal kaya kütlesi içinde açılmış yüzeyini temsil eder. Dışarıdan taş getirerek duvar örmek yerine mevcut ana kayanın biçimlendirilmesi, bu alanın en dikkat çekici yapım mantığıdır.",
+          "features": [
+            {
+              "label": "Malzeme",
+              "value": "Doğal kaya"
+            },
+            {
+              "label": "Teknik",
+              "value": "Oyma"
+            },
+            {
+              "label": "İşlev",
+              "value": "Geçit / erişim alanı"
+            },
+            {
+              "label": "Dayanıklılık",
+              "value": "Yüksek"
+            },
+            {
+              "label": "Görsel",
+              "value": "Var"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": true
+          },
+          "media": {
+            "detailImage": "detail_images/artuklu-sarnici-ve-zindani-kaya_oyma_yuzey.png",
+            "model3d": "models/rock-cut-tunnel.glb"
+          },
+          "audioText": "Kaya oyma yüzey, geçidin doğal ana kaya içinde şekillendirildiğini gösterir. Bu teknik, yapının yerle bütünleşik karakterini güçlendirir.",
+          "historyIdea": null
+        },
+        {
+          "id": "basamaklar",
+          "name": "Basamaklar",
+          "contentType": "info_card",
+          "shortDescription": "Aşağıya doğru inen basamak hattını gösterir.",
+          "detailDescription": "Basamaklar, kullanıcının alt kotlara doğru inişini sağlayan erişim elemanlarıdır. Sarnıç veya zindan geçidi gibi derinleşen yapılarda basamak hattı, mekânın yönünü ve derinlik algısını belirler.",
+          "features": [
+            {
+              "label": "İşlev",
+              "value": "Düşey erişim"
+            },
+            {
+              "label": "Yön",
+              "value": "Aşağı iniş"
+            },
+            {
+              "label": "Algı",
+              "value": "Derinlik hissi"
+            },
+            {
+              "label": "Görsel",
+              "value": "Tünel görseli içinde gösterilebilir"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/artuklu-sarnici-ve-zindani-basamaklar.png",
+            "model3d": "models/rock-cut-tunnel.glb"
+          },
+          "audioText": null,
+          "historyIdea": null
+        },
+        {
+          "id": "tunel_gecidi",
+          "name": "Tünel Geçidi",
+          "contentType": "audio_story",
+          "shortDescription": "Geçidin derinlere doğru devam eden bölümünü temsil eder.",
+          "detailDescription": "Tünel geçidi, yapının içe doğru ilerleyen ve kullanıcıda derinlik hissi oluşturan bölümüdür. Bu hotspot, geçidin sarnıç veya alt erişim alanı olarak nasıl algılanabileceğini anlatmak için kullanılır.",
+          "features": [
+            {
+              "label": "Alan türü",
+              "value": "Tünel / geçit"
+            },
+            {
+              "label": "Algı",
+              "value": "Derinlik ve yön"
+            },
+            {
+              "label": "Sesli anlatım",
+              "value": "Var"
+            },
+            {
+              "label": "Görsel",
+              "value": "Var"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/artuklu-sarnici-ve-zindani-tunel_gecidi.png",
+            "model3d": "models/rock-cut-tunnel.glb"
+          },
+          "audioText": "Bu geçit, kalenin derinliklerine doğru ilerleyen kaya oyma bir hattı temsil eder. Basamaklar ve daralan yüzeyler, yapının hem işlevsel hem de atmosferik yönünü ortaya çıkarır.",
+          "historyIdea": null
+        },
+        {
+          "id": "aydinlatma_alani",
+          "name": "Aydınlatma Alanı",
+          "contentType": "history_slider",
+          "shortDescription": "Geçit içindeki ışık alanını temsil eder.",
+          "detailDescription": "Bu alan, geçidin karanlık atmosferinde ışığın yönünü ve mekânsal derinliği hissettiren bir bölümdür. Geçmişi Gör modunda buraya meşale veya tarihî aydınlatma etkisi eklenebilir.",
+          "features": [
+            {
+              "label": "Alan türü",
+              "value": "Işık / atmosfer"
+            },
+            {
+              "label": "Geçmişi Gör",
+              "value": "Meşale etkisi"
+            },
+            {
+              "label": "Görsel",
+              "value": "Yok"
+            }
+          ],
+          "actions": {
+            "show3d": false,
+            "showHistory": true,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/artuklu-sarnici-ve-zindani-aydinlatma_alani.jpg"
+          },
+          "audioText": "Aydınlatma alanı, geçidin karanlık atmosferini ve derinlik hissini güçlendiren bir noktadır.",
+          "historyIdea": "Bugünkü ışık görünümü ile temsilî meşale aydınlatması karşılaştırılabilir."
+        },
+        {
+          "id": "zemin_inis_hatti",
+          "name": "Zemin / İniş Hattı",
+          "contentType": "info_card",
+          "shortDescription": "Geçit boyunca aşağıya doğru ilerleyen zemin hattını gösterir.",
+          "detailDescription": "Zemin ve iniş hattı, kullanıcının yapının içinde hangi yönde ilerlediğini anlamasına yardımcı olur. Bu hotspot, AR deneyiminde rota ve derinlik algısını destekleyen bilgilendirici bir nokta olarak kullanılabilir.",
+          "features": [
+            {
+              "label": "Alan türü",
+              "value": "Zemin / rota"
+            },
+            {
+              "label": "İşlev",
+              "value": "İniş yönünü gösterme"
+            },
+            {
+              "label": "Algı",
+              "value": "Derinlik ve hareket"
+            }
+          ],
+          "actions": {
+            "show3d": false,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/artuklu-sarnici-ve-zindani-zemin_inis_hatti.jpg"
+          },
+          "audioText": null,
+          "historyIdea": null
+        }
+      ]
+    },
+    "harput-kalesi-genis-aci": {
+      "placeId": "harput-kalesi-genis-aci",
+      "title": "Harput Kalesi - Geniş Açı",
+      "purpose": "Bu dosya sadece hotspot tıklanınca açılacak detay içerikleri için kullanılır. AR referans fotoğrafı veya hotspot overlay kurulumu içermez.",
+      "hotspots": [
+        {
+          "id": "ana_kale_kutlesi",
+          "name": "Ana Kale Kütlesi",
+          "contentType": "history_slider",
+          "shortDescription": "Harput Kalesi’nin genel savunma kütlesini ve şehir silüetindeki baskın konumunu temsil eder.",
+          "detailDescription": "Geniş açıdan görülen ana kale kütlesi, yapının araziye hâkim konumunu ve savunma amaçlı yerleşimini gösterir. Bu hotspot, kullanıcıya kaleyi tek tek parçalardan önce genel bir bütün olarak anlaması için rehberlik eder.",
+          "features": [
+            {
+              "label": "Ölçek",
+              "value": "Genel kale görünümü"
+            },
+            {
+              "label": "İşlev",
+              "value": "Savunma merkezi"
+            },
+            {
+              "label": "Konum",
+              "value": "Yüksek ve hâkim alan"
+            },
+            {
+              "label": "Geçmişi Gör",
+              "value": "Var"
+            }
+          ],
+          "actions": {
+            "show3d": false,
+            "showHistory": true,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/harput-kalesi-genis-aci-ana_kale_kutlesi.jpg"
+          },
+          "audioText": "Ana kale kütlesi, Harput Kalesi'nin genel savunma karakterini ve araziye hâkim duruşunu gösterir.",
+          "historyIdea": "Geniş açı görüntüde bugünkü kale silüeti ile temsilî bütünlüklü savunma görünümü karşılaştırılabilir."
+        },
+        {
+          "id": "sol_sur_hatti",
+          "name": "Sol Sur Hattı",
+          "contentType": "info_card",
+          "shortDescription": "Kalenin sol tarafa uzanan savunma duvarı bölümüdür.",
+          "detailDescription": "Sol sur hattı, kalenin araziye uyumlu biçimde uzanan savunma çizgisini gösterir. Bu alan, savunma yapılarının yalnızca tek bir merkezden değil, çevreye yayılan duvar sistemlerinden oluştuğunu anlatmak için uygundur.",
+          "features": [
+            {
+              "label": "Yapı türü",
+              "value": "Sur hattı"
+            },
+            {
+              "label": "İşlev",
+              "value": "Savunma ve çevreleme"
+            },
+            {
+              "label": "Konum",
+              "value": "Sol cephe"
+            }
+          ],
+          "actions": {
+            "show3d": false,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/harput-kalesi-genis-aci-sol_sur_hatti.jpg"
+          },
+          "audioText": null,
+          "historyIdea": null
+        },
+        {
+          "id": "orta_burc",
+          "name": "Orta Burç",
+          "contentType": "info_card",
+          "shortDescription": "Kalenin orta bölümündeki savunma çıkıntısını temsil eder.",
+          "detailDescription": "Orta burç, geniş açıdan kalenin savunma örgüsündeki ara kontrol noktalarından biri gibi algılanabilir. Bu hotspot, burçların kale boyunca farklı noktalara yerleştirilmesinin savunmadaki önemini gösterir.",
+          "features": [
+            {
+              "label": "Yapı türü",
+              "value": "Burç"
+            },
+            {
+              "label": "İşlev",
+              "value": "Savunma ve gözetleme"
+            },
+            {
+              "label": "Görsel",
+              "value": "Burç görseli tekrar kullanılabilir"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": false,
+            "showAudio": false,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/harput-kalesi-genis-aci-orta_burc.png",
+            "model3d": "models/tower-bastion.glb"
+          },
+          "audioText": null,
+          "historyIdea": null
+        },
+        {
+          "id": "sag_burc",
+          "name": "Sağ Burç",
+          "contentType": "info_card",
+          "shortDescription": "Kalenin sağ tarafındaki burç alanını temsil eder.",
+          "detailDescription": "Sağ burç, kalenin farklı cephelerden gelebilecek tehditleri izleyebilmesi için önemli bir savunma elemanı olarak anlatılabilir. Geniş açı görselde bu hotspot, kalenin çok yönlü savunma kurgusunu göstermeye yarar.",
+          "features": [
+            {
+              "label": "Yapı türü",
+              "value": "Burç"
+            },
+            {
+              "label": "İşlev",
+              "value": "Cephe kontrolü"
+            },
+            {
+              "label": "Görsel",
+              "value": "Burç görseli tekrar kullanılabilir"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": false,
+            "showAudio": false,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/harput-kalesi-genis-aci-sag_burc.png",
+            "model3d": "models/tower-bastion.glb"
+          },
+          "audioText": null,
+          "historyIdea": null
+        },
+        {
+          "id": "kayalik_temel",
+          "name": "Kayalık Temel",
+          "contentType": "info_card",
+          "shortDescription": "Kalenin doğal kayalık zeminle ilişkisini gösterir.",
+          "detailDescription": "Kayalık temel, kalenin savunma avantajını doğrudan etkileyen arazi unsurudur. Yüksek ve sarp konum, yapıyı daha zor ulaşılabilir hâle getirir.",
+          "features": [
+            {
+              "label": "Zemin türü",
+              "value": "Kayalık alan"
+            },
+            {
+              "label": "İşlev",
+              "value": "Savunma avantajı"
+            },
+            {
+              "label": "Arazi ilişkisi",
+              "value": "Yüksek ve sarp konum"
+            }
+          ],
+          "actions": {
+            "show3d": false,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/harput-kalesi-genis-aci-kayalik_temel.jpg"
+          },
+          "audioText": null,
+          "historyIdea": null
+        }
+      ]
+    },
+    "harput-kalesi": {
+      "placeId": "harput-kalesi",
+      "title": "Harput Kalesi",
+      "purpose": "Bu dosya sadece hotspot tıklanınca açılacak detay içerikleri için kullanılır. AR referans fotoğrafı veya hotspot overlay kurulumu içermez.",
+      "hotspots": [
+        {
+          "id": "ana_burc",
+          "name": "Ana Burç",
+          "contentType": "model_3d",
+          "shortDescription": "Kalenin savunma ve gözetleme işleviyle öne çıkan ana burç bölümüdür.",
+          "detailDescription": "Ana burç, dış savunma hattında görüş alanını artırmak ve çevreyi kontrol etmek için kullanılan çıkıntılı kule bölümünü temsil eder. Harput Kalesi gibi yüksek konumlu yapılarda burçlar, hem gözetleme hem de savunma amacıyla önemli mimari elemanlardır.",
+          "features": [
+            {
+              "label": "Yapı türü",
+              "value": "Burç / savunma çıkıntısı"
+            },
+            {
+              "label": "İşlev",
+              "value": "Gözetleme ve savunma"
+            },
+            {
+              "label": "Konum",
+              "value": "Dış sur hattı"
+            },
+            {
+              "label": "Görsel",
+              "value": "Temsilî burç görseli"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/harput-kalesi-ana_burc.png",
+            "model3d": "models/tower-bastion.glb"
+          },
+          "audioText": "Bu nokta, Harput Kalesi'nin savunma düzeninde öne çıkan burç bölümünü temsil eder. Burçlar, kaleyi çevreden gelebilecek tehditlere karşı izleme ve savunma amacıyla güçlendiren mimari elemanlardır.",
+          "historyIdea": null
+        },
+        {
+          "id": "tas_duvar_dokusu",
+          "name": "Taş Duvar Dokusu",
+          "contentType": "material_analysis",
+          "shortDescription": "Kale duvarındaki taş örgü yüzeyini gösterir.",
+          "detailDescription": "Bu hotspot, kalenin taş duvar dokusunu incelemek için seçilmiştir. Duvar yüzeyi, farklı boyutlarda taş bloklar ve harçla bir araya gelen örgü sistemini gösterir. Fotoğraftan kesin taş türü ayırımı yapmak riskli olduğu için burada güvenli biçimde 'taş duvar dokusu' ifadesi kullanılmıştır.",
+          "features": [
+            {
+              "label": "Malzeme",
+              "value": "Taş blok / yerel taş"
+            },
+            {
+              "label": "Bağlayıcı",
+              "value": "Harç / derz dolgusu"
+            },
+            {
+              "label": "İşlev",
+              "value": "Savunma duvarı"
+            },
+            {
+              "label": "Doku",
+              "value": "Taş örgü yüzeyi"
+            },
+            {
+              "label": "Dayanıklılık",
+              "value": "Yüksek"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": true
+          },
+          "media": {
+            "detailImage": "detail_images/harput-kalesi-tas_duvar_dokusu.png",
+            "model3d": "models/wall-section.glb"
+          },
+          "audioText": "Taş duvar dokusu, kalenin savunma mimarisinde kullanılan malzeme ve örgü düzenini anlamamızı sağlar. Bu yüzeyde taş bloklar, harç aralıkları ve onarım izleri birlikte okunabilir.",
+          "historyIdea": null
+        },
+        {
+          "id": "ust_sur_hatti",
+          "name": "Üst Sur Hattı",
+          "contentType": "history_slider",
+          "shortDescription": "Kalenin üst savunma çizgisini ve günümüze ulaşan yıpranmış sur izlerini temsil eder.",
+          "detailDescription": "Üst sur hattı, kalenin savunma mimarisinde üst kotta devam eden duvar çizgisini gösterir. Günümüzde bazı bölümler yıpranmış veya eksilmiş olabilir. Bu nedenle bu hotspot, geçmişteki daha bütünlüklü savunma duvarını temsilî olarak göstermek için uygundur.",
+          "features": [
+            {
+              "label": "Yapı türü",
+              "value": "Sur hattı"
+            },
+            {
+              "label": "İşlev",
+              "value": "Savunma çizgisi"
+            },
+            {
+              "label": "Durum",
+              "value": "Yıpranmış / kısmen eksilmiş"
+            },
+            {
+              "label": "Geçmişi Gör",
+              "value": "Var"
+            }
+          ],
+          "actions": {
+            "show3d": false,
+            "showHistory": true,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/harput-kalesi-ust_sur_hatti.jpg"
+          },
+          "audioText": "Üst sur hattı, kalenin korunma çizgisini gösterir. Bugün eksik veya yıpranmış görünen bu hat, geçmişte daha bütünlüklü bir savunma duvarı olarak düşünülebilir.",
+          "historyIdea": "Slider ile bugünkü yıpranmış sur çizgisi ile temsilî tamamlanmış savunma duvarı karşılaştırılabilir."
+        },
+        {
+          "id": "kayalik_temel",
+          "name": "Kayalık Temel",
+          "contentType": "info_card",
+          "shortDescription": "Kalenin doğal kayalık zemin üzerine oturan savunma yapısını gösterir.",
+          "detailDescription": "Harput Kalesi, kayalık ve yüksek bir zeminle bütünleşik biçimde algılanır. Bu doğal konum, savunma yapısına yükseklik ve erişim zorluğu kazandırır. Bu hotspot, yapının araziyle kurduğu ilişkiyi anlatmak için kullanılır.",
+          "features": [
+            {
+              "label": "Zemin türü",
+              "value": "Doğal kayalık alan"
+            },
+            {
+              "label": "İşlev",
+              "value": "Savunma avantajı"
+            },
+            {
+              "label": "Mimari ilişki",
+              "value": "Araziyle bütünleşme"
+            },
+            {
+              "label": "Görsel tema",
+              "value": "Kale + kaya birleşimi"
+            }
+          ],
+          "actions": {
+            "show3d": false,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/harput-kalesi-kayalik_temel.jpg"
+          },
+          "audioText": "Kayalık temel, kalenin doğal araziyle bütünleştiğini gösterir. Yüksek ve sarp konum, savunma amacıyla seçilmiş stratejik yerleşimi destekler.",
+          "historyIdea": null
+        },
+        {
+          "id": "sag_burc",
+          "name": "Sağ Burç",
+          "contentType": "info_card",
+          "shortDescription": "Kalenin sağ tarafındaki savunma çıkıntısıdır.",
+          "detailDescription": "Sağ burç, kalenin farklı cepheleri kontrol etmesini sağlayan savunma elemanlarından biri olarak yorumlanabilir. Bu hotspot, kalenin tek bir duvardan ibaret olmadığını, farklı yönlere bakan savunma kütlelerinden oluştuğunu göstermek için kullanılır.",
+          "features": [
+            {
+              "label": "Yapı türü",
+              "value": "Burç"
+            },
+            {
+              "label": "İşlev",
+              "value": "Cephe kontrolü"
+            },
+            {
+              "label": "Konum",
+              "value": "Sağ savunma hattı"
+            },
+            {
+              "label": "Görsel",
+              "value": "Burç görseli tekrar kullanılabilir"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/harput-kalesi-sag_burc.png",
+            "model3d": "models/tower-bastion.glb"
+          },
+          "audioText": "Sağ burç, kalenin farklı cephelerden gelebilecek tehditleri izleme ve savunma mantığını temsil eder.",
+          "historyIdea": null
+        }
+      ]
+    },
+    "ic-kale-ve-kazi-alani": {
+      "placeId": "ic-kale-ve-kazi-alani",
+      "title": "İç Kale ve Kazı Alanı",
+      "purpose": "Bu dosya sadece hotspot tıklanınca açılacak detay içerikleri için kullanılır. AR referans fotoğrafı veya hotspot overlay kurulumu içermez.",
+      "hotspots": [
+        {
+          "id": "kazi_zemini",
+          "name": "Kazı Zemini",
+          "contentType": "info_card",
+          "shortDescription": "Kazı alanının zemin bölümünü temsil eder.",
+          "detailDescription": "Kazı zemini, geçmiş kullanım izlerinin ve yapı düzeninin anlaşılması için incelenen yüzeylerden biridir. Bu hotspot, arkeolojik alanlarda zeminin yalnızca boş bir alan değil, geçmişe ait izlerin okunduğu bir katman olduğunu anlatır.",
+          "features": [
+            {
+              "label": "Alan türü",
+              "value": "Kazı zemini"
+            },
+            {
+              "label": "İşlev",
+              "value": "Kullanım izlerini gösterme"
+            },
+            {
+              "label": "Yorum düzeyi",
+              "value": "Temsilî / dikkatli"
+            },
+            {
+              "label": "Görsel",
+              "value": "Yok"
+            }
+          ],
+          "actions": {
+            "show3d": false,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/ic-kale-ve-kazi-alani-kazi_zemini.jpg"
+          },
+          "audioText": null,
+          "historyIdea": null
+        },
+        {
+          "id": "seramik_kap_kup",
+          "name": "Seramik Kap / Küp",
+          "contentType": "material_analysis",
+          "shortDescription": "Kazı alanında görülen seramik kap veya küp benzeri buluntu alanını temsil eder.",
+          "detailDescription": "Seramik kaplar, tarihî yerleşim alanlarında depolama, günlük kullanım veya üretim süreçleri hakkında fikir verebilir. Bu hotspot’ta kesin kullanım amacı iddia edilmeden, seramik buluntuların arkeolojik yorum açısından önemi anlatılır.",
+          "features": [
+            {
+              "label": "Malzeme",
+              "value": "Pişmiş toprak / seramik"
+            },
+            {
+              "label": "Olası kullanım",
+              "value": "Depolama / günlük kullanım"
+            },
+            {
+              "label": "Dayanıklılık",
+              "value": "Orta"
+            },
+            {
+              "label": "Yorum",
+              "value": "Kazı bağlamına bağlı"
+            },
+            {
+              "label": "Görsel",
+              "value": "Var"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": true
+          },
+          "media": {
+            "detailImage": "detail_images/ic-kale-ve-kazi-alani-seramik_kap_kup.png",
+            "model3d": "models/ceramic-jar.glb"
+          },
+          "audioText": "Seramik kap veya küp benzeri buluntular, geçmiş yaşam pratiklerine dair ipuçları verebilir. Ancak kesin işlev için kazı bağlamı ve uzman değerlendirmesi gerekir.",
+          "historyIdea": null
+        },
+        {
+          "id": "cukur_alan",
+          "name": "Çukur Alan",
+          "contentType": "info_card",
+          "shortDescription": "Kazı alanındaki çukur veya oyuk bölümü temsil eder.",
+          "detailDescription": "Bu alan, kazı sırasında ortaya çıkarılmış bir çukur veya boşluk olarak değerlendirilebilir. Kesin işlevi için arkeolojik değerlendirme gerekir. Uygulamada bu hotspot, kullanıcıya kazı alanlarında görülen boşlukların nasıl dikkatle yorumlanması gerektiğini anlatır.",
+          "features": [
+            {
+              "label": "Alan türü",
+              "value": "Çukur / oyuk"
+            },
+            {
+              "label": "Yorum",
+              "value": "Kesin işlev belirtilmez"
+            },
+            {
+              "label": "Dil",
+              "value": "Dikkatli ve temsilî"
+            }
+          ],
+          "actions": {
+            "show3d": false,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/ic-kale-ve-kazi-alani-cukur_alan.jpg"
+          },
+          "audioText": null,
+          "historyIdea": null
+        },
+        {
+          "id": "tas_duvar",
+          "name": "Taş Duvar",
+          "contentType": "material_analysis",
+          "shortDescription": "Kazı alanının arka kısmında görülen taş duvar dokusunu temsil eder.",
+          "detailDescription": "Taş duvar, kazı alanındaki yapısal sınırları ve taş örgü karakterini anlamak için kullanılabilir. Bu hotspot, alanın yalnızca buluntu nesnelerden değil, mimari kalıntılardan da oluştuğunu gösterir.",
+          "features": [
+            {
+              "label": "Malzeme",
+              "value": "Taş"
+            },
+            {
+              "label": "İşlev",
+              "value": "Sınır / destek / yapı elemanı"
+            },
+            {
+              "label": "Doku",
+              "value": "Düzensiz taş örgü"
+            },
+            {
+              "label": "Görsel",
+              "value": "Duvar kesiti görseli tekrar kullanılabilir"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": false,
+            "showAudio": false,
+            "showMaterialAnalysis": true
+          },
+          "media": {
+            "detailImage": "detail_images/ic-kale-ve-kazi-alani-tas_duvar.png",
+            "model3d": "models/wall-section.glb"
+          },
+          "audioText": null,
+          "historyIdea": null
+        },
+        {
+          "id": "yapi_kalintisi",
+          "name": "Yapı Kalıntısı",
+          "contentType": "history_slider",
+          "shortDescription": "Kazı alanında görülen yapı izi veya kalıntı bölümünü temsil eder.",
+          "detailDescription": "Yapı kalıntısı, geçmişte var olan bir mimari düzenin günümüze ulaşan izlerini gösterir. Kesin işlevi arkeolojik inceleme gerektirse de bu tür kalıntılar, mekânın nasıl kullanılmış olabileceğine dair ipuçları sunar.",
+          "features": [
+            {
+              "label": "Alan türü",
+              "value": "Yapı izi / kalıntı"
+            },
+            {
+              "label": "Yorum",
+              "value": "Arkeolojik değerlendirme gerektirir"
+            },
+            {
+              "label": "Geçmişi Gör",
+              "value": "Var"
+            }
+          ],
+          "actions": {
+            "show3d": false,
+            "showHistory": true,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/ic-kale-ve-kazi-alani-yapi_kalintisi.jpg"
+          },
+          "audioText": "Yapı kalıntısı, geçmişte var olan bir mekânın günümüze ulaşmış izlerini temsil eder.",
+          "historyIdea": "Bugünkü düşük kalıntı seviyesi, geçmişte daha bütünlüklü bir yapı hacmi olarak temsilî biçimde gösterilebilir."
+        }
+      ]
+    },
+    "ulu-cami": {
+      "placeId": "ulu-cami",
+      "title": "Harput Ulu Cami",
+      "purpose": "Bu dosya sadece hotspot tıklanınca açılacak detay içerikleri için kullanılır. AR referans fotoğrafı veya hotspot overlay kurulumu içermez.",
+      "hotspots": [
+        {
+          "id": "egri_minare",
+          "name": "Eğri Minare",
+          "contentType": "model_3d",
+          "shortDescription": "Harput Ulu Cami’nin en dikkat çekici mimari unsurlarından biridir.",
+          "detailDescription": "Eğri minare, Harput Ulu Cami’nin ayırt edici silüet unsurlarından biridir. Kullanıcı bu hotspot’a tıkladığında minarenin mimari görünümü, eğim etkisi ve yapıya kattığı karakter anlatılır.",
+          "features": [
+            {
+              "label": "Yapı elemanı",
+              "value": "Minare"
+            },
+            {
+              "label": "Ayırt edici özellik",
+              "value": "Eğik görünüm"
+            },
+            {
+              "label": "Malzeme",
+              "value": "Tuğla ağırlıklı gövde"
+            },
+            {
+              "label": "Görsel",
+              "value": "Var"
+            },
+            {
+              "label": "Geçmişi Gör",
+              "value": "Var"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": true,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/ulu-cami-egri_minare.png",
+            "model3d": "models/leaning-minaret.glb"
+          },
+          "audioText": "Eğri minare, Harput Ulu Cami'nin en dikkat çekici mimari öğelerinden biridir. Silüette kolayca fark edilir ve yapıya karakteristik bir görünüm kazandırır.",
+          "historyIdea": "Slider ile minarenin temsilî daha dik hâli ve bugünkü eğik görünümü karşılaştırılabilir."
+        },
+        {
+          "id": "tugla_orgu",
+          "name": "Tuğla Örgü",
+          "contentType": "material_analysis",
+          "shortDescription": "Minare yüzeyinde görülen tuğla örgü dokusunu temsil eder.",
+          "detailDescription": "Tuğla örgü, minarenin yüzey karakterini oluşturan temel malzeme düzenidir. Bu hotspot, minarenin yalnızca formunu değil, malzeme ve yüzey ritmini de kullanıcıya anlatır.",
+          "features": [
+            {
+              "label": "Malzeme",
+              "value": "Tuğla"
+            },
+            {
+              "label": "Kullanım",
+              "value": "Minare gövdesi"
+            },
+            {
+              "label": "Doku",
+              "value": "Örgü yüzey"
+            },
+            {
+              "label": "Görsel etki",
+              "value": "Ritmik yüzey"
+            },
+            {
+              "label": "Görsel",
+              "value": "Opsiyonel"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": true
+          },
+          "media": {
+            "detailImage": "detail_images/ulu-cami-tugla_orgu.png",
+            "model3d": "models/leaning-minaret.glb"
+          },
+          "audioText": "Tuğla örgü, minarenin yüzey düzenini ve malzeme karakterini gösterir. Bu doku, yapının mimari kimliğini güçlendiren önemli ayrıntılardan biridir.",
+          "historyIdea": null
+        },
+        {
+          "id": "moloz_tas_duvar",
+          "name": "Moloz Taş Duvar",
+          "contentType": "material_analysis",
+          "shortDescription": "Caminin beden duvarında görülen moloz taş dokusunu temsil eder.",
+          "detailDescription": "Moloz taş duvar, farklı boyutlardaki taşların harçla bir araya getirilmesiyle oluşan duvar dokusunu gösterir. Harput Ulu Cami’de beden duvarlarında moloz taş kullanımı öne çıkan mimari özelliklerdendir.",
+          "features": [
+            {
+              "label": "Malzeme",
+              "value": "Moloz taş"
+            },
+            {
+              "label": "İşlev",
+              "value": "Beden duvarı"
+            },
+            {
+              "label": "Doku",
+              "value": "Düzensiz taş örgü"
+            },
+            {
+              "label": "Bağlayıcı",
+              "value": "Harç"
+            },
+            {
+              "label": "Görsel",
+              "value": "Var"
+            }
+          ],
+          "actions": {
+            "show3d": true,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": true
+          },
+          "media": {
+            "detailImage": "detail_images/ulu-cami-moloz_tas_duvar.jpg",
+            "model3d": "models/wall-section.glb"
+          },
+          "audioText": "Moloz taş duvar, farklı boyutlardaki taşların bir araya gelmesiyle oluşan beden duvarı dokusunu gösterir.",
+          "historyIdea": null
+        },
+        {
+          "id": "giris_kemeri",
+          "name": "Giriş Kemeri",
+          "contentType": "info_card",
+          "shortDescription": "Camiye giriş sağlayan kemerli bölümü temsil eder.",
+          "detailDescription": "Giriş kemeri, açıklık geçmek ve yükü yanlara aktarmak için kullanılan temel mimari elemanlardan biridir. Bu hotspot, caminin giriş düzenini ve kemerli mimari dilini anlatır.",
+          "features": [
+            {
+              "label": "Yapı elemanı",
+              "value": "Kemer"
+            },
+            {
+              "label": "İşlev",
+              "value": "Giriş açıklığı"
+            },
+            {
+              "label": "Mimari rol",
+              "value": "Yük aktarımı / giriş vurgusu"
+            },
+            {
+              "label": "Görsel",
+              "value": "Opsiyonel"
+            }
+          ],
+          "actions": {
+            "show3d": false,
+            "showHistory": false,
+            "showAudio": true,
+            "showMaterialAnalysis": false
+          },
+          "media": {
+            "detailImage": "detail_images/ulu-cami-giris_kemeri.jpg"
+          },
+          "audioText": null,
+          "historyIdea": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "placeId": "harput-kalesi-genis-aci",
+  "title": "Harput Kalesi - Geniş Açı",
+  "purpose": "Bu dosya sadece hotspot tıklanınca açılacak detay içerikleri için kullanılır. AR referans fotoğrafı veya hotspot overlay kurulumu içermez.",
+  "hotspots": [
+    {
+      "id": "ana_kale_kutlesi",
+      "name": "Ana Kale Kütlesi",
+      "contentType": "history_slider",
+      "shortDescription": "Ana kale kütlesi, Harput Kalesi’nin genel savunma formunu ve çevreye hâkim konumunu temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Ana kale kütlesi taş duvarlar, burçlar, sur hatları ve doğal kayalık zemin birleşiminden oluşur. Yapı hem insan eliyle örülmüş taş bölümlerden hem de doğal arazi avantajından yararlanır.",
+        "construction": "Kale, yüksek ve kayalık alanın üzerine savunma mantığıyla yerleştirilmiştir. Duvarlar arazi çizgisine uyacak şekilde uzanır. Burçlar belirli noktalarda dışa taşarak savunma ve gözetleme gücünü artırır.",
+        "purpose": "Ana kale kütlesi, yerleşimi korumak, çevreyi kontrol etmek ve stratejik bir savunma merkezi oluşturmak için kullanılır.",
+        "significance": "Geniş açı görünüm, kaleyi tek tek elemanlardan önce bütün olarak anlamaya yardımcı olur. Kullanıcı burada kale, arazi ve savunma ilişkisini birlikte görür."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Taş duvar + doğal kaya"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Araziye uyumlu savunma yerleşimi"
+        },
+        {
+          "label": "İşlev",
+          "value": "Savunma merkezi"
+        },
+        {
+          "label": "Mimari Rol",
+          "value": "Kale silüeti ve hâkim konum"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": true,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/harput-kalesi-genis-aci-ana_kale_kutlesi.jpg"
+      },
+      "audioText": null,
+      "historyIdea": "Geniş açı görüntüde bugünkü kale silüeti ile temsilî bütünlüklü savunma görünümü karşılaştırılabilir."
+    },
+    {
+      "id": "sol_sur_hatti",
+      "name": "Sol Sur Hattı",
+      "contentType": "info_card",
+      "shortDescription": "Sol sur hattı, kalenin sol tarafa uzanan savunma duvarı bölümünü gösterir.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Sol sur hattı taş bloklar, moloz taşlar ve bağlayıcı harçla oluşturulmuş savunma duvarı olarak yorumlanabilir.",
+        "construction": "Sur duvarı, kalenin bulunduğu arazinin şekline uyacak biçimde uzatılır. Taşlar duvar örgüsü hâlinde üst üste dizilir ve araları harçla bağlanır. Arazi eğimi ve kayalık zemin duvarın yönünü etkileyebilir.",
+        "purpose": "Sol sur hattı, kalenin sol cephesini kapatır ve dışarıdan gelebilecek tehditlere karşı koruma sağlar.",
+        "significance": "Bu bölüm, kalenin sadece merkezî bir yapıdan ibaret olmadığını; çevreye yayılan bir savunma hattına sahip olduğunu gösterir."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Taş / harç"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Araziye uyumlu taş duvar hattı"
+        },
+        {
+          "label": "İşlev",
+          "value": "Çevreleme ve savunma"
+        },
+        {
+          "label": "Mimari Rol",
+          "value": "Sol cephe koruması"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/harput-kalesi-genis-aci-sol_sur_hatti.jpg"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "orta_burc",
+      "name": "Orta Burç",
+      "contentType": "info_card",
+      "shortDescription": "Orta burç, kalenin orta bölümündeki savunma ve kontrol noktasını temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Orta burç taş örgü, harç ve dolgu malzemesiyle oluşturulmuş savunma kütlesi olarak anlatılabilir.",
+        "construction": "Burç, sur hattının belirli bir noktasında dışa taşırılarak inşa edilir. Bu biçim, savunma hattındaki kör noktaları azaltır ve çevre kontrolünü artırır. Taşların üst üste örülmesiyle burç gövdesi yükseltilir.",
+        "purpose": "Orta burç, kalenin orta savunma hattında ara kontrol noktası görevi görür. Gözetleme, savunma ve cephe kontrolü için kullanılır.",
+        "significance": "Bu hotspot, kale savunmasının parça parça planlandığını ve burçların stratejik aralıklarla yerleştirildiğini anlatmak için uygundur."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Taş / harç / dolgu"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Sur hattına bağlı çıkıntılı kule"
+        },
+        {
+          "label": "İşlev",
+          "value": "Savunma ve gözetleme"
+        },
+        {
+          "label": "Mimari Rol",
+          "value": "Ara kontrol noktası"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/harput-kalesi-genis-aci-orta_burc.png"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "sag_burc",
+      "name": "Sağ Burç",
+      "contentType": "info_card",
+      "shortDescription": "Sağ burç, geniş açı görünümünde kalenin sağ cephesindeki savunma unsurunu temsil eder.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Sağ burç taş bloklar, moloz taş ve harçla oluşturulmuş savunma elemanı olarak düşünülebilir.",
+        "construction": "Kalenin sağ cephesinde duvar hattını destekleyen çıkıntılı bir kütle olarak inşa edilir. Taş örgüyle yükseltilir ve iç kısmı dolgu ile güçlendirilmiş olabilir.",
+        "purpose": "Sağ cepheyi kontrol etmeye, çevreyi izlemeye ve savunma hattını tamamlamaya yarar.",
+        "significance": "Geniş açıdaki sağ burç, kalenin farklı cephelere göre savunma kurgusuna sahip olduğunu gösterir."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Taş / harç / dolgu"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Cephe kontrolü sağlayan çıkıntılı savunma elemanı"
+        },
+        {
+          "label": "İşlev",
+          "value": "Gözetleme ve savunma"
+        },
+        {
+          "label": "Mimari Rol",
+          "value": "Sağ cephe kontrolü"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/harput-kalesi-genis-aci-sag_burc.png"
+      },
+      "audioText": null,
+      "historyIdea": null
+    },
+    {
+      "id": "kayalik_temel",
+      "name": "Kayalık Temel",
+      "contentType": "info_card",
+      "shortDescription": "Kayalık temel, kalenin geniş açıdan görülen doğal zeminle ilişkisini gösterir.",
+      "detailDescription": "",
+      "sections": {
+        "material": "Bu alan doğal kaya kütlesinden oluşur. Kale, bu kayalık zeminden savunma ve taşıyıcılık açısından yararlanır.",
+        "construction": "Yapı, doğal yükselti üzerine yerleştirilir. Kaya yüzeyi bazı bölümlerde temel gibi kullanılmış, bazı yerlerde üzerine taş duvar örülmüş olabilir.",
+        "purpose": "Kayalık temel, kalenin yüksek ve zor ulaşılır bir konumda yer almasını sağlar. Bu da savunma gücünü artırır.",
+        "significance": "Bu hotspot, doğal arazi ile insan yapımı mimarinin birleşimini anlatmak için önemlidir."
+      },
+      "features": [
+        {
+          "label": "Malzeme",
+          "value": "Doğal kaya"
+        },
+        {
+          "label": "Yapım Tekniği",
+          "value": "Kayalık zemin üzerine savunma yapısı"
+        },
+        {
+          "label": "İşlev",
+          "value": "Taşıyıcı zemin ve doğal savunma"
+        },
+        {
+          "label": "Mimari Rol",
+          "value": "Araziyle bütünleşme"
+        }
+      ],
+      "actions": {
+        "show3d": false,
+        "showHistory": false,
+        "showAudio": false,
+        "showMaterialAnalysis": false
+      },
+      "media": {
+        "detailImage": "detail_images/harput-kalesi-genis-aci-kayalik_temel.jpg"
+      },
+      "audioText": null,
+      "historyIdea": null
+    }
+  ]
+}

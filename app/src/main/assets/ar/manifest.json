@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "supportedPlaceIds": [
+    "harput-kalesi",
+    "harput-kalesi-genis-aci",
+    "ic-kale-ve-kazi-alani",
+    "artuklu-sarnici-ve-zindani",
+    "ulu-cami"
+  ]
+}

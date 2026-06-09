@@ -42,7 +42,7 @@ data class HotspotDetailData(
 
 object SampleStructureHotspots {
 
-    private val kaleSurlariHotspots = listOf(
+    private val flagshipHotspots = listOf(
         StructureHotspot(
             id = "burc",
             name = "Burç",
@@ -136,12 +136,12 @@ object SampleStructureHotspots {
     )
 
     /**
-     * Demo aşaması: [kale_surlari] için tanımlı örnek hotspotlar döner.
+     * Demo aşaması: [FLAGSHIP_PLACE_ID] için tanımlı örnek hotspotlar döner.
      * Diğer mekânlar için de aynı örnek set gösterilir (gerçek entegrasyonda placeId bazlı olacak).
      */
     fun getHotspots(placeId: String): List<StructureHotspot> = when (placeId) {
-        "kale_surlari" -> kaleSurlariHotspots
-        else -> kaleSurlariHotspots // DEMO: tüm AR ekranlarında örnek noktaları görmek için
+        FLAGSHIP_PLACE_ID -> flagshipHotspots
+        else -> flagshipHotspots // DEMO: tüm AR ekranlarında örnek noktaları görmek için
     }
 
     fun findHotspot(placeId: String, hotspotId: String): StructureHotspot? =
@@ -160,6 +160,9 @@ object SampleStructureHotspots {
         )
     }
 
-    /** Demo modunda hotspot verisi gösteriliyor mu (şimdilik her zaman true). */
-    fun isDemoSample(placeId: String): Boolean = placeId != "kale_surlari"
+    /** Hotspot verisi temsilî/demo mu (flagship dışındaki tüm mekânlar için). */
+    fun isDemoSample(placeId: String): Boolean = placeId != FLAGSHIP_PLACE_ID
+
+    /** Örnek hotspot setinin bağlandığı gerçek katalog mekânı. */
+    const val FLAGSHIP_PLACE_ID = "harput-kalesi"
 }

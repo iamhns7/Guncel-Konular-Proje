@@ -1,0 +1,42 @@
+{
+  "placeId": "ulu-cami",
+  "title": "Harput Ulu Cami",
+  "referenceImage": "ulu-cami-reference.jpg",
+  "physicalWidthMeters": 2.0,
+  "shortDescription": "Harput Ulu Cami'nin eğri minaresi, tuğla örgüsü, moloz taş duvarı ve giriş kemerini tanıtan AR deneyimi.",
+  "info": {
+    "constructionPeriod": "Harput Ulu Cami, Artuklu dönemiyle ilişkilendirilen Anadolu'nun erken tarihli camilerinden biridir.",
+    "materialAndArchitecture": "Caminin duvarlarında moloz taş, minaresinde ise tuğla örgü öne çıkar. Eğri minaresi yapının en dikkat çekici mimari özelliklerinden biridir.",
+    "historySliderIdea": "Geçmişi Gör modunda minarenin eski durumu, caminin tarihî avlu ve çevre düzeni temsilî olarak gösterilebilir."
+  },
+  "hotspots": [
+    {
+      "id": "egri_minare",
+      "name": "Eğri Minare",
+      "x": 0.511,
+      "y": 0.258,
+      "shortDescription": "Harput Ulu Cami'nin en dikkat çekici özelliği olan eğri minareyi gösterir. Bu nokta, minarenin eğim durumu ve yapının silüetteki etkisi hakkında bilgi verir."
+    },
+    {
+      "id": "tugla_orgu",
+      "name": "Tuğla Örgü",
+      "x": 0.547,
+      "y": 0.392,
+      "shortDescription": "Minare üzerindeki tuğla örgü yüzeyini gösterir. Bu bölüm, minarenin malzeme ve mimari dokusunu anlatmak için kullanılır."
+    },
+    {
+      "id": "moloz_tas_duvar",
+      "name": "Moloz Taş Duvar",
+      "x": 0.247,
+      "y": 0.659,
+      "shortDescription": "Caminin beden duvarında görülen moloz taş dokusunu gösterir. Bu nokta, yapının ana duvar malzemesini ve tarihî duvar örgüsünü anlatır."
+    },
+    {
+      "id": "giris_kemeri",
+      "name": "Giriş Kemeri",
+      "x": 0.736,
+      "y": 0.686,
+      "shortDescription": "Camiye giriş sağlayan kemerli bölümüdür. Bu alan, yapının giriş düzeni ve kemer mimarisi hakkında bilgi vermek için uygundur."
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "id": "ulu-cami",
-  "name": "ULU CAMI",
-  "shortDescription": "ulu cami için kısa bir açıklama.",
-  "imageAsset": "media/ulu-cami.webp",
+  "name": "Harput Ulu Cami",
+  "shortDescription": "Harput Ulu Cami'nin eğri minaresi, tuğla örgüsü, moloz taş duvarı, giriş kemeri ve avlu çevresini tanıtan AR deneyimi.",
+  "imageAsset": "ar/images/ulu-cami-reference.jpg",
   "category": "historical",
   "coordinate": {
     "latitude": 38.705,

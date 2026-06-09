@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Harput AR Rehber</string>
+    <string name="app_brand">HARPUT</string>
+    <string name="app_tagline">AKILLI AR TUR REHBERİ</string>
 
     <!-- Bottom navigation -->
     <string name="tab_home">Ana Menü</string>
@@ -9,6 +11,57 @@
     <string name="tab_visited">Gezdiğim</string>
     <string name="tab_about">Hakkında</string>
 
+    <!-- Common actions -->
+    <string name="action_retry">Tekrar dene</string>
+    <string name="action_cancel">Vazgeç</string>
+    <string name="action_back">Geri Dön</string>
+    <string name="cd_menu">Menü</string>
+    <string name="cd_filter">Filtrele</string>
+    <string name="cd_back">Geri</string>
+    <string name="cd_favorite">Favori</string>
+    <string name="cd_visited">Gezildi</string>
+    <string name="cd_info">Bilgi</string>
+    <string name="cd_close">Kapat</string>
+
+    <!-- Splash -->
+    <string name="splash_loading">Tarihi keşif başlıyor…</string>
+    <string name="cd_app_logo">Harput logosu</string>
+
+    <!-- Welcome -->
+    <string name="welcome_title">Harput Kalesi\'ni\nkeşfetmeye hazır mısın?</string>
+    <string name="welcome_description">Tarihi noktaları keşfet, geçmişi\ngünümüzle karşılaştır ve Harput\'u\nAR ile keşfetmenin keyfini çıkar.</string>
+    <string name="welcome_start_tour">Turu Başlat</string>
+    <string name="welcome_favorites">♡  Favorilerim</string>
+    <string name="welcome_about">⌖  Hakkında</string>
+    <string name="cd_castle_image">Harput Kalesi</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">Nasıl Çalışır?</string>
+    <string name="onboarding_subtitle">Harput\'u keşfetmek çok kolay!</string>
+    <string name="onboarding_start">Başlayalım</string>
+    <string name="onboarding_step1_title">Nokta Seç</string>
+    <string name="onboarding_step1_desc">Harput\'taki önemli noktaları seç.</string>
+    <string name="onboarding_step2_title">Yönlendirmeyi Takip Et</string>
+    <string name="onboarding_step2_desc">Uygulama seni seçtiğin noktaya götürür.</string>
+    <string name="onboarding_step3_title">AR ile Keşfet</string>
+    <string name="onboarding_step3_desc">Kamerayı aç, yapı üzerinde bilgi katmanlarını gör.</string>
+    <string name="onboarding_step4_title">Keşfet ve İncele</string>
+    <string name="onboarding_step4_desc">Yapıları, malzemeleri ve tarihi dokuyu AR ile interaktif inceleyin.</string>
+
+    <!-- Home -->
+    <string name="home_menu_start_tour_title">Turu Başlat</string>
+    <string name="home_menu_start_tour_desc">Keşfetmeye hemen başla.</string>
+    <string name="home_menu_ar_title">AR Kamera Aç</string>
+    <string name="home_menu_ar_desc">Kamerayı aç, geçmişi gör.</string>
+    <string name="home_menu_favorites_title">Favorilerim</string>
+    <string name="home_menu_favorites_desc">Kaydettiğin noktaları gör.</string>
+    <string name="home_menu_visited_title">Gezdiğim Noktalar</string>
+    <string name="home_menu_visited_desc">Keşfettiğin yerleri görüntüle.</string>
+    <string name="home_menu_faq_title">Rehbere Sor</string>
+    <string name="home_menu_faq_desc">Merak ettiklerini sor, cevap al.</string>
+    <string name="home_menu_about_title">Hakkında</string>
+    <string name="home_menu_about_desc">Uygulama hakkında bilgi al.</string>
+
     <!-- Places -->
     <string name="places_title">Tarihi Noktalar</string>
     <string name="places_subtitle">Harput\'taki önemli noktaları seç\nve keşfetmeye başla.</string>
@@ -17,9 +70,6 @@
     <string name="places_error_empty">Gösterilecek mekân bulunamadı.</string>
     <string name="places_empty_title">Mekân bulunamadı</string>
     <string name="places_empty_description">Henüz listelenecek tarihi nokta yok.</string>
-    <string name="action_retry">Tekrar dene</string>
-    <string name="cd_menu">Menü</string>
-    <string name="cd_filter">Filtrele</string>
 
     <!-- Place detail -->
     <string name="place_detail_error_load">Detay bilgisi yüklenemedi. Lütfen tekrar deneyin.</string>
@@ -29,11 +79,82 @@
     <string name="place_detail_category">Kategori</string>
     <string name="place_detail_highlights">Öne Çıkan Özellikler</string>
     <string name="place_detail_navigate">Yol Tarifi Al</string>
+    <string name="navigation_location_not_found">Konum bilgisi bulunamadı</string>
     <string name="place_detail_ar">AR ile İncele</string>
-    <string name="place_detail_model">3D Modeli Gör</string>
-    <string name="cd_back">Geri</string>
-    <string name="cd_favorite">Favori</string>
-    <string name="cd_visited">Gezildi</string>
+    <string name="place_detail_model">Mimari Analiz</string>
+    <string name="place_detail_mark_visited">Gezildi olarak işaretle</string>
+    <string name="place_detail_visited">Gezildi</string>
+    <string name="place_detail_visited_added">Gezildi olarak işaretlendi.</string>
+    <string name="place_detail_visited_removed">Gezildi işareti kaldırıldı.</string>
+    <string name="place_detail_favorite_added">Favorilere eklendi.</string>
+    <string name="place_detail_favorite_removed">Favorilerden kaldırıldı.</string>
+    <string name="place_detail_action_failed">İşlem gerçekleştirilemedi. Lütfen tekrar deneyin.</string>
+
+    <!-- Favorites -->
+    <string name="favorites_title">Favorilerim</string>
+    <string name="favorites_subtitle">Kaydettiğin tarihi noktaları buradan görüntüleyebilirsin.</string>
+    <string name="favorites_info">Favorilerin cihazında kalıcı olarak saklanır.</string>
+    <string name="favorites_error_load">Noktalar yüklenemedi. Lütfen tekrar deneyin.</string>
+    <string name="favorites_remove_failed">Favori kaldırılamadı. Lütfen tekrar deneyin.</string>
+    <string name="favorites_empty_title">Henüz favori nokta yok</string>
+    <string name="favorites_empty_description">Beğendiğin noktaları favorilere eklediğinde burada listelenecek.</string>
+    <string name="favorites_count">%1$d nokta</string>
+    <string name="favorites_removed">%1$s favorilerden kaldırıldı.</string>
+    <string name="favorites_remove_title">Favorilerden sil</string>
+    <string name="favorites_remove_message">\"%1$s\" favorilerden kaldırılsın mı?\n\nSilmek istediğinize emin misiniz?</string>
+    <string name="favorites_remove_confirm">Evet, Sil</string>
+    <string name="cd_remove_favorite">Favorilerden sil</string>
+
+    <!-- Visited -->
+    <string name="visited_title">Gezdiğim Noktalar</string>
+    <string name="visited_subtitle">Ziyaret ettiğin tarihi noktaların listesi.</string>
+    <string name="visited_info">Gezilen noktalar artık cihazında kalıcı olarak kayıtlıdır.</string>
+    <string name="visited_error_load">Noktalar yüklenemedi. Lütfen tekrar deneyin.</string>
+    <string name="visited_empty_title">Henüz gezilen nokta yok</string>
+    <string name="visited_empty_description">Bir noktayı gezildi olarak işaretlediğinde burada görünecek.</string>
+    <string name="visited_count">%1$d nokta gezildi</string>
+
+    <!-- FAQ / Rehbere Sor -->
+    <string name="faq_title">Rehbere Sor</string>
+    <string name="faq_greeting">Merhaba, sanal rehberinizim. Harput hakkında sorularınızı sorabilirsiniz.</string>
+    <string name="faq_custom_reply">Bu özellik sonraki sürümde canlı rehber desteğiyle geliştirilecektir. Şimdilik önerilen sorulardan birini seçebilirsiniz.</string>
+    <string name="faq_info">Yanıtlar hazır bilgi tabanından alınır. Canlı AI sonraki sürümde eklenecektir.</string>
+    <string name="faq_suggested_title">Önerilen Sorular</string>
+    <string name="faq_more_title">Daha Fazla Soru</string>
+    <string name="faq_more_expand">Tüm soruları göster</string>
+    <string name="faq_more_collapse">Daha az göster</string>
+    <string name="faq_input_placeholder">Sorunuzu yazın…</string>
+    <string name="faq_input_footer">Yanıtlar hazır bilgi tabanından alınır.</string>
+
+    <!-- About -->
+    <string name="about_title">Hakkında</string>
+    <string name="about_hero_title">Harput</string>
+    <string name="about_hero_subtitle">AR Rehber</string>
+    <string name="about_hero_tagline">Tarihi keşfet, geleceği artırılmış gerçeklikle yaşa.</string>
+    <string name="about_card_title">Uygulama Hakkında</string>
+    <string name="about_card_body">Harput AR Rehber, Harput\'un tarihi ve kültürel mirasını artırılmış gerçeklik teknolojisi ile keşfetmeniz için tasarlanmış mobil bir rehberdir. Geçmişi bugüne bağlayan bu deneyimle, Harput\'u daha yakından tanıyabilir; yapıları, malzemeleri ve tarihi dokuyu interaktif bir şekilde inceleyebilirsiniz.</string>
+    <string name="about_info_snackbar">Harput AR Rehber, kültürel miras deneyimini artırılmış gerçeklik ile sunar.</string>
+    <string name="about_features_title">Öne Çıkan Özellikler</string>
+    <string name="about_feature_ar_title">Artırılmış Gerçeklik</string>
+    <string name="about_feature_ar_desc">Kamera ile tarihi yapıları inceleyin ve AR bilgi katmanlarını görün.</string>
+    <string name="about_feature_past_title">Geçmişi Gör</string>
+    <string name="about_feature_past_desc">Tarihi yapıların geçmiş ve günümüz halini karşılaştırın.</string>
+    <string name="about_feature_structure_title">Yapı Bilgisi</string>
+    <string name="about_feature_structure_desc">Yapı elemanları, malzemeler ve mimari detayları öğrenin.</string>
+    <string name="about_feature_inscription_title">Kitabe Oku</string>
+    <string name="about_feature_inscription_desc">Kitabeleri tarayın, açıklamalarını ve çevirilerini görüntüleyin.</string>
+    <string name="about_feature_audio_title">Sesli Rehber</string>
+    <string name="about_feature_audio_desc">Harput hakkında sesli anlatımlarla bilgi alın.</string>
+    <string name="about_link_privacy">Gizlilik Politikası</string>
+    <string name="about_link_terms">Kullanım Koşulları</string>
+    <string name="about_link_faq">Sıkça Sorulan Sorular</string>
+    <string name="about_link_contact">İletişim</string>
+    <string name="about_privacy_soon">Gizlilik politikası yakında eklenecektir.</string>
+    <string name="about_terms_soon">Kullanım koşulları yakında eklenecektir.</string>
+    <string name="about_contact_soon">İletişim bilgileri yakında eklenecektir.</string>
+    <string name="about_footer_version">Versiyon 1.0.0</string>
+    <string name="about_footer_tech">Kotlin • Jetpack Compose • AR Destekli Mobil Rehber</string>
+    <string name="about_footer_copyright">© 2026 HarputARGuide. Tüm hakları saklıdır.</string>
 
     <!-- Language -->
     <string name="language_section_title">Dil / Language</string>
@@ -42,6 +163,86 @@
     <string name="language_english">English</string>
     <string name="language_changed">Dil güncellendi.</string>
 
-    <!-- About -->
-    <string name="about_title">Hakkında</string>
+    <!-- AR -->
+    <string name="ar_cd_camera">Kamera görüntüsü</string>
+    <string name="ar_structure_title">Yapı Bilgisi</string>
+    <string name="ar_sample_hotspot">Örnek hotspot verisi</string>
+    <string name="ar_past_title">Geçmişi Gör</string>
+    <string name="ar_structure_hint">Detaylı bilgi için ekrandaki noktalara dokunun.</string>
+    <string name="ar_help_hint">En iyi deneyim için kamerayı yapıya doğru tutun.</string>
+    <string name="ar_inscription_read">Kitabe Oku</string>
+    <string name="ar_inscription_ocr_info">Kitabe metni şimdilik hazır örnek veridir. İleride OCR ile algılanacaktır.</string>
+    <string name="ar_past_info">Geçmiş görselleri, tarihsel kaynaklara dayalı temsili rekonstrüksiyonlardır. Kaydırıcı ile geçmiş ve günümüzü karşılaştırın.</string>
+    <string name="ar_past_unavailable">Bu nokta için geçmiş görüntüsü bulunmuyor.</string>
+    <string name="ar_listen_switched">Dinle moduna geçildi.</string>
+    <string name="ar_content_placeholder">Bu nokta için AR içeriği henüz hazır değil; temsilî örnek görünüm gösteriliyor.</string>
+    <string name="ar_inscription_detail_title">Kitabe Açıklaması</string>
+    <string name="ar_inscription_detail_body">Kitabe, yapının kim tarafından yaptırıldığını ve hangi dönemde tamamlandığını anlatır. Bu metin ilk sürümde hazır veri olarak gösterilmektedir.</string>
+    <string name="ar_tracking_searching">Referansa yaklaştırın — tam oturtmanız gerekmez</string>
+    <string name="ar_hotspots_preparing">Eşleşme algılandı — noktalar hazırlanıyor…</string>
+    <string name="ar_tracking_aligned">Kısmi eşleşme — noktalar aktif</string>
+    <string name="ar_tracking_locked">Noktalar aktif — canlı AR takibi</string>
+    <string name="ar_tracking_assisted">Yaklaşık konum — noktalar gösteriliyor</string>
+    <string name="ar_live_badge">AR CANLI</string>
+    <string name="ar_hud_locked">KİLİTLİ</string>
+    <string name="ar_tracking_lost">Takip kayboldu — referansa yeniden hizalayın</string>
+    <string name="ar_permission_denied">Kamera izni gerekli. Ayarlardan izin verin veya statik önizleme kullanılıyor.</string>
+    <string name="ar_unsupported">Bu cihazda ARCore desteklenmiyor. Statik önizleme modu kullanılıyor.</string>
+    <string name="ar_point_reference_hint">Bilgisayar ekranındaki referans fotoğrafa kamerayı tutun.</string>
+    <string name="ar_audio_playing">Sesli anlatım oynatılıyor…</string>
+    <string name="ar_audio_ready">Dinle modu: tanıma sonrası sesli anlatım başlar.</string>
+    <string name="place_detail_ar_unavailable">Bu nokta için AR içeriği henüz hazır değil.</string>
+
+    <!-- Tour navigation -->
+
+    <!-- Hotspot detail -->
+    <string name="hotspot_sample_notice">Bu yapı bilgileri temsilî örnek verilerdir.</string>
+    <string name="hotspot_description_title">Açıklama</string>
+    <string name="hotspot_properties_title">Özellikler</string>
+    <string name="hotspot_highlights_title">Öne Çıkan Özellikler</string>
+    <string name="hotspot_section_short">Kısa Açıklama</string>
+    <string name="hotspot_section_material">Neyden Yapılmıştır?</string>
+    <string name="hotspot_section_construction">Nasıl Yapılmıştır?</string>
+    <string name="hotspot_section_purpose">Ne İşe Yarar?</string>
+    <string name="hotspot_section_significance">Mimari / Tarihî / Arkeolojik Önemi</string>
+    <string name="hotspot_construction_process">Yapım Süreci</string>
+    <string name="hotspot_material_analysis">Malzeme Analizi</string>
+    <string name="hotspot_view_3d">Detaylı İncele</string>
+    <string name="hotspot_content_missing">Bu nokta için detay içeriği bulunamadı.</string>
+    <string name="hotspot_image_load_failed">Görsel yüklenemedi</string>
+    <string name="hotspot_open_full_detail">Tam ekran detay</string>
+    <string name="hotspot_material_section_hint">Bu bölümde duvar ve yapı malzemesinin dokusu, örgü tipi ve bağlayıcı özellikleri incelenir.</string>
+    <string name="hotspot_history_title">Geçmişi Gör</string>
+    <string name="hotspot_audio_title">Sesli Anlatım</string>
+    <string name="analysis_history_before">Önceki hâl</string>
+    <string name="analysis_history_after">Bugünkü hâl</string>
+    <string name="analysis_audio_soon">Ses dosyası yakında eklenecek.</string>
+    <string name="model_viewer_file_label">Görsel dosyası</string>
+    <string name="model_viewer_demo_notice">Temsilî görseldir.</string>
+    <string name="model_viewer_missing">Görsel bulunamadı.</string>
+    <string name="model_viewer_load_failed">Görsel yüklenemedi.</string>
+    <string name="model_viewer_interaction_hint">Parmağınızla döndürün, iki parmakla yakınlaştırın.</string>
+
+    <!-- Construction process -->
+    <string name="construction_title">Nasıl Yapılmış?</string>
+
+    <!-- Material analysis -->
+    <string name="material_title">Malzeme Analizi</string>
+    <string name="material_cd_diagram">Malzeme kesiti</string>
+    <string name="material_info_title">Malzeme Bilgileri</string>
+    <string name="architectural_info_title">Mimari Bilgiler</string>
+    <string name="analysis_bookmark_cd">Yer imi</string>
+    <string name="analysis_bookmark_soon">Yer imi özelliği yakında eklenecek.</string>
+    <string name="material_share">Paylaş</string>
+    <string name="material_save">Kaydet</string>
+    <string name="material_share_soon">Paylaş özelliği yakında eklenecek.</string>
+    <string name="material_save_soon">Kaydet özelliği yakında eklenecek.</string>
+
+    <!-- Model viewer -->
+    <string name="model_viewer_title">Mimari Analiz</string>
+    <string name="model_analysis_title">Malzeme / Mimari Analiz</string>
+    <string name="model_viewer_cd_viewport">Analiz görünüm alanı</string>
+    <string name="model_analysis_no_features_label">Bilgi</string>
+    <string name="model_analysis_no_features_value">Özellik verisi bulunamadı</string>
+    <string name="model_viewer_description">Bu mekân için detay ekranı yakında eklenecektir.</string>
 </resources>

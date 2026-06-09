@@ -1,0 +1,49 @@
+{
+  "placeId": "harput-kalesi",
+  "title": "Harput Kalesi",
+  "referenceImage": "harput-kalesi-reference.jpg",
+  "physicalWidthMeters": 2.0,
+  "shortDescription": "Harput Kalesi'nin dış surları, burçları, taş duvar dokusu ve kayalık temel yapısını inceleyen AR deneyimi.",
+  "info": {
+    "constructionPeriod": "Temellerinin M.Ö. 8. yüzyılda Urartu dönemine dayandığı; Roma, Bizans, Artuklu ve sonraki dönemlerde onarım gördüğü kabul edilir.",
+    "materialAndArchitecture": "Kale; taş duvar dokusu, burçlar, üst sur hattı ve doğal kayalık temel ile bütünleşik savunma yapısı üzerinden incelenir.",
+    "historySliderIdea": "Geçmişi Gör modunda günümüzde kısmen yıkık görünen sur hattı, eski dönemlerdeki daha bütünlüklü savunma duvarı olarak canlandırılabilir."
+  },
+  "hotspots": [
+    {
+      "id": "ana_burc",
+      "name": "Ana Burç",
+      "x": 0.397,
+      "y": 0.524,
+      "shortDescription": "Kalenin savunma ve gözetleme işleviyle öne çıkan ana burç bölümüdür. Bu nokta, kalenin dış savunma hattını ve yüksekten kontrol mantığını anlatmak için kullanılır."
+    },
+    {
+      "id": "tas_duvar_dokusu",
+      "name": "Taş Duvar Dokusu",
+      "x": 0.537,
+      "y": 0.541,
+      "shortDescription": "Kale duvarındaki taş örgü yüzeyini gösterir. Bu bölümde yapı malzemesi, duvar dokusu ve farklı dönemlerde yapılmış olabilecek onarım izleri açıklanabilir."
+    },
+    {
+      "id": "ust_sur_hatti",
+      "name": "Üst Sur Hattı",
+      "x": 0.55,
+      "y": 0.372,
+      "shortDescription": "Kalenin üst savunma çizgisini temsil eder. Bu alan, surların zamanla yıpranmış ve kısmen yıkılmış durumunu göstermek için uygundur."
+    },
+    {
+      "id": "kayalik_temel",
+      "name": "Kayalık Temel",
+      "x": 0.309,
+      "y": 0.775,
+      "shortDescription": "Kalenin doğal kayalık zemin üzerine oturan savunma yapısını gösterir. Harput Kalesi'nin sarp kayalıklarla bütünleşen konumu savunma avantajı sağlamıştır."
+    },
+    {
+      "id": "sag_burc",
+      "name": "Sağ Burç",
+      "x": 0.739,
+      "y": 0.571,
+      "shortDescription": "Kalenin sağ tarafındaki savunma çıkıntısıdır. Bu nokta, kalenin farklı yönlerden gelebilecek tehditlere karşı çok parçalı savunma kurgusunu anlatır."
+    }
+  ]
+}

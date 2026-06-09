@@ -1,0 +1,12 @@
+{
+  "id": "ic-kale-ve-kazi-alani",
+  "name": "İç Kale ve Kazı Alanı",
+  "shortDescription": "İç kale alanındaki kazı zemini, seramik kaplar, çukur alanlar, taş duvarlar ve yapı kalıntılarını tanıtan AR deneyimi.",
+  "imageAsset": "ar/images/ic-kale-ve-kazi-alani-reference.jpg",
+  "category": "historical",
+  "coordinate": {
+    "latitude": 38.705,
+    "longitude": 39.255
+  },
+  "yearOrEra": "12. Yüzyıl"
+}

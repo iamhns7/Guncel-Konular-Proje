@@ -1,8 +1,8 @@
 {
   "id": "ulu-cami",
-  "name": "ULU CAMI (EN)",
-  "shortDescription": "A short description for ulu cami.",
-  "imageAsset": "media/ulu-cami.webp",
+  "name": "Harput Grand Mosque",
+  "shortDescription": "AR experience featuring the leaning minaret, brick masonry, rubble stone walls, entrance arch and courtyard of Harput Grand Mosque.",
+  "imageAsset": "ar/images/ulu-cami-reference.jpg",
   "category": "historical",
   "coordinate": {
     "latitude": 38.705,
