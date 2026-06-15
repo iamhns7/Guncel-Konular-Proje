@@ -1,4 +1,10 @@
-﻿1. Proje Başlığı
+﻿# Geliştiriciler
+### Hasan Sido - 225541601
+### Tayyip Güney - 215541009
+
+---
+
+1. Proje Başlığı
 Harput Akıllı AR Tur Rehberi (Harput Smart AR Tour Guide)
 
 2. Proje Özeti
@@ -63,9 +69,7 @@ Tarihi yapıların temsili rekonstrüksiyonlarının bulunduğu dijital bir enva
 Turizm alanında kullanılabilecek, backend maliyeti gerektirmeyen, ölçeklenebilir ve cihaz donanımını verimli kullanan bir akıllı rehber altyapısı.
 
 9. Katkıda Bulunanlar
-Bu proje, Fırat Üniversitesi Yazılım Mühendisliği öğrencileri tarafından geliştirilmektedir:
-- Hasan Sido 225541601
-- Tayyıp Güney 215541009
+Bu proje, Fırat Üniversitesi Yazılım Mühendisliği öğrencileri tarafından geliştirilmektedir.
 
 10. Kaynaklar
 Elazığ İl Kültür ve Turizm Müdürlüğü Harput Arşivi
