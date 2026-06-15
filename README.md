@@ -63,7 +63,9 @@ Tarihi yapıların temsili rekonstrüksiyonlarının bulunduğu dijital bir enva
 Turizm alanında kullanılabilecek, backend maliyeti gerektirmeyen, ölçeklenebilir ve cihaz donanımını verimli kullanan bir akıllı rehber altyapısı.
 
 9. Katkıda Bulunanlar
-Bu proje, Fırat Üniversitesi Yazılım Mühendisliği Hasan Sido ve Tayyip Günay tarafından geliştirilmektedir
+Bu proje, Fırat Üniversitesi Yazılım Mühendisliği öğrencileri tarafından geliştirilmektedir:
+- Hasan Sido 225541601
+- Tayyıp Güney 215541009
 
 10. Kaynaklar
 Elazığ İl Kültür ve Turizm Müdürlüğü Harput Arşivi
